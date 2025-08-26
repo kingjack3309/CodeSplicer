@@ -6,9 +6,12 @@ using UnityEngine.UIElements;
 public class PlayerControllerScript : MonoBehaviour
 {
     private float horizontal;
-    public float speed = 8f;
-    public float jumpingPower = 16f;
-    private bool isFacingRight = true;
+    private float speed = 8f;
+    private float jumpingPower = 13f;
+    private bool isFacingRight = false;
+    private bool canDoubleJump = false;
+    private bool doubleJumpped = false;
+
 
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private Transform groundCheck;
@@ -19,7 +22,7 @@ public class PlayerControllerScript : MonoBehaviour
     {
         horizontal = Input.GetAxisRaw("Horizontal");
 
-        if (Input.GetButtonDown("Jump") && IsGrounded())
+        Jump();
 
         Flip();
     }
@@ -42,6 +45,34 @@ public class PlayerControllerScript : MonoBehaviour
             Vector3 localScale = transform.localScale;
             localScale.x *= -1f;
             transform.localScale = localScale;
+        }
+    }
+
+    private void Jump()
+    {
+        if (doubleJumpped && IsGrounded())
+        {
+            doubleJumpped = false;
+        }
+
+        if (!IsGrounded() && !doubleJumpped) 
+        { 
+            canDoubleJump = true;
+        }
+        else if (doubleJumpped)
+        {
+            canDoubleJump = false;
+        }
+
+        if ((Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.Space)) && IsGrounded())
+        {
+            rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
+        }
+        
+        else if ((Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.Space)) && canDoubleJump)
+        {
+            rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
+            doubleJumpped = true;
         }
     }
 }
