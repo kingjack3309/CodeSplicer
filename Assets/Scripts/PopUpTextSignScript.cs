@@ -1,18 +1,33 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PopUpTextSignScript : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] TextMeshProUGUI npcText;
+    [SerializeField] GameObject dialogBox;
+    //[SerializeField] Scrollbar scrollbar;
+
+    public string npcDialog = "";
+
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        
+        if (collision.CompareTag("Player"))
+        {
+            dialogBox.
+            dialogBox.SetActive(true);
+            npcText.text = npcDialog;
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnTriggerExit2D(Collider2D collision)
     {
-        
+        if (collision.CompareTag("Player"))
+        {
+            dialogBox.SetActive(false);
+            npcText.text = "";
+        }
     }
 }
