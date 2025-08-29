@@ -17,6 +17,9 @@ public class PlayerControllerScript : MonoBehaviour
     [SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask groundLayer;
 
+    private float groundCheckWidth = 1.26f;
+    private float groundCheckHeight = 0.1f;
+
     // Update is called once per frame
     void Update()
     {
@@ -34,7 +37,20 @@ public class PlayerControllerScript : MonoBehaviour
 
     private bool IsGrounded()
     {
-        return Physics2D.OverlapCircle(groundCheck.position, 0.2f, groundLayer);
+        return Physics2D.OverlapBox(groundCheck.position, new Vector2(groundCheckWidth, groundCheckHeight), 0, groundLayer);
+    }
+
+    private void OnDrawGizmos() 
+    {
+        // Set the color with custom alpha.
+        Gizmos.color = new Color(0f, 1f, 0f, 10); // Green with custom alpha
+
+        // Draw the cube.
+        Gizmos.DrawCube(groundCheck.position, new Vector3(groundCheckWidth, groundCheckHeight, 0));
+
+        // Draw a wire cube outline.
+        Gizmos.color = Color.white;
+        Gizmos.DrawWireCube(groundCheck.position, new Vector3(groundCheckWidth, groundCheckHeight, 0));
     }
 
     private void Flip()

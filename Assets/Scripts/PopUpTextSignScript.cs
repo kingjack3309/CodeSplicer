@@ -8,7 +8,7 @@ public class PopUpTextSignScript : MonoBehaviour
 {
     [SerializeField] TextMeshProUGUI npcText;
     [SerializeField] GameObject dialogBox;
-    //[SerializeField] Scrollbar scrollbar;
+    [SerializeField] Scrollbar scrollbar;
 
     public string npcDialog = "";
 
@@ -16,8 +16,8 @@ public class PopUpTextSignScript : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            dialogBox.
             dialogBox.SetActive(true);
+            scrollbar.value = 1;
             npcText.text = npcDialog;
         }
     }

@@ -315,8 +315,8 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 836096689}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 0.86931074}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -459,7 +459,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &386736664
 RectTransform:
   m_ObjectHideFlags: 0
@@ -764,7 +764,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 772.8257}
+  m_SizeDelta: {x: 0, y: 234.594}
   m_Pivot: {x: 0, y: 1}
 --- !u!1 &707248968
 GameObject:
@@ -1168,9 +1168,9 @@ RectTransform:
   m_Father: {fileID: 873593242}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: -17, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &929064524
 MonoBehaviour:
@@ -56856,6 +56856,80 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1001 &1898661586
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8702613080317710871, guid: 14ba0a5fbd7e85741964ca313e664706, type: 3}
+      propertyPath: npcText
+      value: 
+      objectReference: {fileID: 707248970}
+    - target: {fileID: -8702613080317710871, guid: 14ba0a5fbd7e85741964ca313e664706, type: 3}
+      propertyPath: dialogBox
+      value: 
+      objectReference: {fileID: 386736663}
+    - target: {fileID: -8702613080317710871, guid: 14ba0a5fbd7e85741964ca313e664706, type: 3}
+      propertyPath: npcDialog
+      value: By the way you have to click (E) in order to use the portal or pick
+        up items.
+      objectReference: {fileID: 0}
+    - target: {fileID: -8702613080317710871, guid: 14ba0a5fbd7e85741964ca313e664706, type: 3}
+      propertyPath: scrollbar
+      value: 
+      objectReference: {fileID: 1093163846}
+    - target: {fileID: 7496368611580464241, guid: 14ba0a5fbd7e85741964ca313e664706, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 34.98951
+      objectReference: {fileID: 0}
+    - target: {fileID: 7496368611580464241, guid: 14ba0a5fbd7e85741964ca313e664706, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -25.48
+      objectReference: {fileID: 0}
+    - target: {fileID: 7496368611580464241, guid: 14ba0a5fbd7e85741964ca313e664706, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7496368611580464241, guid: 14ba0a5fbd7e85741964ca313e664706, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7496368611580464241, guid: 14ba0a5fbd7e85741964ca313e664706, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7496368611580464241, guid: 14ba0a5fbd7e85741964ca313e664706, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7496368611580464241, guid: 14ba0a5fbd7e85741964ca313e664706, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7496368611580464241, guid: 14ba0a5fbd7e85741964ca313e664706, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7496368611580464241, guid: 14ba0a5fbd7e85741964ca313e664706, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7496368611580464241, guid: 14ba0a5fbd7e85741964ca313e664706, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7800403779484627199, guid: 14ba0a5fbd7e85741964ca313e664706, type: 3}
+      propertyPath: m_Name
+      value: SignEntity (2)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 14ba0a5fbd7e85741964ca313e664706, type: 3}
 --- !u!1 &1975776516
 GameObject:
   m_ObjectHideFlags: 0
@@ -56945,6 +57019,10 @@ PrefabInstance:
       value: You loser. You failed such a basic jump. The rest of the prison will
         eat you alive. Here is a hint to help your sorry butt. (You have double jump.)
       objectReference: {fileID: 0}
+    - target: {fileID: -8702613080317710871, guid: 14ba0a5fbd7e85741964ca313e664706, type: 3}
+      propertyPath: scrollbar
+      value: 
+      objectReference: {fileID: 1093163846}
     - target: {fileID: 7496368611580464241, guid: 14ba0a5fbd7e85741964ca313e664706, type: 3}
       propertyPath: m_LocalPosition.x
       value: 13.39
@@ -57104,6 +57182,10 @@ PrefabInstance:
         can use the gamer classic of W,A,S,D or if you don't like that you can use
         arrow keys or space.
       objectReference: {fileID: 0}
+    - target: {fileID: -8702613080317710871, guid: 14ba0a5fbd7e85741964ca313e664706, type: 3}
+      propertyPath: scrollbar
+      value: 
+      objectReference: {fileID: 1093163846}
     - target: {fileID: 7496368611580464241, guid: 14ba0a5fbd7e85741964ca313e664706, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.04
@@ -57225,6 +57307,14 @@ PrefabInstance:
       propertyPath: m_Material
       value: 
       objectReference: {fileID: 6200000, guid: bffd7fe904a3e93428734421a1f5cb12, type: 2}
+    - target: {fileID: 1715764089081478, guid: 0ff44ad5f2b49794693395b7567c241c, type: 3}
+      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[32].x
+      value: -0.67643714
+      objectReference: {fileID: 0}
+    - target: {fileID: 1715764089081478, guid: 0ff44ad5f2b49794693395b7567c241c, type: 3}
+      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[32].y
+      value: -1.3673216
+      objectReference: {fileID: 0}
     - target: {fileID: 2987654680649926799, guid: 0ff44ad5f2b49794693395b7567c241c, type: 3}
       propertyPath: m_Name
       value: player
@@ -57273,9 +57363,33 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5169526782123754406, guid: 0ff44ad5f2b49794693395b7567c241c, type: 3}
+      propertyPath: groundCheckWidth
+      value: 1.26
+      objectReference: {fileID: 0}
+    - target: {fileID: 5169526782123754406, guid: 0ff44ad5f2b49794693395b7567c241c, type: 3}
+      propertyPath: groundCheckHeight
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5427652937852799144, guid: 0ff44ad5f2b49794693395b7567c241c, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5427652937852799144, guid: 0ff44ad5f2b49794693395b7567c241c, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5427652937852799144, guid: 0ff44ad5f2b49794693395b7567c241c, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5427652937852799144, guid: 0ff44ad5f2b49794693395b7567c241c, type: 3}
       propertyPath: m_LocalPosition.y
       value: -1.356
+      objectReference: {fileID: 0}
+    - target: {fileID: 5427652937852799144, guid: 0ff44ad5f2b49794693395b7567c241c, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -57292,6 +57406,7 @@ SceneRoots:
   - {fileID: 1656654809174612033}
   - {fileID: 1021315374}
   - {fileID: 417193937592205432}
+  - {fileID: 2049932211}
+  - {fileID: 1898661586}
   - {fileID: 1846020877}
   - {fileID: 1975776519}
-  - {fileID: 2049932211}
