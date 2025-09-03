@@ -36,4 +36,13 @@ public class GemHoverScript : MonoBehaviour
             rb.velocity = new Vector2(0, hoverSpeed);
         }
     }
+
+    private void OnTriggerEnter2D(Collider2D collider)
+    {
+        if (collider.CompareTag("Player"))
+        {
+            gameObject.SetActive(false);
+        }
+        
+    }
 }
