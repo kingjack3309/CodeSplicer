@@ -2,10 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GemHoverScript : MonoBehaviour
+public class FoodCollectableScript : MonoBehaviour
 {
     private float startY;
-    private float hoverDistance = 0.25f;
+    private float hoverDistance = 0.2f;
     private float hoverSpeed = 0.30f;
     private float upperBound;
     private float lowerBound;
@@ -20,13 +20,13 @@ public class GemHoverScript : MonoBehaviour
         upperBound = startY + hoverDistance;
         lowerBound = startY - hoverDistance;
 
-        rb.velocity = new Vector2(0, hoverSpeed);
+        rb.velocity = new Vector2(0, Random.Range(0.1f, 0.30f));
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (gameObject.transform.position.y > upperBound ) 
+        if (gameObject.transform.position.y > upperBound)
         {
             rb.velocity = new Vector2(0, -hoverSpeed);
         }
@@ -43,6 +43,6 @@ public class GemHoverScript : MonoBehaviour
         {
             gameObject.SetActive(false);
         }
-        
+
     }
 }
