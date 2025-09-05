@@ -5,9 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class PortalScript : MonoBehaviour
 {
-    private void OnTriggerStay2D(Collider2D collider)
+    private void OnTriggerEnter2D(Collider2D collider)
     {
-        if (collider.CompareTag("Player") && Input.GetKeyDown(KeyCode.E))
+        if (collider.CompareTag("Player"))
         {
             SceneManager.LoadScene("StageOneLevelA");
         }

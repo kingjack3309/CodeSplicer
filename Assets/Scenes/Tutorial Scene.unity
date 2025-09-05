@@ -131480,8 +131480,7 @@ PrefabInstance:
       objectReference: {fileID: 116980413}
     - target: {fileID: -8702613080317710871, guid: 14ba0a5fbd7e85741964ca313e664706, type: 3}
       propertyPath: npcDialog
-      value: By the way you have to click (E) in order to use the portal or pick
-        up code.
+      value: By the way you have to click (E) in order to pick up code.
       objectReference: {fileID: 0}
     - target: {fileID: -8702613080317710871, guid: 14ba0a5fbd7e85741964ca313e664706, type: 3}
       propertyPath: scrollbar
