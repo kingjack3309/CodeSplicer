@@ -330,7 +330,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 10}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.5, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -612,6 +612,7 @@ MonoBehaviour:
   transition: {fileID: 8300000, guid: 9341eea439bb28346b708f07a0b9b1f0, type: 3}
   transitionTwo: {fileID: 8300000, guid: 6ef67dbbef874f94687227b6c824ae8d, type: 3}
   matches: {fileID: 8300000, guid: cdfa09e211b455841a5529c3ce88fa88, type: 3}
+  collider: {fileID: 0}
 --- !u!1 &687621201
 GameObject:
   m_ObjectHideFlags: 0
@@ -673,7 +674,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 5.055438
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -783,7 +784,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 8}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.5, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
