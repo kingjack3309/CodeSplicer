@@ -7,6 +7,6 @@ public class MenuButtonControler : MonoBehaviour
 {
    public void PlayButtonFunction()
     {
-        SceneManager.LoadScene("Tutorial Scene");
+        SceneManager.LoadScene("CutScene1");
     }
 }

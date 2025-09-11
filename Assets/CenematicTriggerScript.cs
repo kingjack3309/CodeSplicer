@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CenematicTriggerScript : MonoBehaviour
 {
@@ -31,11 +32,27 @@ public class CenematicTriggerScript : MonoBehaviour
 
             SFXSource.clip = transition;
             SFXSource.Play();
+        }
+    }
 
-            //timer
-
+    private void Update()
+    {
+        if (SFXSource.clip == transition && !SFXSource.isPlaying)
+        {
             SFXSource.clip = transitionTwo;
             SFXSource.Play();
         }
+
+        if (SFXSource.clip == transitionTwo && !SFXSource.isPlaying)
+        {
+            SFXSource.clip = matches;
+            SFXSource.Play();
+        }
+
+        if (SFXSource.clip == matches && !SFXSource.isPlaying)
+        {
+            SceneManager.LoadScene("Tutorial Scene");
+        }
     }
+
 }

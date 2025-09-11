@@ -16,9 +16,6 @@ public class AudioManagerScript : MonoBehaviour
     public AudioClip walking;
     public AudioClip music;
     public AudioClip windGust;
-    public AudioClip transition;
-    public AudioClip transitionTwo;
-    public AudioClip matches;
 
     private void Start()
     {

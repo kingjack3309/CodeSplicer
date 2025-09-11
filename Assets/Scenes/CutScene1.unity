@@ -609,9 +609,9 @@ MonoBehaviour:
   Background2: {fileID: 932392985}
   MusicSource: {fileID: 106383628}
   SFXSource: {fileID: 1446151280}
-  transition: {fileID: 8300000, guid: 9341eea439bb28346b708f07a0b9b1f0, type: 3}
+  transition: {fileID: 8300000, guid: 58dadbd23e470f747b64654fc23aa218, type: 3}
   transitionTwo: {fileID: 8300000, guid: 6ef67dbbef874f94687227b6c824ae8d, type: 3}
-  matches: {fileID: 8300000, guid: cdfa09e211b455841a5529c3ce88fa88, type: 3}
+  matches: {fileID: 8300000, guid: 2e0981bab7a6034419438706e9e56916, type: 3}
   collider: {fileID: 0}
 --- !u!1 &687621201
 GameObject:
@@ -1123,9 +1123,6 @@ MonoBehaviour:
   walking: {fileID: 8300000, guid: 47ceab3dcc6a71e4f915e1c614accc1d, type: 3}
   music: {fileID: 8300000, guid: 552b41c043d9c234981128edd69ad576, type: 3}
   windGust: {fileID: 8300000, guid: c7e27d8a03e35c341a41c3e655ef5b03, type: 3}
-  transition: {fileID: 8300000, guid: 9341eea439bb28346b708f07a0b9b1f0, type: 3}
-  transitionTwo: {fileID: 8300000, guid: 6ef67dbbef874f94687227b6c824ae8d, type: 3}
-  matches: {fileID: 8300000, guid: cdfa09e211b455841a5529c3ce88fa88, type: 3}
 --- !u!4 &1884699548
 Transform:
   m_ObjectHideFlags: 0
