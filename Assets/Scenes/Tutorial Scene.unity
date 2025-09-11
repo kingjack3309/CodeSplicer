@@ -131480,7 +131480,8 @@ PrefabInstance:
       objectReference: {fileID: 116980413}
     - target: {fileID: -8702613080317710871, guid: 14ba0a5fbd7e85741964ca313e664706, type: 3}
       propertyPath: npcDialog
-      value: By the way you have to click (E) in order to pick up code.
+      value: By the way, you have to click [E] to pick up the code segments, but
+        to collect the collectables, you just bash your head on them.
       objectReference: {fileID: 0}
     - target: {fileID: -8702613080317710871, guid: 14ba0a5fbd7e85741964ca313e664706, type: 3}
       propertyPath: scrollbar
@@ -131862,8 +131863,8 @@ PrefabInstance:
       objectReference: {fileID: 116980413}
     - target: {fileID: -8702613080317710871, guid: 14ba0a5fbd7e85741964ca313e664706, type: 3}
       propertyPath: npcDialog
-      value: You loser. You failed such a basic jump. The rest of the prison will
-        eat you alive. Here is a hint to help your sorry butt. (You have double jump.)
+      value: You LOSER. You failed such a BASIC jump. The rest of the dungeon will
+        EAT YOU ALIVE. Here is a hint to help your sorry anus. (You have double jump.)
       objectReference: {fileID: 0}
     - target: {fileID: -8702613080317710871, guid: 14ba0a5fbd7e85741964ca313e664706, type: 3}
       propertyPath: scrollbar
@@ -139017,9 +139018,9 @@ PrefabInstance:
       objectReference: {fileID: 116980413}
     - target: {fileID: -8702613080317710871, guid: 14ba0a5fbd7e85741964ca313e664706, type: 3}
       propertyPath: npcDialog
-      value: Hello Prisoner, you have several options on how to move. Firstly, you
-        can use the gamer classic of W,A,S,D or if you don't like that you can use
-        arrow keys or space.
+      value: Hello Traveler, you have several options for movement. Firstly, you
+        can use the gamer classic of [W], [A], [S], [D], or if you don't like that,
+        you can use the arrow keys or [SPACE].
       objectReference: {fileID: 0}
     - target: {fileID: -8702613080317710871, guid: 14ba0a5fbd7e85741964ca313e664706, type: 3}
       propertyPath: scrollbar

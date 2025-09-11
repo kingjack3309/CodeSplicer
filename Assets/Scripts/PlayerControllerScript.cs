@@ -12,13 +12,15 @@ public class PlayerControllerScript : MonoBehaviour
     private bool canDoubleJump = false;
     private bool doubleJumpped = false;
 
+    private float coyoteTime = 0.15f;
+    private float coyoteTimeCounter;
 
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask groundLayer;
 
     private float groundCheckWidth = 1.26f;
-    private float groundCheckHeight = 0.1f;
+    private float groundCheckHeight = 0.2f;
 
     // Update is called once per frame
     void Update()
@@ -66,6 +68,19 @@ public class PlayerControllerScript : MonoBehaviour
 
     private void Jump()
     {
+        //if you not grounded coyote timer starts
+
+        if (IsGrounded())
+        {
+            coyoteTimeCounter = coyoteTime;
+        }
+        else
+        {
+            coyoteTimeCounter -= Time.deltaTime;
+        }
+
+        //checking if you can double jump
+
         if (doubleJumpped && IsGrounded())
         {
             doubleJumpped = false;
@@ -80,11 +95,17 @@ public class PlayerControllerScript : MonoBehaviour
             canDoubleJump = false;
         }
 
-        if ((Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.Space)) && IsGrounded())
+        //the actual jump
+
+        if ((Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.Space)) && (IsGrounded() || coyoteTimeCounter > 0f))
         {
             rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
+
+            coyoteTimeCounter = 0f;
         }
         
+        //The double jump
+
         else if ((Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.Space)) && canDoubleJump)
         {
             rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
