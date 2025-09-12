@@ -5,7 +5,7 @@ using UnityEngine;
 public class CollectableSFX : MonoBehaviour
 {
 
-    [Header("------Audio Clips------")]
+    [Header("------Audio Clip------")]
 
     public AudioClip coinCollected;
     //public AudioClip foodCollected;
@@ -20,7 +20,7 @@ public class CollectableSFX : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Gem"))
+        if (collision.CompareTag("Collectable"))
         {
             audioSource.clip = coinCollected;
             audioSource.Play();

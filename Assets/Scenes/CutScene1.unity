@@ -152,7 +152,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -1120,9 +1120,9 @@ MonoBehaviour:
   SFXSource: {fileID: 1446151280}
   SFXSource2: {fileID: 495894010}
   MusicSource: {fileID: 106383628}
-  walking: {fileID: 8300000, guid: 47ceab3dcc6a71e4f915e1c614accc1d, type: 3}
+  walking: {fileID: 8300000, guid: 838a9b1e20986814da2b6b1072897e94, type: 3}
   music: {fileID: 8300000, guid: 552b41c043d9c234981128edd69ad576, type: 3}
-  windGust: {fileID: 8300000, guid: c7e27d8a03e35c341a41c3e655ef5b03, type: 3}
+  windGust: {fileID: 8300000, guid: ebea4e4ed63acff4985418063030ecf3, type: 3}
 --- !u!4 &1884699548
 Transform:
   m_ObjectHideFlags: 0
