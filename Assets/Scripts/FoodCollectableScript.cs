@@ -10,6 +10,8 @@ public class FoodCollectableScript : MonoBehaviour
     private float upperBound;
     private float lowerBound;
 
+    [SerializeField] int healAmount = 100;
+
     Rigidbody2D rb;
 
     void Start()
@@ -41,6 +43,7 @@ public class FoodCollectableScript : MonoBehaviour
     {
         if (collider.CompareTag("Player"))
         {
+            collider.GetComponent<PlayerControllerScript>().AddHealth(healAmount);
             gameObject.SetActive(false);
         }
 

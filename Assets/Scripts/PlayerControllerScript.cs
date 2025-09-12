@@ -22,6 +22,13 @@ public class PlayerControllerScript : MonoBehaviour
     private float groundCheckWidth = 1.26f;
     private float groundCheckHeight = 0.2f;
 
+    HealthManagerScript healthManager;
+
+    private void Start()
+    {
+        healthManager = GameObject.Find("healthbar").GetComponent<HealthManagerScript>();
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -111,5 +118,15 @@ public class PlayerControllerScript : MonoBehaviour
             rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
             doubleJumpped = true;
         }
+    }
+
+    public void AddHealth(int amount)
+    {
+        healthManager.GainHealth(amount);
+    }
+
+    public void RemoveHealth(int amount)
+    {
+        healthManager.LoseHealth(amount);
     }
 }
