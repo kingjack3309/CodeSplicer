@@ -321,6 +321,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinCollected: {fileID: 8300000, guid: f60b915cdcb02cc40998e4d1f0c2d1f4, type: 3}
+  foodCollected: {fileID: 8300000, guid: cbb9c2c5ffa7ddb45af8ef35b3651e38, type: 3}
 --- !u!61 &2332833400468789571
 BoxCollider2D:
   m_ObjectHideFlags: 0
