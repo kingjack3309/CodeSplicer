@@ -8,8 +8,8 @@ public class HealthManagerScript : MonoBehaviour
 
     Slider healthSlider;
 
-    public float maxHealth;
-    private float currentHealth = 100;
+    public int maxHealth = 100;
+    private int currentHealth;
 
 
     // Start is called before the first frame update
@@ -17,6 +17,7 @@ public class HealthManagerScript : MonoBehaviour
     {
         healthSlider = GetComponent<Slider>();
         healthSlider.value = currentHealth;
+        currentHealth = maxHealth;
     }
 
     // Update is called once per frame
@@ -26,17 +27,17 @@ public class HealthManagerScript : MonoBehaviour
         {
             currentHealth = maxHealth;
         }
+
+        healthSlider.value = currentHealth;
     }
 
-    public void LoseHealth(float damage)
+    public void LoseHealth(int damage)
     {
         currentHealth -= damage;
-        healthSlider.value = currentHealth;
     }
 
-    public void GainHealth(float heal)
+    public void GainHealth(int heal)
     {
-        currentHealth += heal;
-        healthSlider.value = currentHealth;
+        currentHealth += heal; 
     }
 }

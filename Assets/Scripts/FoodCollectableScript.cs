@@ -44,6 +44,7 @@ public class FoodCollectableScript : MonoBehaviour
         if (collider.CompareTag("Player"))
         {
             collider.GetComponent<PlayerControllerScript>().AddHealth(healAmount);
+            collider.GetComponent<PlayerControllerScript>().PlayFoodSound();
             gameObject.SetActive(false);
         }
 

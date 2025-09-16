@@ -14,11 +14,11 @@ public class CenematicTriggerScript : MonoBehaviour
     public AudioClip transitionTwo;
     public AudioClip matches;
 
-    public BoxCollider2D collider;
+    public BoxCollider2D triggerCollider;
 
     private void Start()
     {
-        collider = GetComponent<BoxCollider2D>();
+        triggerCollider = GetComponent<BoxCollider2D>();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

@@ -41,6 +41,7 @@ public class GemHoverScript : MonoBehaviour
     {
         if (collider.CompareTag("Player"))
         {
+            collider.GetComponent<PlayerControllerScript>().PlayGemSound();
             gameObject.SetActive(false);
         }
         

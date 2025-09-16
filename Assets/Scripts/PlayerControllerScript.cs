@@ -19,14 +19,26 @@ public class PlayerControllerScript : MonoBehaviour
     [SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask groundLayer;
 
-    private float groundCheckWidth = 1.26f;
+    public float groundCheckWidth = 1.26f;
     private float groundCheckHeight = 0.2f;
+
+    [Header("------Audio Clips------")]
+    public AudioClip coinCollected;
+    public AudioClip foodCollected;
+
+    AudioSource audioSource;
 
     HealthManagerScript healthManager;
 
     private void Start()
     {
         healthManager = GameObject.Find("healthbar").GetComponent<HealthManagerScript>();
+        audioSource = gameObject.GetComponent<AudioSource>();
+    }
+
+    private void Awake()
+    {
+        DontDestroyOnLoad(this.gameObject);
     }
 
     // Update is called once per frame
@@ -128,5 +140,23 @@ public class PlayerControllerScript : MonoBehaviour
     public void RemoveHealth(int amount)
     {
         healthManager.LoseHealth(amount);
+    }
+
+
+    public void PlayGemSound()
+    {
+        audioSource.clip = coinCollected;
+        audioSource.Play();
+    }
+  
+    public void PlayFoodSound()
+    {
+        audioSource.clip = foodCollected;
+        audioSource.Play();
+    }
+
+    public void ReturnToStart()
+    {
+        gameObject.transform.position = new Vector2(0, 0);
     }
 }
