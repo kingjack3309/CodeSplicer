@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class DialogBoxManagerScript : MonoBehaviour
 {
@@ -26,5 +28,15 @@ public class DialogBoxManagerScript : MonoBehaviour
         dialogBox.SetActive(boolChoice);
     }
 
+    public void ChangeDialog(string npcDialogue)
+    {
+        scrollbar.GetComponent<Scrollbar>().value = 1;
+        npcText.GetComponent<TMP_Text>().text = npcDialogue;
+    }
+
+    public void ClearDialog()
+    {
+        npcText.GetComponent<TMP_Text>().text = "";
+    }
 
 }

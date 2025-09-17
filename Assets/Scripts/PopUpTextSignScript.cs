@@ -23,8 +23,7 @@ public class PopUpTextSignScript : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             dialogBoxManagerScript.BoxSleep(true);
-            scrollbar.GetComponent<Scrollbar>().value = 1;
-            npcText.GetComponent<TMP_Text>().text = npcDialog;
+            dialogBoxManagerScript.ChangeDialog(npcDialog);
         }
     }
 
@@ -33,7 +32,7 @@ public class PopUpTextSignScript : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             dialogBoxManagerScript.BoxSleep(false);
-            npcText.GetComponent<TMP_Text>().text = "";
+            dialogBoxManagerScript.ClearDialog();
         }
     }
 }
