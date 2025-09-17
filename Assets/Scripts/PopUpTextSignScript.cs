@@ -7,19 +7,14 @@ using static System.Net.Mime.MediaTypeNames;
 
 public class PopUpTextSignScript : MonoBehaviour
 {
-    GameObject npcText;
-    GameObject scrollbar;
+    
 
     DialogBoxManagerScript dialogBoxManagerScript;
 
     public string npcDialog = "";
 
     private void Start()
-    {
-        npcText = GameObject.Find("NPCText");
-        
-        scrollbar = GameObject.Find("Scrollbar Vertical");
-
+    {  
         dialogBoxManagerScript = GameObject.Find("DialogBoxManager").GetComponent<DialogBoxManagerScript>();
     }
 

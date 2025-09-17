@@ -6,11 +6,11 @@ using UnityEngine.SceneManagement;
 public class PortalScript : MonoBehaviour
 {
     [SerializeField] GameObject loadingScreen;
-    GameObject dialogBox;
+    DialogBoxManagerScript dialogBoxManagerScript;
 
     private void Awake()
     {
-        dialogBox = GameObject.Find("DialogBox");
+        dialogBoxManagerScript = GameObject.Find("DialogBoxManager").GetComponent<DialogBoxManagerScript>();
     }
 
     private void OnTriggerEnter2D(Collider2D collider)
@@ -18,7 +18,7 @@ public class PortalScript : MonoBehaviour
         if (collider.CompareTag("Player"))
         {
             loadingScreen.SetActive(true);
-            dialogBox.SetActive(true);
+            dialogBoxManagerScript.BoxSleep(true);
             SceneManager.LoadScene("StageOneLevelA");
             collider.GetComponent<PlayerControllerScript>().ReturnToStart();
         }
