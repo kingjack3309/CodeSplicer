@@ -8,6 +8,7 @@ public class DialogBoxManagerScript : MonoBehaviour
 
     private void Start()
     {
+        DontDestroyOnLoad(this.gameObject);
         dialogBox = GameObject.Find("DialogBox");
         dialogBox.SetActive(false);
     }
@@ -16,4 +17,6 @@ public class DialogBoxManagerScript : MonoBehaviour
     {
         dialogBox.SetActive(boolChoice);
     }
+
+
 }
