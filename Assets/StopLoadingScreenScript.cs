@@ -4,15 +4,17 @@ using UnityEngine;
 
 public class StopLoadingScreenScript : MonoBehaviour
 {
+
+    GameObject loadingScreen;
+
     // Start is called before the first frame update
     void Start()
     {
-        
-    }
+        loadingScreen = GameObject.Find("LoadingScreen");
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        if (loadingScreen != null && loadingScreen.activeSelf == true)
+        {
+            loadingScreen.SetActive(false);
+        } 
     }
 }

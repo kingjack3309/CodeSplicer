@@ -2,11 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class HealthManagerScript : MonoBehaviour
 {
 
     Slider healthSlider;
+
+    GameObject healthText;
+
+    private string healthRemaining;
 
     public int maxHealth = 100;
     private int currentHealth;
@@ -16,9 +21,11 @@ public class HealthManagerScript : MonoBehaviour
     void Start()
     {
         healthSlider = GetComponent<Slider>();
-        healthSlider.value = currentHealth;
         currentHealth = maxHealth;
-    }
+        healthSlider.value = currentHealth;
+
+        healthText = GameObject.Find("HealthText");
+     }
 
     // Update is called once per frame
     void Update()
@@ -29,6 +36,8 @@ public class HealthManagerScript : MonoBehaviour
         }
 
         healthSlider.value = currentHealth;
+        healthRemaining = healthSlider.value.ToString();
+        healthText.GetComponent<TMP_Text>().text = healthRemaining + "/100";
     }
 
     public void LoseHealth(int damage)
