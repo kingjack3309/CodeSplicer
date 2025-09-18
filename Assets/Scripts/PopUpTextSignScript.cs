@@ -22,7 +22,6 @@ public class PopUpTextSignScript : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            dialogBoxManagerScript.BoxSleep(true);
             dialogBoxManagerScript.ChangeDialog(npcDialog);
         }
     }
@@ -31,7 +30,6 @@ public class PopUpTextSignScript : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            dialogBoxManagerScript.BoxSleep(false);
             dialogBoxManagerScript.ClearDialog();
         }
     }

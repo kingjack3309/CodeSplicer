@@ -4,15 +4,14 @@ using UnityEngine;
 
 public class SpikeScript : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] float knockbackX = 0;
+    [SerializeField] float knockbackY = 15;
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            collision.gameObject.GetComponent<PlayerControllerScript>().RemoveHealth(10);
+            collision.gameObject.GetComponent<PlayerControllerScript>().Knockback(knockbackX, knockbackY);
+        }
     }
 }

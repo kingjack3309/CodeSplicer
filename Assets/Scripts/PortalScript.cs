@@ -18,7 +18,7 @@ public class PortalScript : MonoBehaviour
         if (collider.CompareTag("Player"))
         {
             loadingScreen.SetActive(true);
-            dialogBoxManagerScript.BoxSleep(true);
+            dialogBoxManagerScript.BoxActive(true);
             SceneManager.LoadScene("StageOneLevelA");
             collider.GetComponent<PlayerControllerScript>().ReturnToStart();
         }

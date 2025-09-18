@@ -23,7 +23,7 @@ public class DialogBoxManagerScript : MonoBehaviour
         dialogBox.SetActive(false);
     }
 
-    public void BoxSleep(bool boolChoice)
+    public void BoxActive(bool boolChoice)
     {
         dialogBox.SetActive(boolChoice);
     }
@@ -32,11 +32,25 @@ public class DialogBoxManagerScript : MonoBehaviour
     {
         scrollbar.GetComponent<Scrollbar>().value = 1;
         npcText.GetComponent<TMP_Text>().text = npcDialogue;
+        BoxActive(true);
     }
 
     public void ClearDialog()
     {
         npcText.GetComponent<TMP_Text>().text = "";
+        BoxActive(false);
+    }
+
+    public bool GetDialogActive()
+    {
+        if (dialogBox != null)
+        {
+            return dialogBox.activeSelf;
+        }
+        else
+        {
+            return false;
+        }
     }
 
 }

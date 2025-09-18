@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -30,10 +31,18 @@ public class PlayerControllerScript : MonoBehaviour
 
     HealthManagerScript healthManager;
 
+    GemManager gemManager;
+
+    [Header("------public Variables------")]
+
+    public float dashStrength = 20f;
+    float dashPower;
+
     private void Start()
     {
         healthManager = GameObject.Find("healthbar").GetComponent<HealthManagerScript>();
         audioSource = gameObject.GetComponent<AudioSource>();
+        gemManager = GameObject.Find("GemsText").GetComponent<GemManager>();
     }
 
     private void Awake()
@@ -48,12 +57,14 @@ public class PlayerControllerScript : MonoBehaviour
 
         Jump();
 
+        Dash();
+
         Flip();
     }
 
     private void FixedUpdate()
     {
-        rb.velocity =new Vector2(speed * horizontal, rb.velocity.y);
+        rb.velocity = new Vector2(speed * horizontal, rb.velocity.y);
     }
 
     private bool IsGrounded()
@@ -158,5 +169,43 @@ public class PlayerControllerScript : MonoBehaviour
     public void ReturnToStart()
     {
         gameObject.transform.position = new Vector2(0, 0);
+    }
+
+    public void AddGems(int gems)
+    {
+        gemManager.GainGems(gems);
+    }
+
+    public void Knockback(float knockbackStrengthX, float knockbackStrengthY)
+    {
+
+        if (knockbackStrengthX == 0f)
+        {
+            knockbackStrengthX = rb.velocity.x;
+        }
+
+        if (knockbackStrengthY == 0f)
+        {
+            knockbackStrengthY = rb.velocity.y;
+        }
+
+        rb.velocity = new Vector2(knockbackStrengthX, knockbackStrengthY);
+    }
+
+    void Dash()
+    {
+        if(isFacingRight)
+        {
+            dashPower = dashStrength;
+        }
+        else if (!isFacingRight)
+        {
+            dashPower = -dashStrength;
+        }
+
+        if (Input.GetKeyDown(KeyCode.LeftShift))
+        {
+            rb.velocity = new Vector2(dashPower, rb.velocity.y);
+        }
     }
 }

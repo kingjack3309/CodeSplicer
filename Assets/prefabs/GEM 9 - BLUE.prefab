@@ -156,6 +156,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b69912d6f3f0fe8408831b16b6c1f193, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gemSize: 9
 --- !u!50 &2218330503091307759
 Rigidbody2D:
   serializedVersion: 4

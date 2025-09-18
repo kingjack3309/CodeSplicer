@@ -148,6 +148,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b69912d6f3f0fe8408831b16b6c1f193, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gemSize: 10
 --- !u!58 &6556895824880714655
 CircleCollider2D:
   m_ObjectHideFlags: 0

@@ -10,6 +10,9 @@ public class GemHoverScript : MonoBehaviour
     private float upperBound;
     private float lowerBound;
 
+    [Header("gem size only goes up to 10")]
+    [SerializeField] int gemSize = 1;
+
     Rigidbody2D rb;
 
     void Start()
@@ -41,7 +44,8 @@ public class GemHoverScript : MonoBehaviour
     {
         if (collider.CompareTag("Player"))
         {
-            collider.GetComponent<PlayerControllerScript>().PlayGemSound();
+            collider.gameObject.GetComponent<PlayerControllerScript>().AddGems(gemSize);
+            collider.gameObject.GetComponent<PlayerControllerScript>().PlayGemSound();
             gameObject.SetActive(false);
         }
         
