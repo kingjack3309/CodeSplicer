@@ -16,6 +16,8 @@ public class CenematicTriggerScript : MonoBehaviour
 
     public BoxCollider2D triggerCollider;
 
+    [SerializeField] GameObject spinner;
+
     private void Start()
     {
         triggerCollider = GetComponent<BoxCollider2D>();
@@ -47,6 +49,7 @@ public class CenematicTriggerScript : MonoBehaviour
         {
             SFXSource.clip = matches;
             SFXSource.Play();
+            spinner.SetActive(true);
         }
 
         if (SFXSource.clip == matches && !SFXSource.isPlaying)

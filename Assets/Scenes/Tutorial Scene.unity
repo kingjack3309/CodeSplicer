@@ -156,9 +156,9 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 434638160}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 1, y: 0}
-  m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -54, y: 54}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 128, y: 128}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2016492
@@ -139574,9 +139574,21 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3594842106021151672, guid: ae89c58a72bff4b479acd38d1368841e, type: 3}
+      propertyPath: nextScene
+      value: StageOneLevelA
+      objectReference: {fileID: 0}
+    - target: {fileID: 3594842106021151672, guid: ae89c58a72bff4b479acd38d1368841e, type: 3}
       propertyPath: loadingScreen
       value: 
       objectReference: {fileID: 362157171}
+    - target: {fileID: 3594842106021151672, guid: ae89c58a72bff4b479acd38d1368841e, type: 3}
+      propertyPath: nextLevelRandomized
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3594842106021151672, guid: ae89c58a72bff4b479acd38d1368841e, type: 3}
+      propertyPath: sceneList.Array.size
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6082580248310853551, guid: ae89c58a72bff4b479acd38d1368841e, type: 3}
       propertyPath: m_Name
       value: portal_0
