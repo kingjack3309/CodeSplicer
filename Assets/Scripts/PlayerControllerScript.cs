@@ -205,7 +205,7 @@ public class PlayerControllerScript : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.LeftShift))
         {
-            rb.velocity = new Vector2(dashPower, rb.velocity.y);
+            rb.velocity = new Vector2(rb.velocity.x + dashPower, rb.velocity.y);
         }
     }
 }
