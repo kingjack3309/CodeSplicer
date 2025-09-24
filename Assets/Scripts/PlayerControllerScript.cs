@@ -33,10 +33,13 @@ public class PlayerControllerScript : MonoBehaviour
 
     GemManager gemManager;
 
-    [Header("------public Variables------")]
+    CodePickupData onLeftClick;
+    CodePickupData onRightClick;
 
-    public float dashStrength = 20f;
-    float dashPower;
+    //[Header("------public Variables------")]
+
+    //public float dashStrength = 20f;
+    //float dashPower;
 
     private void Start()
     {
@@ -57,9 +60,16 @@ public class PlayerControllerScript : MonoBehaviour
 
         Jump();
 
-        Dash();
+        //Dash();
 
         Flip();
+
+        //_____________________
+        //Code Snippet section
+        if (Input.GetMouseButtonDown(0) && onLeftClick != null)
+        {
+            onLeftClick.Execute();
+        }
     }
 
     private void FixedUpdate()
@@ -192,20 +202,20 @@ public class PlayerControllerScript : MonoBehaviour
         rb.velocity = new Vector2(knockbackStrengthX, knockbackStrengthY);
     }
 
-    void Dash()
-    {
-        if(isFacingRight)
-        {
-            dashPower = dashStrength;
-        }
-        else if (!isFacingRight)
-        {
-            dashPower = -dashStrength;
-        }
+    //void Dash()
+    //{
+    //    if(isFacingRight)
+    //    {
+    //        dashPower = dashStrength;
+    //    }
+    //    else if (!isFacingRight)
+    //    {
+    //        dashPower = -dashStrength;
+    //    }
 
-        if (Input.GetKeyDown(KeyCode.LeftShift))
-        {
-            rb.velocity = new Vector2(rb.velocity.x + dashPower, rb.velocity.y);
-        }
-    }
+    //    if (Input.GetKeyDown(KeyCode.LeftShift))
+    //    {
+    //        rb.velocity = new Vector2(rb.velocity.x + dashPower, rb.velocity.y);
+    //    }
+    //}
 }
