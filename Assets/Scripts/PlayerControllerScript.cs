@@ -26,6 +26,7 @@ public class PlayerControllerScript : MonoBehaviour
     [Header("------Audio Clips------")]
     public AudioClip coinCollected;
     public AudioClip foodCollected;
+    public AudioClip gotStabbed;
 
     AudioSource audioSource;
 
@@ -33,13 +34,7 @@ public class PlayerControllerScript : MonoBehaviour
 
     GemManager gemManager;
 
-    CodePickupData onLeftClick;
-    CodePickupData onRightClick;
-
-    //[Header("------public Variables------")]
-
-    //public float dashStrength = 20f;
-    //float dashPower;
+    public List<ModData> onLeftClickMods; //every mod to be triggered on left click 
 
     private void Start()
     {
@@ -60,15 +55,16 @@ public class PlayerControllerScript : MonoBehaviour
 
         Jump();
 
-        //Dash();
-
         Flip();
 
         //_____________________
         //Code Snippet section
-        if (Input.GetMouseButtonDown(0) && onLeftClick != null)
+        if (Input.GetMouseButtonDown(0) && onLeftClickMods != null)
         {
-            onLeftClick.Execute();
+            foreach (ModData m in onLeftClickMods)
+            {
+                m.Execute();
+            }
         }
     }
 
@@ -161,6 +157,8 @@ public class PlayerControllerScript : MonoBehaviour
     public void RemoveHealth(int amount)
     {
         healthManager.LoseHealth(amount);
+        audioSource.clip = gotStabbed;
+        audioSource.Play();
     }
 
 
@@ -201,21 +199,4 @@ public class PlayerControllerScript : MonoBehaviour
 
         rb.velocity = new Vector2(knockbackStrengthX, knockbackStrengthY);
     }
-
-    //void Dash()
-    //{
-    //    if(isFacingRight)
-    //    {
-    //        dashPower = dashStrength;
-    //    }
-    //    else if (!isFacingRight)
-    //    {
-    //        dashPower = -dashStrength;
-    //    }
-
-    //    if (Input.GetKeyDown(KeyCode.LeftShift))
-    //    {
-    //        rb.velocity = new Vector2(rb.velocity.x + dashPower, rb.velocity.y);
-    //    }
-    //}
 }

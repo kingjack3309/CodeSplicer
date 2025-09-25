@@ -302,8 +302,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1428197701}
   m_HandleRect: {fileID: 1428197700}
   m_Direction: 2
-  m_Value: 1
-  m_Size: 0.43053105
+  m_Value: 1.0000002
+  m_Size: 0.43053102
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -7797,10 +7797,10 @@ RectTransform:
   - {fileID: 434638160}
   m_Father: {fileID: 700138467}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: -1090, y: -560}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &434638159
 GameObject:
@@ -8146,11 +8146,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
-  m_ScreenMatchMode: 0
+  m_ScreenMatchMode: 1
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
@@ -139939,6 +139939,10 @@ PrefabInstance:
       propertyPath: m_Points.m_Paths.Array.data[0].Array.data[39].y
       value: -1.311807
       objectReference: {fileID: 0}
+    - target: {fileID: 3111439343588868274, guid: 0ff44ad5f2b49794693395b7567c241c, type: 3}
+      propertyPath: MinDistance
+      value: 0.8776754
+      objectReference: {fileID: 0}
     - target: {fileID: 3682268036815900864, guid: 0ff44ad5f2b49794693395b7567c241c, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -139980,9 +139984,21 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5169526782123754406, guid: 0ff44ad5f2b49794693395b7567c241c, type: 3}
+      propertyPath: gotStabbed
+      value: 
+      objectReference: {fileID: 8300000, guid: c9da95f4ed5aff6429cce7d95b451ca8, type: 3}
+    - target: {fileID: 5169526782123754406, guid: 0ff44ad5f2b49794693395b7567c241c, type: 3}
       propertyPath: dashStrength
       value: 20
       objectReference: {fileID: 0}
+    - target: {fileID: 5169526782123754406, guid: 0ff44ad5f2b49794693395b7567c241c, type: 3}
+      propertyPath: onLeftClickMods.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5169526782123754406, guid: 0ff44ad5f2b49794693395b7567c241c, type: 3}
+      propertyPath: onLeftClickMods.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: ef47e737f2d8556479dc25a92691d79b, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

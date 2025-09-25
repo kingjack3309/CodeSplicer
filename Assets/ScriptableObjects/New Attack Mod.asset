@@ -9,6 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0707356f3469b70479736abc7427fdaa, type: 3}
-  m_Name: New Code Pickup Data
+  m_Script: {fileID: 11500000, guid: 58c86f9b09b756b42b2a902d89727a48, type: 3}
+  m_Name: New Attack Mod
   m_EditorClassIdentifier: 
+  rarity: Common
