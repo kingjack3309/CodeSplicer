@@ -19,6 +19,8 @@ public class PlayerControllerScript : MonoBehaviour
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask groundLayer;
+    [SerializeField] private LayerMask oneWayPlatformLayer;
+
 
     public float groundCheckWidth = 1.26f;
     private float groundCheckHeight = 0.2f;
@@ -57,6 +59,8 @@ public class PlayerControllerScript : MonoBehaviour
 
         Flip();
 
+        DropDown();
+
         //_____________________
         //Code Snippet section
         if (Input.GetMouseButtonDown(0) && onLeftClickMods != null)
@@ -76,6 +80,11 @@ public class PlayerControllerScript : MonoBehaviour
     private bool IsGrounded()
     {
         return Physics2D.OverlapBox(groundCheck.position, new Vector2(groundCheckWidth, groundCheckHeight), 0, groundLayer);
+    }
+
+    private bool IsGrounded2()
+    {
+        return Physics2D.OverlapBox(groundCheck.position, new Vector2(groundCheckWidth, groundCheckHeight), 0, oneWayPlatformLayer);
     }
 
     private void OnDrawGizmos() 
@@ -106,7 +115,7 @@ public class PlayerControllerScript : MonoBehaviour
     {
         //if you not grounded coyote timer starts
 
-        if (IsGrounded())
+        if (IsGrounded() || IsGrounded2())
         {
             coyoteTimeCounter = coyoteTime;
         }
@@ -117,12 +126,12 @@ public class PlayerControllerScript : MonoBehaviour
 
         //checking if you can double jump
 
-        if (doubleJumpped && IsGrounded())
+        if (doubleJumpped && (IsGrounded() || IsGrounded2()))
         {
             doubleJumpped = false;
         }
 
-        if (!IsGrounded() && !doubleJumpped) 
+        if ((!IsGrounded() || !IsGrounded2()) && !doubleJumpped) 
         { 
             canDoubleJump = true;
         }
@@ -133,7 +142,7 @@ public class PlayerControllerScript : MonoBehaviour
 
         //the actual jump
 
-        if ((Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.Space)) && (IsGrounded() || coyoteTimeCounter > 0f))
+        if ((Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.Space)) && ((IsGrounded() || IsGrounded2()) || coyoteTimeCounter > 0f))
         {
             rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
 
@@ -198,5 +207,17 @@ public class PlayerControllerScript : MonoBehaviour
         }
 
         rb.velocity = new Vector2(knockbackStrengthX, knockbackStrengthY);
+    }
+
+    private void DropDown()
+    {
+        if (Input.GetAxis("vertical") == -1)
+        {
+            Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("Player"), LayerMask.NameToLayer("OneWayPlatform"), true);
+        }
+        else
+        {
+            Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("Player"), LayerMask.NameToLayer("OneWayPlatform"), false);
+        }
     }
 }
