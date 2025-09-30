@@ -18,12 +18,17 @@ public class PlayerControllerScript : MonoBehaviour
 
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private Transform groundCheck;
+    [SerializeField] private Transform enemyCheck;
+    [SerializeField] private LayerMask enemyLayer;
     [SerializeField] private LayerMask groundLayer;
     [SerializeField] private LayerMask oneWayPlatformLayer;
 
-
-    public float groundCheckWidth = 1.26f;
+    // Gizmo size parameters
+    private float groundCheckWidth = 1.16f;
     private float groundCheckHeight = 0.2f;
+
+    private float enemyCheckWidth = 1;
+    private float enemyCheckHeight = 3;
 
     [Header("------Audio Clips------")]
     public AudioClip coinCollected;
@@ -58,8 +63,6 @@ public class PlayerControllerScript : MonoBehaviour
         Jump();
 
         Flip();
-
-        DropDown();
 
         //_____________________
         //Code Snippet section
@@ -98,6 +101,17 @@ public class PlayerControllerScript : MonoBehaviour
         // Draw a wire cube outline.
         Gizmos.color = Color.white;
         Gizmos.DrawWireCube(groundCheck.position, new Vector3(groundCheckWidth, groundCheckHeight, 0));
+
+
+        // Set the color with custom alpha.
+        Gizmos.color = new Color(0f, 1f, 0f, 10); // Green with custom alpha
+
+        // Draw the cube.
+        Gizmos.DrawCube(enemyCheck.position, new Vector3(enemyCheckWidth, enemyCheckHeight, 0));
+
+        // Draw a wire cube outline.
+        Gizmos.color = Color.white;
+        Gizmos.DrawWireCube(enemyCheck.position, new Vector3(enemyCheckWidth, enemyCheckHeight, 0));
     }
 
     private void Flip()
@@ -158,6 +172,8 @@ public class PlayerControllerScript : MonoBehaviour
         }
     }
 
+    //-------start public functions----------
+
     public void AddHealth(int amount)
     {
         healthManager.GainHealth(amount);
@@ -169,7 +185,6 @@ public class PlayerControllerScript : MonoBehaviour
         audioSource.clip = gotStabbed;
         audioSource.Play();
     }
-
 
     public void PlayGemSound()
     {
@@ -209,15 +224,14 @@ public class PlayerControllerScript : MonoBehaviour
         rb.velocity = new Vector2(knockbackStrengthX, knockbackStrengthY);
     }
 
-    private void DropDown()
+    public void AddMod(ModData mod)
     {
-        if (Input.GetAxis("vertical") == -1)
-        {
-            Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("Player"), LayerMask.NameToLayer("OneWayPlatform"), true);
-        }
-        else
-        {
-            Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("Player"), LayerMask.NameToLayer("OneWayPlatform"), false);
-        }
+        onLeftClickMods.Add(mod);
     }
+
+    public bool CanHitEnemy()
+    {
+        return Physics2D.OverlapBox(enemyCheck.position, new Vector2(enemyCheckWidth, enemyCheckHeight), 0, enemyLayer);
+    }
+
 }

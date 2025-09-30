@@ -9,8 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5427652937852799144}
-  m_Layer: 0
-  m_Name: groundCheck
+  m_Layer: 7
+  m_Name: GroundCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -45,7 +45,7 @@ GameObject:
   - component: {fileID: 5169526782123754406}
   - component: {fileID: 3111439343588868274}
   - component: {fileID: 3038086704128739988}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -66,6 +66,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5427652937852799144}
+  - {fileID: 6724130243340678257}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &360988939634730456
@@ -161,12 +162,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 4600247993214014506}
   groundCheck: {fileID: 5427652937852799144}
+  enemyCheck: {fileID: 6724130243340678257}
   groundLayer:
     serializedVersion: 2
     m_Bits: 64
+  oneWayPlatformLayer:
+    serializedVersion: 2
+    m_Bits: 256
   groundCheckWidth: 1.16
   coinCollected: {fileID: 8300000, guid: f60b915cdcb02cc40998e4d1f0c2d1f4, type: 3}
   foodCollected: {fileID: 8300000, guid: cbb9c2c5ffa7ddb45af8ef35b3651e38, type: 3}
+  gotStabbed: {fileID: 0}
+  onLeftClickMods: []
 --- !u!82 &3111439343588868274
 AudioSource:
   m_ObjectHideFlags: 0
@@ -307,24 +314,12 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0.57696575, y: -1.1956155}
-      - {x: 0.59, y: -0.905}
-      - {x: 0.53999996, y: -0.775}
-      - {x: 0.47, y: -0.755}
-      - {x: 0.47, y: -0.575}
-      - {x: 0.39999998, y: -0.555}
-      - {x: 0.39999998, y: -0.415}
-      - {x: 0.32999998, y: -0.39499998}
+    - - {x: 0.5683073, y: -0.9055943}
+      - {x: 0.5163305, y: -0.7766209}
+      - {x: 0.45250788, y: -0.585887}
+      - {x: 0.3825079, y: -0.41970956}
       - {x: 0.32999998, y: -0.235}
       - {x: 0.34, y: -0.16499999}
-      - {x: 0.37, y: -0.325}
-      - {x: 0.44, y: -0.315}
-      - {x: 0.52, y: -0.235}
-      - {x: 0.66999996, y: 0.074999996}
-      - {x: 0.66999996, y: 0.355}
-      - {x: 0.56, y: 0.39499998}
-      - {x: 0.45999998, y: 0.355}
-      - {x: 0.39999998, y: 0.235}
       - {x: 0.41, y: 0.66499996}
       - {x: 0.41, y: 0.825}
       - {x: 0.37, y: 1.0849999}
@@ -338,18 +333,41 @@ PolygonCollider2D:
       - {x: -0.53, y: 0.105}
       - {x: -0.62, y: -0.015}
       - {x: -0.62, y: -0.505}
-      - {x: -0.52, y: -0.60499996}
-      - {x: -0.59999996, y: -1.035}
-      - {x: -0.5999777, y: -1.2548176}
-      - {x: -0.6020399, y: -1.3191624}
-      - {x: -0.6029925, y: -1.3501433}
-      - {x: -0.54197145, y: -1.3630102}
-      - {x: -0.52, y: -1.365}
-      - {x: 0.39, y: -1.365}
-      - {x: 0.41, y: -1.295}
-      - {x: 0.57891184, y: -1.311807}
+      - {x: -0.5917909, y: -1.3066678}
+      - {x: 0.566144, y: -1.3883008}
     - - {x: 0.24, y: 0.015}
       - {x: 0.22999999, y: 0.015}
       - {x: 0.22999999, y: -0.024999999}
       - {x: 0.24, y: -0.024999999}
   m_UseDelaunayMesh: 0
+--- !u!1 &8842113175816710106
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6724130243340678257}
+  m_Layer: 7
+  m_Name: EnemyCheck
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6724130243340678257
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8842113175816710106}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.1575, y: -0.0904, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3682268036815900864}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
