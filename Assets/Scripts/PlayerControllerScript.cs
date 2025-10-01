@@ -101,17 +101,6 @@ public class PlayerControllerScript : MonoBehaviour
         // Draw a wire cube outline.
         Gizmos.color = Color.white;
         Gizmos.DrawWireCube(groundCheck.position, new Vector3(groundCheckWidth, groundCheckHeight, 0));
-
-
-        // Set the color with custom alpha.
-        Gizmos.color = new Color(0f, 1f, 0f, 10); // Green with custom alpha
-
-        // Draw the cube.
-        Gizmos.DrawCube(enemyCheck.position, new Vector3(enemyCheckWidth, enemyCheckHeight, 0));
-
-        // Draw a wire cube outline.
-        Gizmos.color = Color.white;
-        Gizmos.DrawWireCube(enemyCheck.position, new Vector3(enemyCheckWidth, enemyCheckHeight, 0));
     }
 
     private void Flip()
@@ -228,10 +217,4 @@ public class PlayerControllerScript : MonoBehaviour
     {
         onLeftClickMods.Add(mod);
     }
-
-    public bool CanHitEnemy()
-    {
-        return Physics2D.OverlapBox(enemyCheck.position, new Vector2(enemyCheckWidth, enemyCheckHeight), 0, enemyLayer);
-    }
-
 }

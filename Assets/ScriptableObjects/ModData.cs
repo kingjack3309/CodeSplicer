@@ -6,6 +6,6 @@ using UnityEngine;
 [CreateAssetMenu]
 public abstract class ModData : ScriptableObject
 {
-    public string rarity = "Common";
+    public string rarity = "";
     public abstract void Execute();
 }
