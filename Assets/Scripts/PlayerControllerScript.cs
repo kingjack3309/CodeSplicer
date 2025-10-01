@@ -9,7 +9,7 @@ public class PlayerControllerScript : MonoBehaviour
     private float horizontal;
     private float speed = 8f;
     private float jumpingPower = 13f;
-    private bool isFacingRight = false;
+    public bool isFacingRight = false;
     private bool canDoubleJump = false;
     private bool doubleJumpped = false;
 
@@ -26,9 +26,6 @@ public class PlayerControllerScript : MonoBehaviour
     // Gizmo size parameters
     private float groundCheckWidth = 1.16f;
     private float groundCheckHeight = 0.2f;
-
-    private float enemyCheckWidth = 1;
-    private float enemyCheckHeight = 3;
 
     [Header("------Audio Clips------")]
     public AudioClip coinCollected;

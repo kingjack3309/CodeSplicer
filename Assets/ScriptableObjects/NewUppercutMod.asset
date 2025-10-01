@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: NewUppercutMod
   m_EditorClassIdentifier: 
   rarity: Common
+  uppercutPrefab: {fileID: 1071949891972383840, guid: 3a18690157e51164abf9236bbaf719aa, type: 3}

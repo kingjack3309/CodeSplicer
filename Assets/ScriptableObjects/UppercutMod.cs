@@ -5,21 +5,23 @@ using UnityEngine;
 [CreateAssetMenu]
 public class UppercutMod : ModData
 {
-    GameObject UppercutPrefab;
+    public GameObject uppercutPrefab;
 
-    GameObject player;
-
-    private float playerX;
-    private float playerY;
-
-    private void Awake()
-    {
-        playerX = player.transform.position.x;
-        playerY = player.transform.position.y;
-    }
-    
+    Vector3 offset;
+   
     public override void Execute()
     {
-        Instantiate(UppercutPrefab, new Vector3(playerX, playerY, 0));
+        if (GameObject.Find("player").GetComponent<PlayerControllerScript>().isFacingRight)
+        {
+            offset = new Vector3(2, 0, 0);
+            uppercutPrefab.GetComponent<SpriteRenderer>().flipX = true;
+            uppercutPrefab.transform.rotation = new Vector3(0, 0, 41.5f);
+        }
+        else
+        {
+            offset = new Vector3(-2, 0, 0);
+            uppercutPrefab.GetComponent<SpriteRenderer>().flipX = false;
+        }
+        Instantiate(uppercutPrefab, GameObject.Find("player").transform.position + offset, uppercutPrefab.transform.rotation);
     }
 }
