@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 100c61a04a1df394eb18d8afd2ec9a11
+guid: a4ce3cd49a9521a4f9649288f6e9b220
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -97,7 +97,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: FistSwipe 1_0
+      name: FistSwipe2_0
       rect:
         serializedVersion: 2
         x: 0
@@ -111,14 +111,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 562c453ac6f45fb4d8ad7c3ab411d12d
-      internalID: -1931369889
+      spriteID: 0a7ce823e5e97f948867dd509c6e3ed7
+      internalID: -1119181345
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: FistSwipe 1_1
+      name: FistSwipe2_1
       rect:
         serializedVersion: 2
         x: 16
@@ -132,14 +132,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9b37d6c8c5470a54fbd12900545ad38d
-      internalID: 1859874007
+      spriteID: c02eb9fccb390a04e83bc8baa5b0670a
+      internalID: 320231692
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: FistSwipe 1_2
+      name: FistSwipe2_2
       rect:
         serializedVersion: 2
         x: 32
@@ -153,14 +153,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c576014383da9ba4a8831f11acdc1d09
-      internalID: -1497157764
+      spriteID: d440f09ecdfb62140b049f911142bfda
+      internalID: 821791132
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: FistSwipe 1_3
+      name: FistSwipe2_3
       rect:
         serializedVersion: 2
         x: 48
@@ -174,8 +174,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3469cc1277f2d8747ac695a6c2a51b3d
-      internalID: -1284451801
+      spriteID: 4a5988d9836a3e541808c8b2d3e86f3e
+      internalID: -1798497692
       vertices: []
       indices: 
       edges: []
@@ -191,10 +191,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      FistSwipe 1_0: -1931369889
-      FistSwipe 1_1: 1859874007
-      FistSwipe 1_2: -1497157764
-      FistSwipe 1_3: -1284451801
+      FistSwipe2_0: -1119181345
+      FistSwipe2_1: 320231692
+      FistSwipe2_2: 821791132
+      FistSwipe2_3: -1798497692
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

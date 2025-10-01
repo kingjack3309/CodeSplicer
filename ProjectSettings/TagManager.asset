@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Gem
   - Collectable
+  - Enemy
   layers:
   - Default
   - TransparentFX
