@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class UppercutSpriteManager : MonoBehaviour
 {
+    private void Awake()
+    {
+        StartCoroutine(KillObject());
+    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -13,4 +17,9 @@ public class UppercutSpriteManager : MonoBehaviour
         }
     }
 
+    IEnumerator KillObject()
+    {
+        yield return new WaitForSeconds(0.25f);
+        Destroy(gameObject);
+    }
 }

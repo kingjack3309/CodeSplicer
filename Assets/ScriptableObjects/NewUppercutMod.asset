@@ -14,3 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rarity: Common
   uppercutPrefab: {fileID: 1071949891972383840, guid: 3a18690157e51164abf9236bbaf719aa, type: 3}
+  uppercutAngle: {x: 0, y: 0, z: 41.5}
+  offsetX: 1
+  offsetY: 0.5

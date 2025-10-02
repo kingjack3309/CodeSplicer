@@ -7,21 +7,27 @@ public class UppercutMod : ModData
 {
     public GameObject uppercutPrefab;
 
-    Vector3 offset;
+    public Vector3 uppercutAngle;
+
+    public float offsetX;
+    public float offsetY;
+    Vector3 offsetVector;
    
     public override void Execute()
     {
+        uppercutPrefab.GetComponent<SpriteRenderer>().flipX = false;
+
         if (GameObject.Find("player").GetComponent<PlayerControllerScript>().isFacingRight)
         {
-            offset = new Vector3(2, 0, 0);
-            uppercutPrefab.GetComponent<SpriteRenderer>().flipX = true;
-            uppercutPrefab.transform.rotation = new Vector3(0, 0, 41.5f);
+            offsetVector = new Vector3(offsetX, offsetY, 0);
+            uppercutPrefab.transform.eulerAngles = -uppercutAngle;
+
         }
         else
         {
-            offset = new Vector3(-2, 0, 0);
-            uppercutPrefab.GetComponent<SpriteRenderer>().flipX = false;
+            offsetVector = new Vector3(-offsetX, offsetY, 0);
+            uppercutPrefab.transform.eulerAngles = uppercutAngle;
         }
-        Instantiate(uppercutPrefab, GameObject.Find("player").transform.position + offset, uppercutPrefab.transform.rotation);
+        Instantiate(uppercutPrefab, GameObject.Find("player").transform.position + offsetVector, uppercutPrefab.transform.rotation, GameObject.Find("player").transform);
     }
 }
