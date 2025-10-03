@@ -18,14 +18,23 @@ public class PlayerControllerScript : MonoBehaviour
 
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private Transform groundCheck;
-    [SerializeField] private Transform enemyCheck;
+    [SerializeField] private Transform stuckCheck;
+    [SerializeField] private Transform stuckCheck2;
     [SerializeField] private LayerMask enemyLayer;
     [SerializeField] private LayerMask groundLayer;
     [SerializeField] private LayerMask oneWayPlatformLayer;
 
     // Gizmo size parameters
     private float groundCheckWidth = 1.16f;
-    private float groundCheckHeight = 0.2f;
+    private float groundCheckHeight = 1;
+
+    private float stuckCheckWidth = 1;
+    private float stuckCheckHeight = 0.75f;
+
+    private float stuckCheckWidth2 = 1;
+    private float stuckCheckHeight2 = 2f;
+
+    public bool drawGizmos = true;
 
     [Header("------Audio Clips------")]
     public AudioClip coinCollected;
@@ -76,28 +85,45 @@ public class PlayerControllerScript : MonoBehaviour
     {
         rb.velocity = new Vector2(speed * horizontal, rb.velocity.y);
     }
-
-    private bool IsGrounded()
-    {
-        return Physics2D.OverlapBox(groundCheck.position, new Vector2(groundCheckWidth, groundCheckHeight), 0, groundLayer);
-    }
-
-    private bool IsGrounded2()
-    {
-        return Physics2D.OverlapBox(groundCheck.position, new Vector2(groundCheckWidth, groundCheckHeight), 0, oneWayPlatformLayer);
-    }
-
+    
     private void OnDrawGizmos() 
     {
-        // Set the color with custom alpha.
-        Gizmos.color = new Color(0f, 1f, 0f, 10); // Green with custom alpha
+        if (drawGizmos) 
+        { 
+            // Set the color with custom alpha.
+            Gizmos.color = new Color(0f, 1f, 0f, 10); // Green with custom alpha
 
-        // Draw the cube.
-        Gizmos.DrawCube(groundCheck.position, new Vector3(groundCheckWidth, groundCheckHeight, 0));
+            // Draw the cube.
+            Gizmos.DrawCube(groundCheck.position, new Vector3(groundCheckWidth, groundCheckHeight, 0));
 
-        // Draw a wire cube outline.
-        Gizmos.color = Color.white;
-        Gizmos.DrawWireCube(groundCheck.position, new Vector3(groundCheckWidth, groundCheckHeight, 0));
+            // Draw a wire cube outline.
+            Gizmos.color = Color.white;
+            Gizmos.DrawWireCube(groundCheck.position, new Vector3(groundCheckWidth, groundCheckHeight, 0));
+            
+            //------------------------------------------
+
+            // Set the color with custom alpha.
+            Gizmos.color = new Color(1f, 0f, 0f, 50); // red with custom alpha
+
+            // Draw the cube.
+            Gizmos.DrawCube(stuckCheck.position, new Vector3(stuckCheckWidth, stuckCheckHeight, 0));
+
+            // Draw a wire cube outline.
+            Gizmos.color = Color.white;
+            Gizmos.DrawWireCube(stuckCheck.position, new Vector3(stuckCheckWidth, stuckCheckHeight, 0));
+
+            //------------------------------------------
+
+            // Set the color with custom alpha.
+            Gizmos.color = new Color(1f, 0f, 0f, 50); // red with custom alpha
+
+            // Draw the cube.
+            Gizmos.DrawCube(stuckCheck2.position, new Vector3(stuckCheckWidth2, stuckCheckHeight2, 0));
+
+            // Draw a wire cube outline.
+            Gizmos.color = Color.white;
+            Gizmos.DrawWireCube(stuckCheck2.position, new Vector3(stuckCheckWidth2, stuckCheckHeight2, 0));
+        }
     }
 
     private void Flip()
@@ -159,6 +185,25 @@ public class PlayerControllerScript : MonoBehaviour
     }
 
     //-------start public functions----------
+
+    public bool IsGrounded()
+    {
+        return Physics2D.OverlapBox(groundCheck.position, new Vector2(groundCheckWidth, groundCheckHeight), 0, groundLayer);
+    }
+
+    public bool IsGrounded2()
+    {
+        return Physics2D.OverlapBox(groundCheck.position, new Vector2(groundCheckWidth, groundCheckHeight), 0, oneWayPlatformLayer);
+    }
+
+    public bool IsStuck()
+    {
+        return Physics2D.OverlapBox(stuckCheck.position, new Vector2(stuckCheckWidth, stuckCheckHeight), 0, oneWayPlatformLayer);
+    }
+    public bool IsStuck2()
+    {
+        return Physics2D.OverlapBox(stuckCheck2.position, new Vector2(stuckCheckWidth2, stuckCheckHeight2), 0, oneWayPlatformLayer);
+    }
 
     public void AddHealth(int amount)
     {
