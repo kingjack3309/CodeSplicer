@@ -5,16 +5,18 @@ using UnityEngine.SceneManagement;
 
 public class PortalScript : MonoBehaviour
 {
-    [SerializeField] GameObject loadingScreen;
+    GameObject loadingScreen;
     DialogBoxManagerScript dialogBoxManagerScript;
 
     [SerializeField] string nextScene;
     [SerializeField] bool nextLevelRandomized;
 
-    [Header("If level is randomized then pick which scenes will be randomized")]
+    [Header("If level is randomized then pick which")]
+    [Header("scenes will be randomized")]
     [SerializeField] List<string> sceneList = new List<string>();
 
-    [Header("special portals like boss fights will use a level counter and certian scenes wont count to that counter")]
+    [Header("special portals like boss fights will use a level counter")]
+    [Header(" and certian scenes wont count to that counter")]
     [SerializeField] bool sceneCounterAffected = true;
 
     int sceneCounter = 0;
@@ -27,6 +29,12 @@ public class PortalScript : MonoBehaviour
     {
         dialogBoxManagerScript = GameObject.Find("DialogBoxManager").GetComponent<DialogBoxManagerScript>();
         currentScene = SceneManager.GetActiveScene().name;
+        loadingScreen = GameObject.Find("LoadingScreen");
+    }
+
+    private void Start()
+    {
+        loadingScreen.SetActive(false);
     }
 
     private void OnTriggerEnter2D(Collider2D collider)
