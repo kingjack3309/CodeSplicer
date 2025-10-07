@@ -16,7 +16,7 @@ public class PlayerControllerScript : MonoBehaviour
     private float coyoteTime = 0.15f;
     private float coyoteTimeCounter;
 
-    [SerializeField] private Rigidbody2D rb;
+    [SerializeField] public Rigidbody2D rb;
     [SerializeField] private Transform groundCheck;
     [SerializeField] private Transform stuckCheck;
     [SerializeField] private Transform stuckCheck2;
@@ -26,13 +26,10 @@ public class PlayerControllerScript : MonoBehaviour
 
     // Gizmo size parameters
     private float groundCheckWidth = 1.16f;
-    private float groundCheckHeight = 1;
+    private float groundCheckHeight = 0.5f;
 
-    private float stuckCheckWidth = 1;
-    private float stuckCheckHeight = 0.75f;
-
-    private float stuckCheckWidth2 = 1;
-    private float stuckCheckHeight2 = 2f;
+    private float stuckCheckWidth = 1.16f;
+    private float stuckCheckHeight = 0.5f;
 
     public bool drawGizmos = true;
 
@@ -111,18 +108,6 @@ public class PlayerControllerScript : MonoBehaviour
             // Draw a wire cube outline.
             Gizmos.color = Color.white;
             Gizmos.DrawWireCube(stuckCheck.position, new Vector3(stuckCheckWidth, stuckCheckHeight, 0));
-
-            //------------------------------------------
-
-            // Set the color with custom alpha.
-            Gizmos.color = new Color(1f, 0f, 0f, 50); // red with custom alpha
-
-            // Draw the cube.
-            Gizmos.DrawCube(stuckCheck2.position, new Vector3(stuckCheckWidth2, stuckCheckHeight2, 0));
-
-            // Draw a wire cube outline.
-            Gizmos.color = Color.white;
-            Gizmos.DrawWireCube(stuckCheck2.position, new Vector3(stuckCheckWidth2, stuckCheckHeight2, 0));
         }
     }
 
@@ -200,11 +185,7 @@ public class PlayerControllerScript : MonoBehaviour
     {
         return Physics2D.OverlapBox(stuckCheck.position, new Vector2(stuckCheckWidth, stuckCheckHeight), 0, oneWayPlatformLayer);
     }
-    public bool IsStuck2()
-    {
-        return Physics2D.OverlapBox(stuckCheck2.position, new Vector2(stuckCheckWidth2, stuckCheckHeight2), 0, oneWayPlatformLayer);
-    }
-
+    
     public void AddHealth(int amount)
     {
         healthManager.GainHealth(amount);
