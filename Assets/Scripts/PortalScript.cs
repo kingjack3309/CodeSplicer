@@ -35,6 +35,10 @@ public class PortalScript : MonoBehaviour
     private void Start()
     {
         loadingScreen.SetActive(false);
+        if(dialogBoxManagerScript.GetDialogActive()) 
+        {
+            dialogBoxManagerScript.BoxActive(false);
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collider)

@@ -17,9 +17,8 @@ public class PlayerControllerScript : MonoBehaviour
     private float coyoteTimeCounter;
 
     [SerializeField] public Rigidbody2D rb;
-    [SerializeField] private Transform groundCheck;
+    [SerializeField] public Transform groundCheck;
     [SerializeField] private Transform stuckCheck;
-    [SerializeField] private Transform stuckCheck2;
     [SerializeField] private LayerMask enemyLayer;
     [SerializeField] private LayerMask groundLayer;
     [SerializeField] private LayerMask oneWayPlatformLayer;
