@@ -131559,6 +131559,11 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!1 &1518664275 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2987654680649926799, guid: 0ff44ad5f2b49794693395b7567c241c, type: 3}
+  m_PrefabInstance: {fileID: 3569587035334626739}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1569752998
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -131654,7 +131659,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42437347f99cb734d9962389850f9aa3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 10
+  damage: 40
 --- !u!61 &1653706420
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -132168,6 +132173,11 @@ PrefabInstance:
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 6268925084837348597, guid: 1f6001616bbe8564b9f3de610457600e, type: 3}
   m_PrefabInstance: {fileID: 1959165862}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1965575252 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4864497695586010437, guid: e4b3c5460a964dc49a8ed8a79aff5255, type: 3}
+  m_PrefabInstance: {fileID: 3156748728855431795}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1975776516
 GameObject:
@@ -139593,6 +139603,22 @@ PrefabInstance:
       propertyPath: sceneList.Array.size
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3594842106021151672, guid: ae89c58a72bff4b479acd38d1368841e, type: 3}
+      propertyPath: persistentObjects.Array.data[0]
+      value: 
+      objectReference: {fileID: 1518664275}
+    - target: {fileID: 3594842106021151672, guid: ae89c58a72bff4b479acd38d1368841e, type: 3}
+      propertyPath: persistentObjects.Array.data[1]
+      value: 
+      objectReference: {fileID: 1965575252}
+    - target: {fileID: 3594842106021151672, guid: ae89c58a72bff4b479acd38d1368841e, type: 3}
+      propertyPath: persistentObjects.Array.data[2]
+      value: 
+      objectReference: {fileID: 700138463}
+    - target: {fileID: 3594842106021151672, guid: ae89c58a72bff4b479acd38d1368841e, type: 3}
+      propertyPath: persistentObjects.Array.data[3]
+      value: 
+      objectReference: {fileID: 1878605292}
     - target: {fileID: 6082580248310853551, guid: ae89c58a72bff4b479acd38d1368841e, type: 3}
       propertyPath: m_Name
       value: portal_0

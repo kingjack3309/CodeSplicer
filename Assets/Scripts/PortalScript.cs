@@ -25,11 +25,23 @@ public class PortalScript : MonoBehaviour
 
     string currentScene;
 
+    List<GameObject> persistentObjects;
+
+    public void DestroyPersistentObjects()
+    {
+        foreach (GameObject obj in persistentObjects)
+        {
+            Destroy(obj);
+        }
+    }
+
     private void Awake()
     {
         dialogBoxManagerScript = GameObject.Find("DialogBoxManager").GetComponent<DialogBoxManagerScript>();
         currentScene = SceneManager.GetActiveScene().name;
         loadingScreen = GameObject.Find("LoadingScreen");
+
+        persistentObjects = new List<GameObject>() { GameObject.Find("player"), GameObject.Find("Virtual Camera"), GameObject.Find("Canvas"), GameObject.Find("DialogBoxManager") };
     }
 
     private void Start()
@@ -76,6 +88,12 @@ public class PortalScript : MonoBehaviour
                 {
                     nextLevelRandomized = true;
                 }
+
+                if(nextScene == "Main Menu" || nextScene == "Tutorial Scene")
+                {
+                    DestroyPersistentObjects();
+                }
+
                 SceneManager.LoadScene(nextScene);
             }
             else if (nextLevelRandomized)

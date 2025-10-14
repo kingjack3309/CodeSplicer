@@ -9,4 +9,14 @@ public class MenuButtonControler : MonoBehaviour
     {
         SceneManager.LoadScene("CutScene1");
     }
+
+    public void LanguagesButtonFunction()
+    {
+        SceneManager.LoadScene("CutScene1");
+    }
+
+    public void SettingsButtonFunction()
+    {
+        SceneManager.LoadScene("SettingsScreen");
+    }
 }

@@ -155,3 +155,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a2af30f1c868d14f9c86873583052c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  nextScene: 
+  nextLevelRandomized: 0
+  sceneList: []
+  sceneCounterAffected: 1
+  persistentObjects:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
