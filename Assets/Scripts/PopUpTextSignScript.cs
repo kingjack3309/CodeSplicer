@@ -7,22 +7,27 @@ using static System.Net.Mime.MediaTypeNames;
 
 public class PopUpTextSignScript : MonoBehaviour
 {
-    
 
-    DialogBoxManagerScript dialogBoxManagerScript;
+    Canvas canvas;
 
-    public string npcDialog = "";
+    Camera mainCamera;
 
     private void Start()
-    {  
-        dialogBoxManagerScript = GameObject.Find("DialogBoxManager").GetComponent<DialogBoxManagerScript>();
+    {
+        canvas = GetComponentInChildren<Canvas>();
+
+        mainCamera = GameObject.Find("Main Camera").GetComponent<Camera>();
+
+        canvas.worldCamera = mainCamera;
+    
+        canvas.gameObject.SetActive(false);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
         {
-            dialogBoxManagerScript.ChangeDialog(npcDialog);
+            canvas.gameObject.SetActive(true);
         }
     }
 
@@ -30,7 +35,7 @@ public class PopUpTextSignScript : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            dialogBoxManagerScript.ClearDialog();
+            canvas.gameObject.SetActive(false);
         }
     }
 }

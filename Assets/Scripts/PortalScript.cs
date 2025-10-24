@@ -11,12 +11,12 @@ public class PortalScript : MonoBehaviour
     [SerializeField] string nextScene;
     [SerializeField] bool nextLevelRandomized;
 
-    [Header("If level is randomized then pick which")]
+    [Header("If next level is randomized then pick which")]
     [Header("scenes will be randomized")]
     [SerializeField] List<string> sceneList = new List<string>();
 
     [Header("special portals like boss fights will use a level counter")]
-    [Header(" and certian scenes wont count to that counter")]
+    [Header("and certian scenes wont count to that counter")]
     [SerializeField] bool sceneCounterAffected = true;
 
     int sceneCounter = 0;
@@ -37,20 +37,15 @@ public class PortalScript : MonoBehaviour
 
     private void Awake()
     {
-        dialogBoxManagerScript = GameObject.Find("DialogBoxManager").GetComponent<DialogBoxManagerScript>();
         currentScene = SceneManager.GetActiveScene().name;
         loadingScreen = GameObject.Find("LoadingScreen");
 
-        persistentObjects = new List<GameObject>() { GameObject.Find("player"), GameObject.Find("Virtual Camera"), GameObject.Find("Canvas"), GameObject.Find("DialogBoxManager") };
+        persistentObjects = new List<GameObject>() { GameObject.Find("player"), GameObject.Find("Virtual Camera"), GameObject.Find("Canvas")};
     }
 
     private void Start()
     {
         loadingScreen.SetActive(false);
-        if(dialogBoxManagerScript.GetDialogActive()) 
-        {
-            dialogBoxManagerScript.BoxActive(false);
-        }
     }
 
     private void OnTriggerEnter2D(Collider2D collider)
@@ -58,7 +53,6 @@ public class PortalScript : MonoBehaviour
         if (collider.CompareTag("Player"))
         {
             loadingScreen.SetActive(true);
-            dialogBoxManagerScript.BoxActive(true);
 
             if (sceneCounterAffected) 
             { 

@@ -72966,6 +72966,17 @@ PrefabInstance:
       propertyPath: scrollbar
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 1969191245327547214, guid: 14ba0a5fbd7e85741964ca313e664706, type: 3}
+      propertyPath: m_text
+      value: 'Gems can be used in the market to buy new code segments, and food heals
+        you. [Hint]: enemies may drop gems or food, and in rarer cases, code segments.
+
+'
+      objectReference: {fileID: 0}
+    - target: {fileID: 1969191245327547214, guid: 14ba0a5fbd7e85741964ca313e664706, type: 3}
+      propertyPath: m_fontSize
+      value: 0.85
+      objectReference: {fileID: 0}
     - target: {fileID: 7496368611580464241, guid: 14ba0a5fbd7e85741964ca313e664706, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.43789864
@@ -73043,6 +73054,10 @@ PrefabInstance:
     - target: {fileID: -8702613080317710871, guid: 14ba0a5fbd7e85741964ca313e664706, type: 3}
       propertyPath: scrollbar
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1969191245327547214, guid: 14ba0a5fbd7e85741964ca313e664706, type: 3}
+      propertyPath: m_text
+      value: The boxes are just for show and wont mess up your jump.
       objectReference: {fileID: 0}
     - target: {fileID: 7496368611580464241, guid: 14ba0a5fbd7e85741964ca313e664706, type: 3}
       propertyPath: m_LocalPosition.x
