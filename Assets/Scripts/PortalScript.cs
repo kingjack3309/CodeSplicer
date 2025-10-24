@@ -6,7 +6,6 @@ using UnityEngine.SceneManagement;
 public class PortalScript : MonoBehaviour
 {
     GameObject loadingScreen;
-    DialogBoxManagerScript dialogBoxManagerScript;
 
     [SerializeField] string nextScene;
     [SerializeField] bool nextLevelRandomized;

@@ -36,8 +36,8 @@ public class OneWayPlatformManager : MonoBehaviour
 
         if (isColliding && isStuck && GameObject.Find("player").GetComponent<PlayerControllerScript>().rb.velocity.y == 0)
         {
-            Debug.Log(isStuck.ToString());
-            Debug.Log("unstuck the player");
+            //Debug.Log(isStuck.ToString());
+            //Debug.Log("unstuck the player");
             platformEffector.rotationalOffset = 180;
         }
 
@@ -52,8 +52,8 @@ public class OneWayPlatformManager : MonoBehaviour
             isStuck = false;
         }
         isColliding = true;
-        Debug.Log("is Colliding");
-        Debug.Log(isStuck.ToString());
+        //Debug.Log("is Colliding");
+        //Debug.Log(isStuck.ToString());
     }
     private void OnCollisionStay2D(Collision2D collision)
     {
@@ -74,7 +74,7 @@ public class OneWayPlatformManager : MonoBehaviour
     {
         platformEffector.rotationalOffset = 0;
         isColliding = false;
-        Debug.Log("is not Colliding");
-        Debug.Log(isStuck.ToString());
+        //Debug.Log("is not Colliding");
+        //Debug.Log(isStuck.ToString());
     }
 }
