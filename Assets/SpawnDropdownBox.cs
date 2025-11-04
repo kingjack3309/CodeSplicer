@@ -10,6 +10,8 @@ public class SpawnDropdownBox : MonoBehaviour
 
     List<GameObject> dropdownsList = new List<GameObject>();
 
+    public List<GameObject> functionsList = new List<GameObject>();
+
     public void SpawnDropdown()
     {
         GameObject DropdownBox = Instantiate(dropdownPrefab, codeTerminal);
@@ -22,6 +24,15 @@ public class SpawnDropdownBox : MonoBehaviour
         {
             Destroy(dropdownsList[^1]);
             dropdownsList.Remove(dropdownsList[^1]);
+        }
+    }
+
+    public void RemoveFunction()
+    {
+        if (functionsList.Count > 0)
+        {
+            Destroy(functionsList[^1]);
+            functionsList.Remove(functionsList[^1]);
         }
     }
 }
