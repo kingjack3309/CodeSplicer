@@ -8,9 +8,7 @@ public class SpawnDropdownBox : MonoBehaviour
 
     public Transform codeTerminal;
 
-    List<GameObject> dropdownsList = new List<GameObject>();
-
-    public List<GameObject> functionsList = new List<GameObject>();
+    public List<GameObject> dropdownsList = new List<GameObject>();
 
     public void SpawnDropdown()
     {
@@ -24,15 +22,13 @@ public class SpawnDropdownBox : MonoBehaviour
         {
             Destroy(dropdownsList[^1]);
             dropdownsList.Remove(dropdownsList[^1]);
+
+            enableSpawn?.Invoke();
         }
     }
 
-    public void RemoveFunction()
-    {
-        if (functionsList.Count > 0)
-        {
-            Destroy(functionsList[^1]);
-            functionsList.Remove(functionsList[^1]);
-        }
-    }
+    public delegate void EnableSpawnButton();
+    public static EnableSpawnButton enableSpawn;
+
+
 }

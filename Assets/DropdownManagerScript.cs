@@ -28,18 +28,17 @@ public class DropdownManagerScript : MonoBehaviour
     {
         int selectedIndex = change.value;
 
-        if (selectedIndex >= 0 && selectedIndex < spawnableFunctions.Length)
+        GameObject prefabToSpawn = spawnableFunctions[selectedIndex];
+
+        if (prefabToSpawn != null)
         {
-            GameObject prefabToSpawn = spawnableFunctions[selectedIndex];
+            GameObject function = Instantiate(prefabToSpawn, codeTerminal); 
 
-            if (prefabToSpawn != null)
-            {
-                GameObject function = Instantiate(prefabToSpawn, codeTerminal); 
+            GameObject.Find("Spawn Script Holder").GetComponent<SpawnDropdownBox>().RemoveDropdown();
 
-                GameObject.Find("Spawn Script Holder").GetComponent<SpawnDropdownBox>().functionsList.Add(function);
+            GameObject.Find("Spawn Script Holder").GetComponent<SpawnDropdownBox>().dropdownsList.Add(function);
 
-                GameObject.Find("Spawn Script Holder").GetComponent<SpawnDropdownBox>().RemoveDropdown();
-            }
+            GameObject.Find("Add Function Button").GetComponent<Button>().interactable = true;
         }
 
     }
