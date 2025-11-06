@@ -3482,11 +3482,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6035039112217524956, guid: ddc2a2d4b5b256247874c17c1dbe3e9b, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6035039112217524956, guid: ddc2a2d4b5b256247874c17c1dbe3e9b, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6750143736598699570, guid: ddc2a2d4b5b256247874c17c1dbe3e9b, type: 3}
       propertyPath: m_Value
@@ -3742,7 +3742,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &700138464
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4409,11 +4409,11 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_NormalColor: {r: 0.050980397, g: 0.4431373, b: 0, a: 1}
+    m_HighlightedColor: {r: 0.050980397, g: 0.4431373, b: 0, a: 1}
+    m_PressedColor: {r: 0.050980397, g: 0.4431373, b: 0, a: 1}
+    m_SelectedColor: {r: 0.050980397, g: 0.4431373, b: 0, a: 1}
+    m_DisabledColor: {r: 0.03529412, g: 0.24313727, b: 0, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -4450,7 +4450,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 0.15686275, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -62541,7 +62541,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 4.9793224, y: -0.19853401}
+  m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -62552,7 +62552,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 10.958645, y: 0.602932}
+  m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
 --- !u!4 &1653706421
 Transform:
@@ -62563,8 +62563,8 @@ Transform:
   m_GameObject: {fileID: 1653706418}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.2, y: -20.18, z: -0.07047959}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 3.29, y: -20.19, z: -0.07047959}
+  m_LocalScale: {x: 20, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -63147,13 +63147,21 @@ PrefabInstance:
       propertyPath: m_audioClip
       value: 
       objectReference: {fileID: 8300000, guid: e6e8fa81817461f48829cf4ec52d6f36, type: 3}
+    - target: {fileID: 5721130334733393964, guid: 4aa73951ec91ba640b869a7cdf77903c, type: 3}
+      propertyPath: m_Size.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6621757244966663332, guid: 4aa73951ec91ba640b869a7cdf77903c, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 6621757244966663332, guid: 4aa73951ec91ba640b869a7cdf77903c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.75
+      value: 3.29
       objectReference: {fileID: 0}
     - target: {fileID: 6621757244966663332, guid: 4aa73951ec91ba640b869a7cdf77903c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -20.14
+      value: -20.19
       objectReference: {fileID: 0}
     - target: {fileID: 6621757244966663332, guid: 4aa73951ec91ba640b869a7cdf77903c, type: 3}
       propertyPath: m_LocalPosition.z
