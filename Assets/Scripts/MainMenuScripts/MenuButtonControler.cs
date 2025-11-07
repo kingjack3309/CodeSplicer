@@ -12,7 +12,7 @@ public class MenuButtonControler : MonoBehaviour
 
     public void LanguagesButtonFunction()
     {
-        SceneManager.LoadScene("CutScene1");
+        SceneManager.LoadScene("Languages Screen");
     }
 
     public void SettingsButtonFunction()
