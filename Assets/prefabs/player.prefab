@@ -45,6 +45,7 @@ GameObject:
   - component: {fileID: 5169526782123754406}
   - component: {fileID: 3111439343588868274}
   - component: {fileID: 3038086704128739988}
+  - component: {fileID: 4155321388692701243}
   m_Layer: 7
   m_Name: player
   m_TagString: Player
@@ -164,7 +165,6 @@ MonoBehaviour:
   rb: {fileID: 4600247993214014506}
   groundCheck: {fileID: 5427652937852799144}
   stuckCheck: {fileID: 6724130243340678257}
-  stuckCheck2: {fileID: 0}
   enemyLayer:
     serializedVersion: 2
     m_Bits: 0
@@ -199,7 +199,7 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 1
+  MinDistance: 0.8776754
   MaxDistance: 500
   Pan2D: 0
   rolloffMode: 0
@@ -345,6 +345,22 @@ PolygonCollider2D:
       - {x: 0.22999999, y: -0.024999999}
       - {x: 0.24, y: -0.024999999}
   m_UseDelaunayMesh: 0
+--- !u!114 &4155321388692701243
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2987654680649926799}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51284248cfab2084cb7b39fcecad3bdb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  settingsData: {fileID: 11400000, guid: 0cf52153c15919b4290e530dc59fe985, type: 2}
+  sfxSource: 1
+  musicSource: 0
+  cutsceneSource: 0
 --- !u!1 &8842113175816710106
 GameObject:
   m_ObjectHideFlags: 0

@@ -3,6 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+#if UNITY_EDITOR
+using UnityEditor;
+#endif
+
 public class MenuButtonControler : MonoBehaviour
 {
    public void PlayButtonFunction()
@@ -18,5 +22,14 @@ public class MenuButtonControler : MonoBehaviour
     public void SettingsButtonFunction()
     {
         SceneManager.LoadScene("SettingsScreen");
+    }
+
+    public void QuitButtonFunction()
+    {
+#if UNITY_EDITOR
+        EditorApplication.isPlaying = false;
+#else 
+        Application.Quit();
+#endif
     }
 }

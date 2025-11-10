@@ -4431,7 +4431,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 792175742}
   m_HandleRect: {fileID: 792175741}
   m_Direction: 2
-  m_Value: 0
+  m_Value: 1
   m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -6629,37 +6629,6 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
---- !u!1 &1304671048
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1304671050}
-  m_Layer: 0
-  m_Name: SFXplayer
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1304671050
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1304671048}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.5301415, y: -1.8938327, z: 0.03505014}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1366400769
 GameObject:
   m_ObjectHideFlags: 0
@@ -62165,8 +62134,32 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8892486969669128093, guid: 4aa73951ec91ba640b869a7cdf77903c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1569753000}
   m_SourcePrefab: {fileID: 100100000, guid: 4aa73951ec91ba640b869a7cdf77903c, type: 3}
+--- !u!1 &1569752999 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8892486969669128093, guid: 4aa73951ec91ba640b869a7cdf77903c, type: 3}
+  m_PrefabInstance: {fileID: 1569752998}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1569753000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1569752999}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51284248cfab2084cb7b39fcecad3bdb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  settingsData: {fileID: 11400000, guid: 0cf52153c15919b4290e530dc59fe985, type: 2}
+  sfxSource: 1
+  musicSource: 0
+  cutsceneSource: 0
 --- !u!1 &1573779205
 GameObject:
   m_ObjectHideFlags: 0
@@ -62892,8 +62885,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 55986708}
   m_HandleRect: {fileID: 55986707}
   m_Direction: 0
-  m_Value: 0
-  m_Size: 0.99999994
+  m_Value: 1
+  m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -63202,8 +63195,32 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8892486969669128093, guid: 4aa73951ec91ba640b869a7cdf77903c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1816450838}
   m_SourcePrefab: {fileID: 100100000, guid: 4aa73951ec91ba640b869a7cdf77903c, type: 3}
+--- !u!1 &1816450837 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8892486969669128093, guid: 4aa73951ec91ba640b869a7cdf77903c, type: 3}
+  m_PrefabInstance: {fileID: 1816450836}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1816450838
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1816450837}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51284248cfab2084cb7b39fcecad3bdb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  settingsData: {fileID: 11400000, guid: 0cf52153c15919b4290e530dc59fe985, type: 2}
+  sfxSource: 1
+  musicSource: 0
+  cutsceneSource: 0
 --- !u!1001 &1898661586
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -64089,10 +64106,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: player
       objectReference: {fileID: 0}
-    - target: {fileID: 3111439343588868274, guid: 0ff44ad5f2b49794693395b7567c241c, type: 3}
-      propertyPath: MinDistance
-      value: 0.8776754
-      objectReference: {fileID: 0}
     - target: {fileID: 3682268036815900864, guid: 0ff44ad5f2b49794693395b7567c241c, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -64217,8 +64230,32 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8892486969669128093, guid: 4aa73951ec91ba640b869a7cdf77903c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7101509761250725987}
   m_SourcePrefab: {fileID: 100100000, guid: 4aa73951ec91ba640b869a7cdf77903c, type: 3}
+--- !u!1 &7101509761250725986 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8892486969669128093, guid: 4aa73951ec91ba640b869a7cdf77903c, type: 3}
+  m_PrefabInstance: {fileID: 7101509761250725985}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &7101509761250725987
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7101509761250725986}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51284248cfab2084cb7b39fcecad3bdb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  settingsData: {fileID: 11400000, guid: 0cf52153c15919b4290e530dc59fe985, type: 2}
+  sfxSource: 1
+  musicSource: 0
+  cutsceneSource: 0
 --- !u!1001 &9218047952195271154
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -64271,6 +64308,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Main Camera
       objectReference: {fileID: 0}
+    - target: {fileID: 5155750176463187799, guid: f17d03ebd64c3074da93322cde09e59b, type: 3}
+      propertyPath: m_TagString
+      value: MainCamera
+      objectReference: {fileID: 0}
     - target: {fileID: 8976335301890043597, guid: f17d03ebd64c3074da93322cde09e59b, type: 3}
       propertyPath: backgroundElements.Array.data[0].xScrollSpeed
       value: 0
@@ -64313,6 +64354,5 @@ SceneRoots:
   - {fileID: 1816450836}
   - {fileID: 1569752998}
   - {fileID: 1653706421}
-  - {fileID: 1304671050}
   - {fileID: 226486805370247081}
   - {fileID: 1755689552}

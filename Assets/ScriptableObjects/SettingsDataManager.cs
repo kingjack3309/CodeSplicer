@@ -2,17 +2,23 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SettingsDataManager : MonoBehaviour
+[CreateAssetMenu(fileName = "NewSettingsData", menuName = "settings data")]
+public class SettingsDataManager : ScriptableObject
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public float sfxVolume = 0.5f;
+    public float musicVolume = 0.5f;
+    public float cutsceneVolume = 0.5f;
 
-    // Update is called once per frame
-    void Update()
+    public void SetSFXVolume(float volume)
     {
-        
+        sfxVolume = volume;
+    }
+    public void SetMusicVolume(float volume)
+    {
+        musicVolume = volume;
+    }
+    public void SetCutsceneVolume(float volume)
+    {
+        cutsceneVolume = volume;
     }
 }
