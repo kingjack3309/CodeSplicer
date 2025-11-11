@@ -8,6 +8,7 @@ TagManager:
   - Collectable
   - Enemy
   - Has Audio
+  - Text
   layers:
   - Default
   - TransparentFX

@@ -157,9 +157,10 @@ GameObject:
   - component: {fileID: 7695796116215162560}
   - component: {fileID: 3668498441042804291}
   - component: {fileID: 5224731406544397758}
+  - component: {fileID: 1035678792344529499}
   m_Layer: 5
   m_Name: Text (TMP)
-  m_TagString: Untagged
+  m_TagString: Text
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -280,3 +281,22 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &1035678792344529499
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3721486390300354492}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 389c30eb907b77143836d7acce5d24a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  americanTXT: Back
+  brittishTXT: Retreat
+  germanTXT: " zur\xFCck"
+  chineeseTXT: "\u5F8C\u9000"
+  russianTXT: "\u043D\u0430\u0437\u0430\u0434"
+  japaneseTXT: "\u623B\u308B"
+  targetText: {fileID: 0}

@@ -15,18 +15,19 @@ public class PrieviewSFXScript : MonoBehaviour
     private void Start()
     {
         audioSource = GetComponent<AudioSource>();
-        clip = GetComponent<AudioClip>();
     }
 
     public void PreviewSFX()
     {
         clip = sfxClipList[Random.Range(0, sfxClipList.Count)];
+        audioSource.clip = clip;
         audioSource.Play();
     }
 
     public void PreviewCutscene()
     {
         clip = cutsceneClipList[Random.Range(0, cutsceneClipList.Count)];
+        audioSource.clip = clip;
         audioSource.Play();
     }
 }

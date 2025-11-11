@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -13,10 +14,10 @@ public class VolumeManager : MonoBehaviour
 
     private void Start()
     {
-         if (sfx)
-            {
-                SetSFXVolume();
-            }
+        if (sfx)
+        {
+            SetSFXVolume();
+        }
         else if (music)
         {
             SetMusicVolume();
@@ -28,25 +29,33 @@ public class VolumeManager : MonoBehaviour
         }
     }
 
+    void SetNewVolume()
+    {
+        foreach (GameObject game_object in GameObject.FindGameObjectsWithTag("Has Audio"))
+        {
+            game_object.GetComponent<SetVolume>().UpdateVolume();
+        }
+    }
+
     public void ChangeSfxVolume()
     {
         settingsData.SetSFXVolume(gameObject.GetComponent<Slider>().value);
 
-        GameObject.FindWithTag("Has Audio").GetComponent<SetVolume>().UpdateVolume();
+        SetNewVolume();
     }
 
     public void ChangeMusicVolume()
     {
         settingsData.SetMusicVolume(gameObject.GetComponent<Slider>().value);
 
-        GameObject.FindWithTag("Has Audio").GetComponent<SetVolume>().UpdateVolume();
+        SetNewVolume();
     }
 
     public void ChangeCutsceneVolume()
     {
         settingsData.SetCutsceneVolume(gameObject.GetComponent<Slider>().value);
 
-        GameObject.FindWithTag("Has Audio").GetComponent<SetVolume>().UpdateVolume();
+        SetNewVolume();
     }
 
     void SetSFXVolume()
