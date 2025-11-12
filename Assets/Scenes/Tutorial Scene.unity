@@ -788,23 +788,6 @@ MonoBehaviour:
   m_ChildScaleWidth: 1
   m_ChildScaleHeight: 1
   m_ReverseArrangement: 0
---- !u!1 &255076736 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2854351975375742438, guid: 14ba0a5fbd7e85741964ca313e664706, type: 3}
-  m_PrefabInstance: {fileID: 417193937592205432}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &255076741
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 255076736}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d2ad1b57c875cc44ab33b327e6872d8d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &258757399
 GameObject:
   m_ObjectHideFlags: 0
@@ -2996,7 +2979,6 @@ GameObject:
   - component: {fileID: 366215947}
   - component: {fileID: 366215946}
   - component: {fileID: 366215945}
-  - component: {fileID: 366215949}
   m_Layer: 5
   m_Name: Inventory Terminal
   m_TagString: Untagged
@@ -3088,18 +3070,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!114 &366215949
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 366215944}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6913e9e07b68f4b45861d46f2a68f0fe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &434638159
 GameObject:
   m_ObjectHideFlags: 0
@@ -4488,7 +4458,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 792175742}
   m_HandleRect: {fileID: 792175741}
   m_Direction: 2
-  m_Value: 0
+  m_Value: 1
   m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -62942,7 +62912,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 55986708}
   m_HandleRect: {fileID: 55986707}
   m_Direction: 0
-  m_Value: 0
+  m_Value: 1
   m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -63286,32 +63256,9 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1762452414}
     m_Modifications:
-    - target: {fileID: -8702613080317710871, guid: 14ba0a5fbd7e85741964ca313e664706, type: 3}
-      propertyPath: npcText
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: -8702613080317710871, guid: 14ba0a5fbd7e85741964ca313e664706, type: 3}
-      propertyPath: dialogBox
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: -8702613080317710871, guid: 14ba0a5fbd7e85741964ca313e664706, type: 3}
-      propertyPath: npcDialog
-      value: By the way, you have to click [E] to pick up the code segments, but
-        to collect the collectables, you just bash your head on them.
-      objectReference: {fileID: 0}
-    - target: {fileID: -8702613080317710871, guid: 14ba0a5fbd7e85741964ca313e664706, type: 3}
-      propertyPath: scrollbar
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 1969191245327547214, guid: 14ba0a5fbd7e85741964ca313e664706, type: 3}
       propertyPath: m_text
-      value: 'To collect the collectables, you just bash your head on them.
-
-'
-      objectReference: {fileID: 0}
-    - target: {fileID: 4279707814166882041, guid: 14ba0a5fbd7e85741964ca313e664706, type: 3}
-      propertyPath: m_TagString
-      value: Text
+      value: 'To collect the collectables, you just bash your head on them. '
       objectReference: {fileID: 0}
     - target: {fileID: 7496368611580464241, guid: 14ba0a5fbd7e85741964ca313e664706, type: 3}
       propertyPath: m_LocalPosition.x
@@ -63360,37 +63307,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 4279707814166882041, guid: 14ba0a5fbd7e85741964ca313e664706, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1898661589}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 14ba0a5fbd7e85741964ca313e664706, type: 3}
 --- !u!4 &1898661587 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7496368611580464241, guid: 14ba0a5fbd7e85741964ca313e664706, type: 3}
   m_PrefabInstance: {fileID: 1898661586}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1898661588 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4279707814166882041, guid: 14ba0a5fbd7e85741964ca313e664706, type: 3}
-  m_PrefabInstance: {fileID: 1898661586}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1898661589
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1898661588}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 389c30eb907b77143836d7acce5d24a6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  americanTXT: Move with [W], [A], [S], [D]
-  brittishTXT: Advance thyself with [W], [A], [S], [D]
-  germanTXT: Bewegung mit [W], [A], [S], [D]
-  russianTXT: " \u0448\u0430\u0433 c [\u0426], [\u0424], [\u042B], [\u0412]"
 --- !u!1 &1901448613
 GameObject:
   m_ObjectHideFlags: 0
@@ -63812,33 +63735,36 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1762452414}
     m_Modifications:
-    - target: {fileID: -8702613080317710871, guid: 14ba0a5fbd7e85741964ca313e664706, type: 3}
-      propertyPath: npcText
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: -8702613080317710871, guid: 14ba0a5fbd7e85741964ca313e664706, type: 3}
-      propertyPath: dialogBox
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: -8702613080317710871, guid: 14ba0a5fbd7e85741964ca313e664706, type: 3}
-      propertyPath: npcDialog
-      value: You LOSER. You failed such a BASIC jump. The rest of the dungeon will
-        EAT YOU ALIVE. Here is a hint to help your sorry anus. (You have double jump.)
-      objectReference: {fileID: 0}
-    - target: {fileID: -8702613080317710871, guid: 14ba0a5fbd7e85741964ca313e664706, type: 3}
-      propertyPath: scrollbar
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 1969191245327547214, guid: 14ba0a5fbd7e85741964ca313e664706, type: 3}
       propertyPath: m_text
       value: 'You LOSER. You failed such a BASIC jump. The Encription will EAT YOU
-        ALIVE. [Hint]: You have a double jump.
-
-'
+        ALIVE. [Hint]: You have a double jump. '
       objectReference: {fileID: 0}
-    - target: {fileID: 4279707814166882041, guid: 14ba0a5fbd7e85741964ca313e664706, type: 3}
-      propertyPath: m_TagString
-      value: Text
+    - target: {fileID: 3387761824857879988, guid: 14ba0a5fbd7e85741964ca313e664706, type: 3}
+      propertyPath: germanTXT
+      value: "Du Versager! Du hast schon an so einem einfachen Sprung versagt. Die
+        Verschl\xFCsselung wird dich vernichten! [Hinweis]: Du hast einen Doppelsprung. "
+      objectReference: {fileID: 0}
+    - target: {fileID: 3387761824857879988, guid: 14ba0a5fbd7e85741964ca313e664706, type: 3}
+      propertyPath: russianTXT
+      value: "\u0422\u044B \u041D\u0415\u0423\u0414\u0410\u0427\u041D\u0418\u041A.
+        \u0422\u044B \u043F\u0440\u043E\u0432\u0430\u043B\u0438\u043B \u0442\u0430\u043A\u043E\u0439
+        \u0411\u0410\u0417\u041E\u0412\u042B\u0419 \u043F\u0440\u044B\u0436\u043E\u043A.
+        \u041D\u0430\u0434\u043F\u0438\u0441\u044C \u0421\u042A\u0415\u0421\u0422
+        \u0422\u0415\u0411\u042F \u0417\u0410\u0416\u0418\u0412. [\u041F\u043E\u0434\u0441\u043A\u0430\u0437\u043A\u0430]:
+        \u0423 \u0442\u0435\u0431\u044F \u0435\u0441\u0442\u044C \u0434\u0432\u043E\u0439\u043D\u043E\u0439
+        \u043F\u0440\u044B\u0436\u043E\u043A. "
+      objectReference: {fileID: 0}
+    - target: {fileID: 3387761824857879988, guid: 14ba0a5fbd7e85741964ca313e664706, type: 3}
+      propertyPath: americanTXT
+      value: 'You LOSER. You failed such a BASIC jump. The Encription will EAT YOU
+        ALIVE. [Hint]: You have a double jump. '
+      objectReference: {fileID: 0}
+    - target: {fileID: 3387761824857879988, guid: 14ba0a5fbd7e85741964ca313e664706, type: 3}
+      propertyPath: brittishTXT
+      value: 'Thou art an INFERIOR CHIMP. Thou hast fumbled such an AVERAGE leap.
+        The Encription shall FEAST ON THY LIVING FLESH. [Hint]: Thou hast a second
+        gravity-defying leap in thine disposal. '
       objectReference: {fileID: 0}
     - target: {fileID: 7496368611580464241, guid: 14ba0a5fbd7e85741964ca313e664706, type: 3}
       propertyPath: m_LocalPosition.x
@@ -63887,46 +63813,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 4279707814166882041, guid: 14ba0a5fbd7e85741964ca313e664706, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 2049932214}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 14ba0a5fbd7e85741964ca313e664706, type: 3}
 --- !u!4 &2049932212 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7496368611580464241, guid: 14ba0a5fbd7e85741964ca313e664706, type: 3}
   m_PrefabInstance: {fileID: 2049932211}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &2049932213 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4279707814166882041, guid: 14ba0a5fbd7e85741964ca313e664706, type: 3}
-  m_PrefabInstance: {fileID: 2049932211}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &2049932214
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2049932213}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 389c30eb907b77143836d7acce5d24a6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  americanTXT: 'You LOSER. You failed such a BASIC jump. The Encription will EAT
-    YOU ALIVE. [Hint]: You have a double jump. '
-  brittishTXT: 'You LOSER. You failed such a BASIC jump. The Encription will EAT
-    YOU ALIVE. [Hint]: You have a double jump. '
-  germanTXT: "Du Versager! Du hast schon an so einem simplen Sprung versagt. Die
-    Verschl\xFCsselung wird dich vernichten! [Hinweis]: Du hast einen Doppelsprung."
-  russianTXT: "\u0422\u044B \u041D\u0415\u0423\u0414\u0410\u0427\u041D\u0418\u041A.
-    \u0422\u044B \u043F\u0440\u043E\u0432\u0430\u043B\u0438\u043B \u0442\u0430\u043A\u043E\u0439
-    \u0411\u0410\u0417\u041E\u0412\u042B\u0419 \u043F\u0440\u044B\u0436\u043E\u043A.
-    \u041D\u0430\u0434\u043F\u0438\u0441\u044C \u0421\u042A\u0415\u0421\u0422 \u0422\u0415\u0411\u042F
-    \u0417\u0410\u0416\u0418\u0412. [\u041F\u043E\u0434\u0441\u043A\u0430\u0437\u043A\u0430]:
-    \u0423 \u0442\u0435\u0431\u044F \u0435\u0441\u0442\u044C \u0434\u0432\u043E\u0439\u043D\u043E\u0439
-    \u043F\u0440\u044B\u0436\u043E\u043A."
 --- !u!20 &2087580566 stripped
 Camera:
   m_CorrespondingSourceObject: {fileID: 3545453194670407619, guid: f17d03ebd64c3074da93322cde09e59b, type: 3}
@@ -63999,11 +63892,25 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1969191245327547214, guid: 14ba0a5fbd7e85741964ca313e664706, type: 3}
       propertyPath: m_text
-      value: Move with [W], [A], [S], [D]
+      value: 'Move with [W], [A], [S], [D]
+
+'
       objectReference: {fileID: 0}
-    - target: {fileID: 4279707814166882041, guid: 14ba0a5fbd7e85741964ca313e664706, type: 3}
-      propertyPath: m_TagString
-      value: Text
+    - target: {fileID: 3387761824857879988, guid: 14ba0a5fbd7e85741964ca313e664706, type: 3}
+      propertyPath: germanTXT
+      value: 'Bewegung mit [W], [A], [S], [D] '
+      objectReference: {fileID: 0}
+    - target: {fileID: 3387761824857879988, guid: 14ba0a5fbd7e85741964ca313e664706, type: 3}
+      propertyPath: russianTXT
+      value: " \u0448\u0430\u0433 c [\u0426], [\u0424], [\u042B], [\u0412] "
+      objectReference: {fileID: 0}
+    - target: {fileID: 3387761824857879988, guid: 14ba0a5fbd7e85741964ca313e664706, type: 3}
+      propertyPath: americanTXT
+      value: 'Move with [W], [A], [S], [D] '
+      objectReference: {fileID: 0}
+    - target: {fileID: 3387761824857879988, guid: 14ba0a5fbd7e85741964ca313e664706, type: 3}
+      propertyPath: brittishTXT
+      value: 'Advance thyself with [W], [A], [S], [D] '
       objectReference: {fileID: 0}
     - target: {fileID: 7496368611580464241, guid: 14ba0a5fbd7e85741964ca313e664706, type: 3}
       propertyPath: m_LocalPosition.x
@@ -64053,47 +63960,16 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 2087580566}
-    - target: {fileID: 8772912752875615470, guid: 14ba0a5fbd7e85741964ca313e664706, type: 3}
-      propertyPath: m_VertexColorAlwaysGammaSpace
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 2854351975375742438, guid: 14ba0a5fbd7e85741964ca313e664706, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 255076741}
-    - targetCorrespondingSourceObject: {fileID: 4279707814166882041, guid: 14ba0a5fbd7e85741964ca313e664706, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 417193937592205435}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 14ba0a5fbd7e85741964ca313e664706, type: 3}
 --- !u!4 &417193937592205433 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7496368611580464241, guid: 14ba0a5fbd7e85741964ca313e664706, type: 3}
   m_PrefabInstance: {fileID: 417193937592205432}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &417193937592205434 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4279707814166882041, guid: 14ba0a5fbd7e85741964ca313e664706, type: 3}
-  m_PrefabInstance: {fileID: 417193937592205432}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &417193937592205435
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 417193937592205434}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 389c30eb907b77143836d7acce5d24a6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  americanTXT: Move with [W], [A], [S], [D]
-  brittishTXT: Advance thyself with [W], [A], [S], [D]
-  germanTXT: Bewegung mit [W], [A], [S], [D]
-  russianTXT: " \u0448\u0430\u0433 c [\u0426], [\u0424], [\u042B], [\u0412]"
 --- !u!1001 &1656654809174612033
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -64297,16 +64173,8 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5169526782123754406, guid: 0ff44ad5f2b49794693395b7567c241c, type: 3}
-      propertyPath: gotStabbed
-      value: 
-      objectReference: {fileID: 8300000, guid: c9da95f4ed5aff6429cce7d95b451ca8, type: 3}
-    - target: {fileID: 5169526782123754406, guid: 0ff44ad5f2b49794693395b7567c241c, type: 3}
       propertyPath: dashStrength
       value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 5169526782123754406, guid: 0ff44ad5f2b49794693395b7567c241c, type: 3}
-      propertyPath: onLeftClickMods.Array.size
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5169526782123754406, guid: 0ff44ad5f2b49794693395b7567c241c, type: 3}
       propertyPath: onLeftClickMods.Array.data[0]

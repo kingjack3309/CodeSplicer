@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -7,42 +8,42 @@ using UnityEngine;
 public class LanguageData : ScriptableObject
 {
 
-    public string language = "american";
+    public string language;
 
     public void ChangeLanguage() 
     {
-        var textObject = GameObject.FindGameObjectsWithTag("Text");
+        GameObject[] textObject = GameObject.FindGameObjectsWithTag("Text");
 
         if (language == "american")
         {
-            foreach (var obj in textObject)
+            foreach (GameObject game_Object in textObject)
             {
-                obj.GetComponent<TMP_Text>().text = obj.GetComponent<LanguageOptions>().americanTXT;
+                game_Object.GetComponent<TMP_Text>().text = game_Object.GetComponent<LanguageOptions>().americanTXT;
             }
         }
 
-        else if (language == "brittish")
+        if (language == "brittish")
         {
-            foreach (var obj in textObject)
+            foreach (var game_Object in textObject)
             {
-                obj.GetComponent<TMP_Text>().text = obj.GetComponent<LanguageOptions>().brittishTXT;
+                game_Object.GetComponent<TMP_Text>().text = game_Object.GetComponent<LanguageOptions>().brittishTXT;
             }
         }
 
-        else if (language == "german")
+        if (language == "german")
         {
-            foreach (var obj in textObject)
+            foreach (var game_Object in textObject)
             {
-                obj.GetComponent<TMP_Text>().text = obj.GetComponent<LanguageOptions>().germanTXT;
+                game_Object.GetComponent<TMP_Text>().text = game_Object.GetComponent<LanguageOptions>().germanTXT;
             }
         }
 
-        else if (language == "russian")
+        if (language == "russian")
         {
-            foreach (var obj in textObject)
+            foreach (var game_Object in textObject)
             {
-                obj.GetComponent<TMP_Text>().text = obj.GetComponent<LanguageOptions>().russianTXT;
+                game_Object.GetComponent<TMP_Text>().text = game_Object.GetComponent<LanguageOptions>().russianTXT;
             }
-        }   
+        }
     }
 }

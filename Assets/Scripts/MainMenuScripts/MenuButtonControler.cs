@@ -11,7 +11,7 @@ public class MenuButtonControler : MonoBehaviour
 {
    public void PlayButtonFunction()
     {
-        SceneManager.LoadScene("CutScene1");
+        SceneManager.LoadScene("Tutorial Scene");
     }
 
     public void LanguagesButtonFunction()

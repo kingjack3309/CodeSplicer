@@ -56,7 +56,7 @@ Canvas:
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
-  m_VertexColorAlwaysGammaSpace: 0
+  m_VertexColorAlwaysGammaSpace: 1
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
@@ -113,9 +113,10 @@ GameObject:
   - component: {fileID: 894267859413149458}
   - component: {fileID: 5852829552369274631}
   - component: {fileID: 1969191245327547214}
+  - component: {fileID: 3387761824857879988}
   m_Layer: 5
   m_Name: Text (TMP)
-  m_TagString: Untagged
+  m_TagString: Text
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -167,7 +168,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: New Text
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: aa6c04cdeb27e774db1361b9da2083d0, type: 2}
   m_sharedMaterial: {fileID: -4575264452406408413, guid: aa6c04cdeb27e774db1361b9da2083d0, type: 2}
@@ -236,6 +237,28 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &3387761824857879988
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4279707814166882041}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 389c30eb907b77143836d7acce5d24a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  americanTXT: 'To collect the collectables, you just bash your head on them. '
+  brittishTXT: 'To procure the valuables, thou shalt have to cave thine skull on
+    them. '
+  germanTXT: "Um die Sammlerst\xFCcke einzusammeln, schl\xE4gt man einfach mit dem
+    Kopf darauf. "
+  russianTXT: "\u0427\u0442\u043E\u0431\u044B \u0441\u043E\u0431\u0440\u0430\u0442\u044C
+    \u043F\u0440\u0435\u0434\u043C\u0435\u0442\u044B \u043A\u043E\u043B\u043B\u0435\u043A\u0446\u0438\u043E\u043D\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u044F,
+    \u0432\u0430\u043C \u043F\u0440\u043E\u0441\u0442\u043E \u043D\u0443\u0436\u043D\u043E
+    \u0443\u0434\u0430\u0440\u0438\u0442\u044C\u0441\u044F \u043E \u043D\u0438\u0445
+    \u0433\u043E\u043B\u043E\u0432\u043E\u0439. "
 --- !u!1 &7800403779484627199
 GameObject:
   m_ObjectHideFlags: 0
@@ -335,9 +358,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 319924591aafbc94b820d649f4b74247, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  npcDialog: Hello Traveler, you have several options for movement. Firstly, you
-    can use the gamer classic of [W], [A], [S], [D], or if you don't like that, you
-    can use the arrow keys or [SPACE].
 --- !u!61 &-8450722169230300540
 BoxCollider2D:
   m_ObjectHideFlags: 0

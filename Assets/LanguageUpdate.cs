@@ -5,12 +5,10 @@ using UnityEngine;
 public class LanguageUpdate : MonoBehaviour
 {
     
-    public LanguageData languageData;
+    [SerializeField] LanguageData languageData;
 
-    void Start()
+    private void Start() 
     {
         languageData.ChangeLanguage();
     }
-
-    
 }

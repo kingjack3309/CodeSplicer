@@ -24,14 +24,14 @@ public class InventoryToggle : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Tab) && !isActive)
+        if (Input.GetKeyDown(KeyCode.Q) && !isActive)
         {
             inventory.SetActive(true);
             gui.SetActive(false);
             isActive = true;
             Time.timeScale = 0;
         }
-        else if (Input.GetKeyDown(KeyCode.Tab) && isActive)
+        else if (Input.GetKeyDown(KeyCode.Q) && isActive)
         {
             inventory.SetActive(false);
             gui.SetActive(true);

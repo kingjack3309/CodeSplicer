@@ -177,7 +177,7 @@ MonoBehaviour:
   drawGizmos: 1
   coinCollected: {fileID: 8300000, guid: f60b915cdcb02cc40998e4d1f0c2d1f4, type: 3}
   foodCollected: {fileID: 8300000, guid: cbb9c2c5ffa7ddb45af8ef35b3651e38, type: 3}
-  gotStabbed: {fileID: 0}
+  gotStabbed: {fileID: 8300000, guid: c9da95f4ed5aff6429cce7d95b451ca8, type: 3}
   onLeftClickMods: []
 --- !u!82 &3111439343588868274
 AudioSource:
