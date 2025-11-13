@@ -4,14 +4,19 @@ using UnityEngine;
 
 public class LanguageChanger : MonoBehaviour
 {
-    public LanguageData languageData;
 
     public string languageName;
 
     public void SetNewLanguage()
     {
-        languageData.language = languageName;
+        GameObject[] textObjects = GameObject.FindGameObjectsWithTag("Text");
 
-        languageData.ChangeLanguage();
+        foreach (GameObject textObject in textObjects)
+        {
+            textObject.GetComponent<LanguageOptions>().language = languageName;
+            textObject.GetComponent<LanguageOptions>().ChangeLanguage();
+        }
+
+        GameObject.Find("Language Name Holder").GetComponent<LanguageStringManager>().constantLanguage = languageName;
     }
 }
