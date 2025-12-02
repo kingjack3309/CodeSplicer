@@ -25,10 +25,13 @@ public class LanguageOptions : MonoBehaviour
 
     private void Start()
     {
-        languageStringManager = GameObject.Find("Language Name Holder").GetComponent<LanguageStringManager>();
-        textLabel = GetComponent<TMP_Text>();
-        LanguageUpdate += languageStringManager.UpdateLanguage;
-        LanguageUpdate.Invoke(this);
+        if (GameObject.Find("Language Name Holder") != null)
+        {
+            languageStringManager = GameObject.Find("Language Name Holder").GetComponent<LanguageStringManager>();
+            textLabel = GetComponent<TMP_Text>();
+            LanguageUpdate += languageStringManager.UpdateLanguage;
+            LanguageUpdate.Invoke(this);
+        }
     }
 
     public void ChangeLanguage()
@@ -36,26 +39,25 @@ public class LanguageOptions : MonoBehaviour
         if (language == "american")
         {
             textLabel.text = americanTXT;
+            textLabel.font = pixelFont;
         }
 
         if (language == "brittish")
         {
             textLabel.text = brittishTXT;
+            textLabel.font = pixelFont;
         }
 
         if (language == "german")
         {
-            textLabel.text = germanTXT;  
+            textLabel.text = germanTXT;
+            textLabel.font = pixelFont;
         }
 
         if (language == "russian")
         {
             textLabel.font = russianFont;
             textLabel.text = russianTXT;
-        }
-        else
-        {
-            textLabel.font = pixelFont;
         }
     }
 

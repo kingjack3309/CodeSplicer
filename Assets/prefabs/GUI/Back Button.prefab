@@ -295,8 +295,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   americanTXT: Back
   brittishTXT: Retreat
-  germanTXT: " zur\xFCck"
-  chineeseTXT: "\u5F8C\u9000"
+  germanTXT: "zur\xFCck"
   russianTXT: "\u043D\u0430\u0437\u0430\u0434"
-  japaneseTXT: "\u623B\u308B"
-  targetText: {fileID: 0}
+  russianFont: {fileID: 11400000, guid: bbf14cc66b83a474cbf5d59d4fc532eb, type: 2}
+  pixelFont: {fileID: 11400000, guid: aa6c04cdeb27e774db1361b9da2083d0, type: 2}
+  language: american

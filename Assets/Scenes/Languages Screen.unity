@@ -2438,7 +2438,7 @@ MonoBehaviour:
   americanTXT: 'Sample Text '
   brittishTXT: 'Posh Sample Text '
   germanTXT: Beispieltext
-  russianTXT: Obrazets teksta
+  russianTXT: "\u041F\u0440\u0438\u043C\u0435\u0440 \u0442\u0435\u043A\u0441\u0442\u0430"
   russianFont: {fileID: 11400000, guid: bbf14cc66b83a474cbf5d59d4fc532eb, type: 2}
   pixelFont: {fileID: 11400000, guid: aa6c04cdeb27e774db1361b9da2083d0, type: 2}
   language: 
@@ -3125,18 +3125,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1153815150}
     m_Modifications:
-    - target: {fileID: 1035678792344529499, guid: bb7b35f90ba6dbe48a09aec410b94195, type: 3}
-      propertyPath: pixelFont
-      value: 
-      objectReference: {fileID: 11400000, guid: aa6c04cdeb27e774db1361b9da2083d0, type: 2}
-    - target: {fileID: 1035678792344529499, guid: bb7b35f90ba6dbe48a09aec410b94195, type: 3}
-      propertyPath: russianTXT
-      value: nazad
-      objectReference: {fileID: 0}
-    - target: {fileID: 1035678792344529499, guid: bb7b35f90ba6dbe48a09aec410b94195, type: 3}
-      propertyPath: russianFont
-      value: 
-      objectReference: {fileID: 11400000, guid: bbf14cc66b83a474cbf5d59d4fc532eb, type: 2}
     - target: {fileID: 1492497998520413655, guid: bb7b35f90ba6dbe48a09aec410b94195, type: 3}
       propertyPath: m_Name
       value: Back Button

@@ -24,6 +24,11 @@ public class MenuButtonControler : MonoBehaviour
         SceneManager.LoadScene("SettingsScreen");
     }
 
+    public void SkipCutscene()
+    {
+        SceneManager.LoadScene("Tutorial Scene");
+    }
+
     public void QuitButtonFunction()
     {
 #if UNITY_EDITOR
