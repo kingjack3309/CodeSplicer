@@ -73009,7 +73009,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3387761824857879988, guid: 14ba0a5fbd7e85741964ca313e664706, type: 3}
       propertyPath: brittishTXT
-      value: 'Gems shall be used to purchase new code segments, and food heals thee.
+      value: 'Gems shall be used to purchase new code segments, and gruel heals thee.
         [Hint]: ne''er-do-wells shall drop gems or gruel, and in exotic instances,
         code segments.'
       objectReference: {fileID: 0}
