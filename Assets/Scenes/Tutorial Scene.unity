@@ -61569,7 +61569,7 @@ CompositeCollider2D:
   m_GameObject: {fileID: 1476812734}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: bffd7fe904a3e93428734421a1f5cb12, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -61891,7 +61891,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: bffd7fe904a3e93428734421a1f5cb12, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -63986,7 +63986,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3594842106021151672, guid: ae89c58a72bff4b479acd38d1368841e, type: 3}
       propertyPath: nextScene
-      value: StageOneLevelA
+      value: StageOneLevelC
       objectReference: {fileID: 0}
     - target: {fileID: 3594842106021151672, guid: ae89c58a72bff4b479acd38d1368841e, type: 3}
       propertyPath: loadingScreen
@@ -64098,6 +64098,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: player
       objectReference: {fileID: 0}
+    - target: {fileID: 3038086704128739988, guid: 0ff44ad5f2b49794693395b7567c241c, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 08c3657f895256646a4e212e4d2c808e, type: 2}
     - target: {fileID: 3682268036815900864, guid: 0ff44ad5f2b49794693395b7567c241c, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -64138,6 +64142,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4600247993214014506, guid: 0ff44ad5f2b49794693395b7567c241c, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 08c3657f895256646a4e212e4d2c808e, type: 2}
     - target: {fileID: 5169526782123754406, guid: 0ff44ad5f2b49794693395b7567c241c, type: 3}
       propertyPath: dashStrength
       value: 20

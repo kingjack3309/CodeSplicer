@@ -1,78 +1,72 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Tilemaps;
 using UnityEngine.UI;
 
 public class StairScript : MonoBehaviour
 {
 
-    PlatformEffector2D platformEffector;
+    CompositeCollider2D stairCollider;
 
-    bool isColliding;
+    TilemapCollider2D stepCollider;
 
-    bool isStuck;
-
-    public bool isRight = true;
-
-    float startAngle = 45;
+    //bool wannaCollide = true;
 
     // Start is called before the first frame update
     void Start()
     {
-        platformEffector = GetComponentInChildren<PlatformEffector2D>();
-
-        if (isRight)
-        {
-            startAngle = 45;
-        }
-        else
-        {
-            startAngle = -45;
-        }
+        stairCollider = gameObject.GetComponent<CompositeCollider2D>();
+        stepCollider = gameObject.GetComponent <TilemapCollider2D>();
     }
 
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.W))
-        {
-            platformEffector.rotationalOffset = startAngle * -1;
-        }
+    //private void Update()
+    //{
+    //    if (wannaCollide)
+    //    {
+    //        stairCollider.enabled = true;
+    //    }
+        
+    //    if (!wannaCollide)
+    //    {
+    //        stairCollider.enabled = false;
+    //    }
 
-        if (!GameObject.Find("player").GetComponent<PlayerControllerScript>().IsStuck() && !GameObject.Find("player").GetComponent<PlayerControllerScript>().IsGrounded2())
-        {
-            isStuck = true;
-        }
-        else
-        {
-            isStuck = false;
-        }
-
-        if (isColliding && isStuck && GameObject.Find("player").GetComponent<PlayerControllerScript>().rb.velocity.y == 0)
-        {
-            platformEffector.rotationalOffset = startAngle;
-        }
-    }
+    //}
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        platformEffector.rotationalOffset = startAngle * -1;
-        if (isStuck)
+        if (collision.gameObject.CompareTag("Player"))
         {
-            isStuck = false;
+            //wannaCollide = false;
         }
-        isColliding = true;
     }
+
     private void OnCollisionStay2D(Collision2D collision)
     {
-        if (Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow))
+        if (collision.gameObject.CompareTag("Player"))
         {
-            platformEffector.rotationalOffset = startAngle;
+
+            if (Input.GetKeyDown(KeyCode.S))
+            {
+                //wannaCollide = false;
+
+                //stairCollider.enabled = false;
+                stepCollider.enabled = false;
+                Debug.Log("Stair collider off");
+            }
         }
     }
 
     private void OnCollisionExit2D(Collision2D collision)
     {
-        platformEffector.rotationalOffset = startAngle * -1;
-        isColliding = false;
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            //wannaCollide = true;
+
+            //stairCollider.enabled = true;
+            stepCollider.enabled = true;
+            Debug.Log("Stair collider on");
+        }
     }
 }
