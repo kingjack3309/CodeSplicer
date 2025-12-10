@@ -8,17 +8,28 @@ public class InventoryToggle : MonoBehaviour
 
     GameObject gui;
 
+    GameObject pauseMenu;
+
+    GameObject ui;
+
     bool isActive = false;
+
+    bool isActive2 = false;
     // Start is called before the first frame update
     void Start()
     {
         inventory = GameObject.Find("Inventory Terminal");
-        DontDestroyOnLoad(inventory);
+        pauseMenu = GameObject.Find("Pause Menu");
         inventory.SetActive(false);
+        pauseMenu.SetActive(false);
 
         gui = GameObject.Find("GUI");
 
-        DontDestroyOnLoad(gameObject);
+        ui = GameObject.Find("UI");
+        DontDestroyOnLoad(ui);
+
+        DontDestroyOnLoad(this.gameObject);
+
     }
 
     // Update is called once per frame
@@ -34,9 +45,30 @@ public class InventoryToggle : MonoBehaviour
         else if (Input.GetKeyDown(KeyCode.Q) && isActive)
         {
             inventory.SetActive(false);
-            gui.SetActive(true);
             isActive = false;
-            Time.timeScale = 1;
+            if (!isActive && !isActive2)
+            {
+                gui.SetActive(true);
+                Time.timeScale = 1;
+            }
+        }
+
+        if (Input.GetKeyDown(KeyCode.Escape) && !isActive2)
+        {
+            pauseMenu.SetActive(true);
+            gui.SetActive(false);
+            isActive2 = true;
+            Time.timeScale = 0;
+        }
+        else if (Input.GetKeyDown(KeyCode.Escape) && isActive2)
+        {
+            pauseMenu.SetActive(false); 
+            isActive2 = false;
+            if (!isActive && !isActive2)
+            {
+                gui.SetActive(true);
+                Time.timeScale = 1;
+            }
         }
     }
 }

@@ -29,6 +29,11 @@ public class MenuButtonControler : MonoBehaviour
         SceneManager.LoadScene("Tutorial Scene");
     }
 
+    public void MainMenu()
+    {
+        SceneManager.LoadScene("Main Menu");
+    }
+
     public void QuitButtonFunction()
     {
 #if UNITY_EDITOR
