@@ -13,8 +13,8 @@ public class InventoryToggle : MonoBehaviour
     GameObject ui;
 
     bool isActive = false;
-
     bool isActive2 = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -26,14 +26,21 @@ public class InventoryToggle : MonoBehaviour
         gui = GameObject.Find("GUI");
 
         ui = GameObject.Find("UI");
-        DontDestroyOnLoad(ui);
+        DontDestroyOnLoadManager.DontDestroyOnLoad(ui);
 
-        DontDestroyOnLoad(this.gameObject);
+        DontDestroyOnLoadManager.DontDestroyOnLoad(this.gameObject);
 
     }
 
     // Update is called once per frame
     void Update()
+    {
+        ToggleInventory();
+
+        TogglePauseMenu();
+    }
+
+    public void ToggleInventory()
     {
         if (Input.GetKeyDown(KeyCode.Q) && !isActive)
         {
@@ -52,7 +59,10 @@ public class InventoryToggle : MonoBehaviour
                 Time.timeScale = 1;
             }
         }
+    }
 
+    public void TogglePauseMenu()
+    {
         if (Input.GetKeyDown(KeyCode.Escape) && !isActive2)
         {
             pauseMenu.SetActive(true);
@@ -62,7 +72,7 @@ public class InventoryToggle : MonoBehaviour
         }
         else if (Input.GetKeyDown(KeyCode.Escape) && isActive2)
         {
-            pauseMenu.SetActive(false); 
+            pauseMenu.SetActive(false);
             isActive2 = false;
             if (!isActive && !isActive2)
             {
@@ -71,4 +81,16 @@ public class InventoryToggle : MonoBehaviour
             }
         }
     }
+
+    public void UnPause()
+    {
+        pauseMenu.SetActive(false);
+        isActive2 = false;
+        if (!isActive && !isActive2)
+        {
+            gui.SetActive(true);
+            Time.timeScale = 1;
+        }
+    }
+
 }

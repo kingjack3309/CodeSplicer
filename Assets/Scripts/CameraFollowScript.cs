@@ -7,6 +7,6 @@ public class CameraFollowScript : MonoBehaviour
 {
     private void Awake()
     {
-        DontDestroyOnLoad(this.gameObject);
+        DontDestroyOnLoadManager.DontDestroyOnLoad(this.gameObject);
     }
 }

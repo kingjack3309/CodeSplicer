@@ -39,7 +39,7 @@ public class PortalScript : MonoBehaviour
         currentScene = SceneManager.GetActiveScene().name;
         loadingScreen = GameObject.Find("LoadingScreen");
 
-        persistentObjects = new List<GameObject>() { GameObject.Find("player"), GameObject.Find("Virtual Camera"), GameObject.Find("GUI"), GameObject.Find("Inventory Terminal"), GameObject.Find("Inventory Manager")};
+        persistentObjects = new List<GameObject>() { GameObject.Find("player"), GameObject.Find("Virtual Camera"), GameObject.Find("UI"), GameObject.Find("Inventory Manager")};
     }
 
     private void Start()

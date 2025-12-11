@@ -9,7 +9,13 @@ using UnityEditor;
 
 public class MenuButtonControler : MonoBehaviour
 {
-   public void PlayButtonFunction()
+
+    private void Start()
+    {
+        Time.timeScale = 1;
+    }
+
+    public void PlayButtonFunction()
     {
         SceneManager.LoadScene("CutScene1");
     }
@@ -27,11 +33,6 @@ public class MenuButtonControler : MonoBehaviour
     public void SkipCutscene()
     {
         SceneManager.LoadScene("Tutorial Scene");
-    }
-
-    public void MainMenu()
-    {
-        SceneManager.LoadScene("Main Menu");
     }
 
     public void QuitButtonFunction()

@@ -54,7 +54,7 @@ public class PlayerControllerScript : MonoBehaviour
 
     private void Awake()
     {
-        DontDestroyOnLoad(this.gameObject);
+        DontDestroyOnLoadManager.DontDestroyOnLoad(this.gameObject);
     }
 
     // Update is called once per frame
