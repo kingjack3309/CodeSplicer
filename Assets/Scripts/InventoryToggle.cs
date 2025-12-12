@@ -8,7 +8,8 @@ public class InventoryToggle : MonoBehaviour
 
     GameObject gui;
 
-    GameObject pauseMenu;
+    [HideInInspector]
+    public GameObject pauseMenu;
 
     GameObject ui;
 
