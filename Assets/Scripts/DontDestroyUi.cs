@@ -6,6 +6,6 @@ public class DontDestroyUi : MonoBehaviour
 {
     private void Awake()
     {
-        DontDestroyOnLoad(this.gameObject);
+        DontDestroyOnLoadManager.DontDestroyOnLoad(this.gameObject);
     }
 }

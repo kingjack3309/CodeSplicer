@@ -62,7 +62,40 @@ public class SettingsUIButtonManager : MonoBehaviour
 
     public void ToggleUIParticles()
     {
+        if (uiParticles != null)
+        {
+            foreach (ParticleSystem p in uiParticles)
+            {
+                if (p.isPlaying)
+                {
+                    p.Stop();
+                }
 
+                else
+                {
+                    p.Play();
+                }
+            }
+        }
+    }
+
+    public void ToggleDynamicParticles()
+    {
+        if (dynamicParticles != null)
+        {
+            foreach (ParticleSystem p in dynamicParticles)
+            {
+                if (p.isPlaying)
+                {
+                    p.Stop();
+                }
+
+                else
+                {
+                    p.Play();
+                }
+            }
+        }
     }
 
 }

@@ -9,6 +9,8 @@ TagManager:
   - Enemy
   - Has Audio
   - Text
+  - UI Particle
+  - Dynamic Particle
   layers:
   - Default
   - TransparentFX
