@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -16,6 +17,8 @@ public class SettingsUIButtonManager : MonoBehaviour
     public List<ParticleSystem> dynamicParticles = new List<ParticleSystem>();
 
     private GameObject openMenu;
+
+    [SerializeField] SettingsDataManager settingsDataManager;
 
     public void ExitSettingsMenu()
     {
@@ -64,17 +67,16 @@ public class SettingsUIButtonManager : MonoBehaviour
     {
         if (uiParticles != null)
         {
-            foreach (ParticleSystem p in uiParticles)
+            if (settingsDataManager.uiParticlesPlaying)
             {
-                if (p.isPlaying)
-                {
-                    p.Stop();
-                }
+                settingsDataManager.uiParticlesPlaying = false;
+                UpdateParticles();
+            }
 
-                else
-                {
-                    p.Play();
-                }
+            else
+            {
+                settingsDataManager.uiParticlesPlaying = true;
+                UpdateParticles();
             }
         }
     }
@@ -83,19 +85,22 @@ public class SettingsUIButtonManager : MonoBehaviour
     {
         if (dynamicParticles != null)
         {
-            foreach (ParticleSystem p in dynamicParticles)
+            if (settingsDataManager.dynamicParticlesPlaying)
             {
-                if (p.isPlaying)
-                {
-                    p.Stop();
-                }
+                settingsDataManager.dynamicParticlesPlaying = false;
+                UpdateParticles();
+            }
 
-                else
-                {
-                    p.Play();
-                }
+            else
+            {
+                settingsDataManager.dynamicParticlesPlaying = true;
+                UpdateParticles();
             }
         }
     }
+
+    //public delegate void UpdateParticles();
+
+    public static Action UpdateParticles;
 
 }

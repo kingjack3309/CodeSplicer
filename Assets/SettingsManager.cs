@@ -21,7 +21,7 @@ public class SettingsManager : MonoBehaviour
         foreach (var system in uiParticleSystems)
         {
             uiParticleToggle.uiParticles.Add(system);
-            Debug.Log(system.name);
+            system.GetComponentInParent<ParticleSystemManager>().DelegateSubscriber();
         }
     }
 
@@ -31,6 +31,7 @@ public class SettingsManager : MonoBehaviour
         foreach (var system in dynamicParticleSystems)
         {
             dynamicParticleToggle.dynamicParticles.Add(system);
+            system.GetComponentInParent<ParticleSystemManager>().DelegateSubscriber();
         }
     }
 
