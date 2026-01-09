@@ -7,37 +7,22 @@ using UnityEngine;
 public class ParticleSystemManager : MonoBehaviour
 {
 
-    SettingsDataManager settingsDataManager;
+    [SerializeField]SettingsDataManager settingsDataManager;
 
     ParticleSystem thisParticleSystem;
 
     void Start()
     {
+        Debug.Log(gameObject.name);
         thisParticleSystem = GetComponent<ParticleSystem>();
 
-        if (settingsDataManager.uiParticlesPlaying && this.gameObject.CompareTag("UI Particle"))
-        {
-            thisParticleSystem.Play();
-        }
-        else
-        {
-            thisParticleSystem.Stop();
-        }
-
-        if (settingsDataManager.dynamicParticlesPlaying && this.gameObject.CompareTag("Dynamic Particle"))
-        {
-            thisParticleSystem.Play();
-        }
-        else
-        {
-            thisParticleSystem.Stop();
-        }
+        thisParticleSystem.Play();
     }
 
     public void DelegateSubscriber()
     {
-        SettingsUIButtonManager.UpdateParticles += UIParticleUpdater;
-        SettingsUIButtonManager.UpdateParticles += DynamicParticleUpdater;
+        SettingsUIButtonManager.UpdateUIParticles += UIParticleUpdater;
+        SettingsUIButtonManager.UpdateDynamicParticles += DynamicParticleUpdater;
     }
 
     public void UIParticleUpdater()
@@ -46,7 +31,7 @@ public class ParticleSystemManager : MonoBehaviour
         {
             thisParticleSystem.Play();
         }
-        else
+        else if (!settingsDataManager.uiParticlesPlaying && this.gameObject.CompareTag("UI Particle"))
         {
             thisParticleSystem.Stop();
         }
@@ -58,7 +43,7 @@ public class ParticleSystemManager : MonoBehaviour
         {
             thisParticleSystem.Play();
         }
-        else
+        else if (!settingsDataManager.dynamicParticlesPlaying && this.gameObject.CompareTag("Dynamic Particle"))
         {
             thisParticleSystem.Stop();
         }

@@ -20,9 +20,15 @@ public class SettingsUIButtonManager : MonoBehaviour
 
     [SerializeField] SettingsDataManager settingsDataManager;
 
+    private void Start()
+    {
+        SubscribeParticleAction();
+    }
+
     public void ExitSettingsMenu()
     {
         pauseMenu.SetActive(true);
+        UpdateUIParticles();
         GameObject.Find("SettingsUI").SetActive(false);
     }
 
@@ -70,13 +76,13 @@ public class SettingsUIButtonManager : MonoBehaviour
             if (settingsDataManager.uiParticlesPlaying)
             {
                 settingsDataManager.uiParticlesPlaying = false;
-                UpdateParticles();
+                UpdateUIParticles();
             }
 
             else
             {
                 settingsDataManager.uiParticlesPlaying = true;
-                UpdateParticles();
+                UpdateUIParticles();
             }
         }
     }
@@ -88,19 +94,29 @@ public class SettingsUIButtonManager : MonoBehaviour
             if (settingsDataManager.dynamicParticlesPlaying)
             {
                 settingsDataManager.dynamicParticlesPlaying = false;
-                UpdateParticles();
+                UpdateDynamicParticles();
             }
 
             else
             {
                 settingsDataManager.dynamicParticlesPlaying = true;
-                UpdateParticles();
+                UpdateDynamicParticles();
             }
         }
     }
 
-    //public delegate void UpdateParticles();
+    public void ClearDynamicParticles()
+    {
+        dynamicParticles.Clear();
+    }
 
-    public static Action UpdateParticles;
+    private void SubscribeParticleAction()
+    {
+        ClearDynamicParticleList += ClearDynamicParticles;
+    }
 
+    public static Action UpdateUIParticles;
+    public static Action UpdateDynamicParticles;
+
+    public static Action ClearDynamicParticleList;
 }

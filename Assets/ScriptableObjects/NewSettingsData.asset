@@ -15,3 +15,5 @@ MonoBehaviour:
   sfxVolume: 0.5
   musicVolume: 0.5
   cutsceneVolume: 0.5
+  uiParticlesPlaying: 1
+  dynamicParticlesPlaying: 1

@@ -5,12 +5,14 @@ using UnityEngine;
 
 public class SettingsManager : MonoBehaviour
 {
-    [SerializeField]SettingsUIButtonManager uiParticleToggle;
-
-    [SerializeField] SettingsUIButtonManager dynamicParticleToggle;
+    SettingsUIButtonManager particleToggle;
 
     private void Start()
     {
+        var AllButtonManagers = FindObjectsByType<SettingsUIButtonManager>(FindObjectsInactive.Include, FindObjectsSortMode.None).Where(t => t.CompareTag("Settings UI"));
+        
+        particleToggle = AllButtonManagers.FirstOrDefault();
+
         FindDynamicParticleSystems();
         FindUIParticleSystems();
     }
@@ -20,7 +22,7 @@ public class SettingsManager : MonoBehaviour
         var uiParticleSystems = FindObjectsByType<ParticleSystem>(FindObjectsInactive.Include, FindObjectsSortMode.None).Where(t => t.CompareTag("UI Particle"));
         foreach (var system in uiParticleSystems)
         {
-            uiParticleToggle.uiParticles.Add(system);
+            particleToggle.uiParticles.Add(system);
             system.GetComponentInParent<ParticleSystemManager>().DelegateSubscriber();
         }
     }
@@ -30,7 +32,7 @@ public class SettingsManager : MonoBehaviour
         var dynamicParticleSystems = FindObjectsByType<ParticleSystem>(FindObjectsInactive.Include, FindObjectsSortMode.None).Where(t => t.CompareTag("Dynamic Particle"));
         foreach (var system in dynamicParticleSystems)
         {
-            dynamicParticleToggle.dynamicParticles.Add(system);
+            particleToggle.dynamicParticles.Add(system);
             system.GetComponentInParent<ParticleSystemManager>().DelegateSubscriber();
         }
     }

@@ -13,6 +13,7 @@ TagManager:
   - Dynamic Particle
   - UI Particle Toggle
   - Dynamic Particle Toggle
+  - Settings UI
   layers:
   - Default
   - TransparentFX

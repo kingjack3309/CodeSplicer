@@ -22,8 +22,9 @@ public class ResumeScript : MonoBehaviour
 
     public void Settings()
     {
-        inventoryToggle.pauseMenu.SetActive(false);
         settingsUI.SetActive(true);
+        SettingsUIButtonManager.UpdateUIParticles();
+        inventoryToggle.pauseMenu.SetActive(false);
 
     }
 }

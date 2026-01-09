@@ -386,6 +386,7 @@ GameObject:
   - component: {fileID: 39119345}
   - component: {fileID: 39119344}
   - component: {fileID: 39119343}
+  - component: {fileID: 39119346}
   m_Layer: 5
   m_Name: Particle System
   m_TagString: UI Particle
@@ -5221,6 +5222,19 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     vectorLabel1_3: W
+--- !u!114 &39119346
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 39119341}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b775716c286c5fc42964389b59a26d8e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  settingsDataManager: {fileID: 11400000, guid: 0cf52153c15919b4290e530dc59fe985, type: 2}
 --- !u!1 &39937595
 GameObject:
   m_ObjectHideFlags: 0
@@ -8351,6 +8365,7 @@ GameObject:
   - component: {fileID: 411277556}
   - component: {fileID: 411277555}
   - component: {fileID: 411277554}
+  - component: {fileID: 411277558}
   m_Layer: 0
   m_Name: Particle System (1)
   m_TagString: Dynamic Particle
@@ -13182,6 +13197,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!114 &411277558
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 411277553}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b775716c286c5fc42964389b59a26d8e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  settingsDataManager: {fileID: 11400000, guid: 0cf52153c15919b4290e530dc59fe985, type: 2}
 --- !u!1 &434638159
 GameObject:
   m_ObjectHideFlags: 0
@@ -13480,9 +13508,10 @@ GameObject:
   - component: {fileID: 446439947}
   - component: {fileID: 446439946}
   - component: {fileID: 446439949}
+  - component: {fileID: 446439950}
   m_Layer: 0
   m_Name: SettingsUI
-  m_TagString: Untagged
+  m_TagString: Settings UI
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13597,6 +13626,24 @@ MonoBehaviour:
   m_ChildScaleWidth: 1
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
+--- !u!114 &446439950
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 446439944}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6b1aa4deacd4f64c85360bca22c1bee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pauseMenu: {fileID: 1840686943}
+  audioMenu: {fileID: 1822014841}
+  videoMenu: {fileID: 1667389577}
+  uiParticles: []
+  dynamicParticles: []
+  settingsDataManager: {fileID: 11400000, guid: 0cf52153c15919b4290e530dc59fe985, type: 2}
 --- !u!1 &463279150
 GameObject:
   m_ObjectHideFlags: 0
@@ -13743,6 +13790,7 @@ GameObject:
   - component: {fileID: 503065055}
   - component: {fileID: 503065054}
   - component: {fileID: 503065053}
+  - component: {fileID: 503065057}
   m_Layer: 0
   m_Name: Particle System
   m_TagString: Dynamic Particle
@@ -18574,6 +18622,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!114 &503065057
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 503065052}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b775716c286c5fc42964389b59a26d8e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  settingsDataManager: {fileID: 11400000, guid: 0cf52153c15919b4290e530dc59fe985, type: 2}
 --- !u!1 &520083434
 GameObject:
   m_ObjectHideFlags: 0
@@ -19993,7 +20054,6 @@ GameObject:
   - component: {fileID: 700138466}
   - component: {fileID: 700138465}
   - component: {fileID: 700138464}
-  - component: {fileID: 700138468}
   m_Layer: 5
   m_Name: GUI
   m_TagString: Untagged
@@ -20086,18 +20146,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!114 &700138468
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 700138463}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 57d8bd2c4e7595b4083354d47a946439, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &709149925 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3682268036815900864, guid: 0ff44ad5f2b49794693395b7567c241c, type: 3}
@@ -20351,6 +20399,7 @@ GameObject:
   - component: {fileID: 740378333}
   - component: {fileID: 740378332}
   - component: {fileID: 740378334}
+  - component: {fileID: 740378335}
   m_Layer: 5
   m_Name: Particle System (1)
   m_TagString: UI Particle
@@ -25186,6 +25235,19 @@ SortingGroup:
   m_SortingLayer: 0
   m_SortingOrder: 12
   m_SortAtRoot: 0
+--- !u!114 &740378335
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 740378330}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b775716c286c5fc42964389b59a26d8e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  settingsDataManager: {fileID: 11400000, guid: 0cf52153c15919b4290e530dc59fe985, type: 2}
 --- !u!1 &779005049
 GameObject:
   m_ObjectHideFlags: 0
@@ -25890,7 +25952,6 @@ GameObject:
   - component: {fileID: 955137502}
   - component: {fileID: 955137501}
   - component: {fileID: 955137500}
-  - component: {fileID: 955137499}
   m_Layer: 0
   m_Name: Toggle UI Particles Button
   m_TagString: UI Particle Toggle
@@ -25918,23 +25979,6 @@ RectTransform:
   m_AnchoredPosition: {x: 245, y: -95}
   m_SizeDelta: {x: 450, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &955137499
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 955137497}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e6b1aa4deacd4f64c85360bca22c1bee, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pauseMenu: {fileID: 1840686943}
-  audioMenu: {fileID: 1822014841}
-  videoMenu: {fileID: 1667389577}
-  uiParticles: []
-  dynamicParticles: []
 --- !u!114 &955137500
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25979,7 +26023,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 955137499}
+      - m_Target: {fileID: 446439950}
         m_TargetAssemblyTypeName: SettingsUIButtonManager, Assembly-CSharp
         m_MethodName: ToggleUIParticles
         m_Mode: 1
@@ -26203,7 +26247,6 @@ GameObject:
   - component: {fileID: 1041436246}
   - component: {fileID: 1041436245}
   - component: {fileID: 1041436244}
-  - component: {fileID: 1041436243}
   m_Layer: 0
   m_Name: Toggle Dynamic Particles Button
   m_TagString: Dynamic Particle Toggle
@@ -26231,23 +26274,6 @@ RectTransform:
   m_AnchoredPosition: {x: 245, y: -295}
   m_SizeDelta: {x: 450, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1041436243
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1041436241}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e6b1aa4deacd4f64c85360bca22c1bee, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pauseMenu: {fileID: 1840686943}
-  audioMenu: {fileID: 1822014841}
-  videoMenu: {fileID: 1667389577}
-  uiParticles: []
-  dynamicParticles: []
 --- !u!114 &1041436244
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26292,7 +26318,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1041436243}
+      - m_Target: {fileID: 446439950}
         m_TargetAssemblyTypeName: SettingsUIButtonManager, Assembly-CSharp
         m_MethodName: ToggleDynamicParticles
         m_Mode: 1
@@ -26592,7 +26618,6 @@ GameObject:
   - component: {fileID: 1089494818}
   - component: {fileID: 1089494817}
   - component: {fileID: 1089494816}
-  - component: {fileID: 1089494815}
   m_Layer: 0
   m_Name: Audio Button
   m_TagString: Untagged
@@ -26620,23 +26645,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1089494815
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1089494813}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e6b1aa4deacd4f64c85360bca22c1bee, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pauseMenu: {fileID: 1840686943}
-  audioMenu: {fileID: 1822014841}
-  videoMenu: {fileID: 1667389577}
-  uiParticles: []
-  dynamicParticles: []
 --- !u!114 &1089494816
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26681,7 +26689,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1089494815}
+      - m_Target: {fileID: 446439950}
         m_TargetAssemblyTypeName: SettingsUIButtonManager, Assembly-CSharp
         m_MethodName: ToggleAudioMenu
         m_Mode: 1
@@ -27439,6 +27447,7 @@ GameObject:
   - component: {fileID: 1136784841}
   - component: {fileID: 1136784840}
   - component: {fileID: 1136784839}
+  - component: {fileID: 1136784842}
   m_Layer: 5
   m_Name: Particle System (1)
   m_TagString: UI Particle
@@ -32274,6 +32283,19 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     vectorLabel1_3: W
+--- !u!114 &1136784842
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1136784837}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b775716c286c5fc42964389b59a26d8e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  settingsDataManager: {fileID: 11400000, guid: 0cf52153c15919b4290e530dc59fe985, type: 2}
 --- !u!1 &1166862928
 GameObject:
   m_ObjectHideFlags: 0
@@ -34438,7 +34460,6 @@ GameObject:
   - component: {fileID: 1232854139}
   - component: {fileID: 1232854138}
   - component: {fileID: 1232854137}
-  - component: {fileID: 1232854140}
   m_Layer: 0
   m_Name: Back Button
   m_TagString: Untagged
@@ -34510,7 +34531,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1232854140}
+      - m_Target: {fileID: 446439950}
         m_TargetAssemblyTypeName: SettingsUIButtonManager, Assembly-CSharp
         m_MethodName: ExitSettingsMenu
         m_Mode: 1
@@ -34560,23 +34581,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1232854135}
   m_CullTransparentMesh: 1
---- !u!114 &1232854140
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1232854135}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e6b1aa4deacd4f64c85360bca22c1bee, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pauseMenu: {fileID: 1840686943}
-  audioMenu: {fileID: 0}
-  videoMenu: {fileID: 0}
-  uiParticles: []
-  dynamicParticles: []
 --- !u!1 &1279767670
 GameObject:
   m_ObjectHideFlags: 0
@@ -97433,7 +97437,6 @@ GameObject:
   - component: {fileID: 1759352200}
   - component: {fileID: 1759352199}
   - component: {fileID: 1759352198}
-  - component: {fileID: 1759352197}
   m_Layer: 0
   m_Name: Video Button
   m_TagString: Untagged
@@ -97461,23 +97464,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1759352197
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1759352195}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e6b1aa4deacd4f64c85360bca22c1bee, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pauseMenu: {fileID: 1840686943}
-  audioMenu: {fileID: 1822014841}
-  videoMenu: {fileID: 1667389577}
-  uiParticles: []
-  dynamicParticles: []
 --- !u!114 &1759352198
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -97522,7 +97508,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1759352197}
+      - m_Target: {fileID: 446439950}
         m_TargetAssemblyTypeName: SettingsUIButtonManager, Assembly-CSharp
         m_MethodName: ToggleVideoMenu
         m_Mode: 1
@@ -97850,6 +97836,7 @@ GameObject:
   - component: {fileID: 1780376336}
   - component: {fileID: 1780376335}
   - component: {fileID: 1780376337}
+  - component: {fileID: 1780376338}
   m_Layer: 5
   m_Name: Particle System
   m_TagString: UI Particle
@@ -102685,6 +102672,19 @@ SortingGroup:
   m_SortingLayer: 0
   m_SortingOrder: 12
   m_SortAtRoot: 0
+--- !u!114 &1780376338
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1780376333}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b775716c286c5fc42964389b59a26d8e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  settingsDataManager: {fileID: 11400000, guid: 0cf52153c15919b4290e530dc59fe985, type: 2}
 --- !u!1 &1785025365
 GameObject:
   m_ObjectHideFlags: 0
@@ -104636,13 +104636,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2499544477470310775, guid: fb4ade14ebaaa68489a2b1102bfa6637, type: 3}
+      propertyPath: particleToggle
+      value: 
+      objectReference: {fileID: 446439950}
+    - target: {fileID: 2499544477470310775, guid: fb4ade14ebaaa68489a2b1102bfa6637, type: 3}
       propertyPath: uiParticleToggle
       value: 
-      objectReference: {fileID: 955137499}
+      objectReference: {fileID: 0}
     - target: {fileID: 2499544477470310775, guid: fb4ade14ebaaa68489a2b1102bfa6637, type: 3}
       propertyPath: dynamicParticleToggle
       value: 
-      objectReference: {fileID: 1041436243}
+      objectReference: {fileID: 0}
     - target: {fileID: 6074256200892654278, guid: fb4ade14ebaaa68489a2b1102bfa6637, type: 3}
       propertyPath: m_Name
       value: Settings Manager

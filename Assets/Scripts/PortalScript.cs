@@ -53,6 +53,10 @@ public class PortalScript : MonoBehaviour
         {
             loadingScreen.SetActive(true);
 
+            SettingsUIButtonManager.ClearDynamicParticleList();
+            SettingsUIButtonManager.UpdateUIParticles = null;
+            SettingsUIButtonManager.UpdateDynamicParticles = null;
+
             if (sceneCounterAffected) 
             { 
                 sceneCounter++; 
