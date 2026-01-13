@@ -13,22 +13,49 @@ public class ParticleSystemManager : MonoBehaviour
 
     void Start()
     {
-        Debug.Log(gameObject.name);
         thisParticleSystem = GetComponent<ParticleSystem>();
+        //Debug.Log($"{gameObject.name} {thisParticleSystem != null}");
 
-        thisParticleSystem.Play();
+        //thisParticleSystem.Play();
+
+        SettingsUIButtonManager.RemoveSubscriberFunctions += RemoveSubscribers;
     }
 
     public void DelegateSubscriber()
     {
-        SettingsUIButtonManager.UpdateUIParticles += UIParticleUpdater;
-        SettingsUIButtonManager.UpdateDynamicParticles += DynamicParticleUpdater;
+        if (gameObject.tag == "UI Particle")
+        {
+            SettingsUIButtonManager.UpdateUIParticles += UIParticleUpdater;
+        }
+        else if (gameObject.tag == "Dynamic Particle")
+        {
+            SettingsUIButtonManager.UpdateDynamicParticles += DynamicParticleUpdater;
+        }
+    }
+
+    public void RemoveSubscribers()
+    {
+        if (gameObject.tag == "UI Particle")
+        {
+            SettingsUIButtonManager.UpdateUIParticles -= UIParticleUpdater;
+        }
+        else if (gameObject.tag == "Dynamic Particle")
+        {
+            SettingsUIButtonManager.UpdateDynamicParticles -= DynamicParticleUpdater;
+        }
     }
 
     public void UIParticleUpdater()
     {
         if (settingsDataManager.uiParticlesPlaying && this.gameObject.CompareTag("UI Particle"))
         {
+            //Debug.Log($"{gameObject.name} {thisParticleSystem != null}");
+
+            if (thisParticleSystem == null)
+            {
+                thisParticleSystem = GetComponent<ParticleSystem>();
+            }
+            
             thisParticleSystem.Play();
         }
         else if (!settingsDataManager.uiParticlesPlaying && this.gameObject.CompareTag("UI Particle"))

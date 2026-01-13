@@ -23,7 +23,7 @@ public class SettingsManager : MonoBehaviour
         foreach (var system in uiParticleSystems)
         {
             particleToggle.uiParticles.Add(system);
-            system.GetComponentInParent<ParticleSystemManager>().DelegateSubscriber();
+            system.GetComponentsInParent<ParticleSystemManager>(true)[0].DelegateSubscriber();
         }
     }
 

@@ -47,15 +47,20 @@ public class PortalScript : MonoBehaviour
         loadingScreen.SetActive(false);
     }
 
+    IEnumerator CallEvents()
+    {
+        SettingsUIButtonManager.ClearDynamicParticleList();
+        SettingsUIButtonManager.RemoveSubscriberFunctions();
+        yield return new WaitForSeconds(1); 
+    }
+
     private void OnTriggerEnter2D(Collider2D collider)
     {
         if (collider.CompareTag("Player"))
         {
             loadingScreen.SetActive(true);
 
-            SettingsUIButtonManager.ClearDynamicParticleList();
-            SettingsUIButtonManager.UpdateUIParticles = null;
-            SettingsUIButtonManager.UpdateDynamicParticles = null;
+            CallEvents();
 
             if (sceneCounterAffected) 
             { 

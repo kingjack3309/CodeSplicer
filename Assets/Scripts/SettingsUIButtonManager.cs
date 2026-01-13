@@ -119,4 +119,6 @@ public class SettingsUIButtonManager : MonoBehaviour
     public static Action UpdateDynamicParticles;
 
     public static Action ClearDynamicParticleList;
+
+    public static Action RemoveSubscriberFunctions;
 }
