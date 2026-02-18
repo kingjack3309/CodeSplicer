@@ -27,9 +27,6 @@ public class PlayerControllerScript : MonoBehaviour
     private float groundCheckWidth = 1.16f;
     private float groundCheckHeight = 0.5f;
 
-    private float stuckCheckWidth = 1.16f;
-    private float stuckCheckHeight = 0.5f;
-
     public bool drawGizmos = true;
 
     [Header("------Audio Clips------")]
@@ -95,18 +92,6 @@ public class PlayerControllerScript : MonoBehaviour
             // Draw a wire cube outline.
             Gizmos.color = Color.white;
             Gizmos.DrawWireCube(groundCheck.position, new Vector3(groundCheckWidth, groundCheckHeight, 0));
-            
-            //------------------------------------------
-
-            // Set the color with custom alpha.
-            Gizmos.color = new Color(1f, 0f, 0f, 50); // red with custom alpha
-
-            // Draw the cube.
-            Gizmos.DrawCube(stuckCheck.position, new Vector3(stuckCheckWidth, stuckCheckHeight, 0));
-
-            // Draw a wire cube outline.
-            Gizmos.color = Color.white;
-            Gizmos.DrawWireCube(stuckCheck.position, new Vector3(stuckCheckWidth, stuckCheckHeight, 0));
         }
     }
 
@@ -179,12 +164,7 @@ public class PlayerControllerScript : MonoBehaviour
     {
         return Physics2D.OverlapBox(groundCheck.position, new Vector2(groundCheckWidth, groundCheckHeight), 0, oneWayPlatformLayer);
     }
-
-    public bool IsStuck()
-    {
-        return Physics2D.OverlapBox(stuckCheck.position, new Vector2(stuckCheckWidth, stuckCheckHeight), 0, oneWayPlatformLayer);
-    }
-    
+        
     public void AddHealth(int amount)
     {
         healthManager.GainHealth(amount);

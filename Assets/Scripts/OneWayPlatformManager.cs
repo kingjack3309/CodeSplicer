@@ -1,80 +1,48 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class OneWayPlatformManager : MonoBehaviour
 {
 
-    PlatformEffector2D platformEffector;
+    private Collider2D platformCollider;
+    private Collider2D playerCollider;
+    private bool isFallingThrough = false;
 
-    bool isColliding;
-
-    bool isStuck;
-
-    // Start is called before the first frame update
     void Start()
     {
-        platformEffector = GetComponentInChildren<PlatformEffector2D>();
+        platformCollider = GetComponent<Collider2D>();
+        playerCollider = GameObject.FindGameObjectWithTag("Player").GetComponent<Collider2D>();
     }
 
-    private void Update()
+    void Update()
     {
-        if (Input.GetKeyDown(KeyCode.W))
+        // Reference height is the Marker's Y position
+        float platformTop = platformCollider.bounds.max.y;
+        float playerFeet = playerCollider.bounds.min.y;
+
+        // Toggle 'S' to start falling through
+        if (Input.GetKeyDown(KeyCode.S) && playerFeet > platformTop - 0.1f)
         {
-            platformEffector.rotationalOffset = 0;
+            isFallingThrough = true;
         }
 
-        if (!GameObject.Find("player").GetComponent<PlayerControllerScript>().IsStuck() && !GameObject.Find("player").GetComponent<PlayerControllerScript>().IsGrounded2())
+        // AUTO-OFF: If player feet are below platform height
+        // OR if the player has toggled the 'fall through' state
+        if (playerFeet < platformTop - 0.05f || isFallingThrough)
         {
-            isStuck = true;
+            Debug.Log("");
+            Physics2D.IgnoreCollision(playerCollider, platformCollider, true);
         }
         else
         {
-            isStuck = false;
+            // Only re-enable if we are clearly above and NOT trying to fall through
+            Physics2D.IgnoreCollision(playerCollider, platformCollider, false);
         }
 
-        if (isColliding && isStuck && GameObject.Find("player").GetComponent<PlayerControllerScript>().rb.velocity.y == 0)
+        // Reset the toggle once the player has fully cleared the bottom of the platform
+        if (isFallingThrough && playerCollider.bounds.max.y < platformTop - 0.5f)
         {
-            //Debug.Log(isStuck.ToString());
-            //Debug.Log("unstuck the player");
-            platformEffector.rotationalOffset = 180;
+            isFallingThrough = false;
         }
-
-        //Debug.Log(GameObject.Find("player").GetComponent<PlayerControllerScript>().rb.velocity.y.ToString());
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        platformEffector.rotationalOffset = 0;
-        if (isStuck)
-        {
-            isStuck = false;
-        }
-        isColliding = true;
-        //Debug.Log("is Colliding");
-        //Debug.Log(isStuck.ToString());
-    }
-    private void OnCollisionStay2D(Collision2D collision)
-    {
-        if (Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow))
-        {
-            platformEffector.rotationalOffset = 180;
-        }
-
-        //if mcfucking not stuck then dont mcfucking unstuck
-
-        //if (GameObject.Find("player").GetComponent<PlayerControllerScript>().IsGrounded2() && GameObject.Find("player").GetComponent<PlayerControllerScript>().IsStuck())
-        //{
-        //    isStuck = false;
-        //}
-    }
-
-    private void OnCollisionExit2D(Collision2D collision)
-    {
-        platformEffector.rotationalOffset = 0;
-        isColliding = false;
-        //Debug.Log("is not Colliding");
-        //Debug.Log(isStuck.ToString());
-    }
 }

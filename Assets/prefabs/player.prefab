@@ -67,7 +67,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5427652937852799144}
-  - {fileID: 6724130243340678257}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &360988939634730456
@@ -110,7 +109,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1000
+  m_SortingOrder: 1
   m_Sprite: {fileID: 478475006, guid: 2ef31c2e0e6b40047a6709d0eb4f04dc, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -138,16 +137,16 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 3
-  m_Material: {fileID: 6200000, guid: bffd7fe904a3e93428734421a1f5cb12, type: 2}
+  m_Material: {fileID: 6200000, guid: 08c3657f895256646a4e212e4d2c808e, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!114 &5169526782123754406
 MonoBehaviour:
@@ -164,7 +163,7 @@ MonoBehaviour:
   isFacingRight: 0
   rb: {fileID: 4600247993214014506}
   groundCheck: {fileID: 5427652937852799144}
-  stuckCheck: {fileID: 6724130243340678257}
+  stuckCheck: {fileID: 0}
   enemyLayer:
     serializedVersion: 2
     m_Bits: 0
@@ -284,7 +283,7 @@ PolygonCollider2D:
   m_GameObject: {fileID: 2987654680649926799}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 6200000, guid: bffd7fe904a3e93428734421a1f5cb12, type: 2}
+  m_Material: {fileID: 6200000, guid: 08c3657f895256646a4e212e4d2c808e, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -361,34 +360,3 @@ MonoBehaviour:
   sfxSource: 1
   musicSource: 0
   cutsceneSource: 0
---- !u!1 &8842113175816710106
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 6724130243340678257}
-  m_Layer: 7
-  m_Name: StuckCheck
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &6724130243340678257
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8842113175816710106}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.015, y: -1.686, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 3682268036815900864}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

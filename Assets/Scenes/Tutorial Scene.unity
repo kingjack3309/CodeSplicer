@@ -104814,18 +104814,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 360988939634730456, guid: 0ff44ad5f2b49794693395b7567c241c, type: 3}
-      propertyPath: m_SortingOrder
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 2987654680649926799, guid: 0ff44ad5f2b49794693395b7567c241c, type: 3}
       propertyPath: m_Name
       value: player
       objectReference: {fileID: 0}
-    - target: {fileID: 3038086704128739988, guid: 0ff44ad5f2b49794693395b7567c241c, type: 3}
-      propertyPath: m_Material
-      value: 
-      objectReference: {fileID: 6200000, guid: 08c3657f895256646a4e212e4d2c808e, type: 2}
     - target: {fileID: 3682268036815900864, guid: 0ff44ad5f2b49794693395b7567c241c, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -104866,22 +104858,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4600247993214014506, guid: 0ff44ad5f2b49794693395b7567c241c, type: 3}
-      propertyPath: m_Mass
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4600247993214014506, guid: 0ff44ad5f2b49794693395b7567c241c, type: 3}
-      propertyPath: m_Material
-      value: 
-      objectReference: {fileID: 6200000, guid: 08c3657f895256646a4e212e4d2c808e, type: 2}
     - target: {fileID: 5169526782123754406, guid: 0ff44ad5f2b49794693395b7567c241c, type: 3}
-      propertyPath: dashStrength
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 5169526782123754406, guid: 0ff44ad5f2b49794693395b7567c241c, type: 3}
-      propertyPath: onLeftClickMods.Array.data[0]
+      propertyPath: stuckCheck
       value: 
-      objectReference: {fileID: 11400000, guid: ef47e737f2d8556479dc25a92691d79b, type: 2}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
