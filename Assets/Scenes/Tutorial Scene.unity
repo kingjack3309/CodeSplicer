@@ -104706,7 +104706,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3594842106021151672, guid: ae89c58a72bff4b479acd38d1368841e, type: 3}
       propertyPath: nextScene
-      value: StageOneLevelA
+      value: StageOneLevelB
       objectReference: {fileID: 0}
     - target: {fileID: 3594842106021151672, guid: ae89c58a72bff4b479acd38d1368841e, type: 3}
       propertyPath: loadingScreen
