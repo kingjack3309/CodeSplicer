@@ -43,7 +43,7 @@ public class OneWayPlatformManager : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter2D()
+    private void OnCollisionStay2D()
     {
         if (Input.GetKeyDown(KeyCode.S) && playerFeet > platformTop - 0.1f)
         {
