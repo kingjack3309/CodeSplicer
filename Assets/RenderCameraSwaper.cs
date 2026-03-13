@@ -15,8 +15,11 @@ public class RenderCameraSwaper : MonoBehaviour
 
     public void SetCamera()
     {
-        inventory.GetComponent<Canvas>().worldCamera = Camera.main;
-        pauseMenu.GetComponent<Canvas>().worldCamera = Camera.main;
-        settingsUI.GetComponent<Canvas>().worldCamera = Camera.main;
+        if (inventory == null)
+        {
+            inventory.GetComponent<Canvas>().worldCamera = Camera.main;
+            pauseMenu.GetComponent<Canvas>().worldCamera = Camera.main;
+            settingsUI.GetComponent<Canvas>().worldCamera = Camera.main;
+        }
     }
 }

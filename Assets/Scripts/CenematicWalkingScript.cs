@@ -25,11 +25,11 @@ public class CenematicWalkingScript : MonoBehaviour
     {
         if (gameObject.transform.position.y < endY)
         {
-            rb.velocity = new Vector2(0, walkSpeed);
+            rb.linearVelocity = new Vector2(0, walkSpeed);
         }
         else
         {
-            rb.velocity = Vector2.zero;
+            rb.linearVelocity = Vector2.zero;
         }
     }
 }

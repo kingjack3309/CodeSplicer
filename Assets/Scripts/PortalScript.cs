@@ -36,7 +36,6 @@ public class PortalScript : MonoBehaviour
 
     private void Awake()
     {
-        currentScene = SceneManager.GetActiveScene().name;
         loadingScreen = GameObject.Find("LoadingScreen");
 
         persistentObjects = new List<GameObject>() { GameObject.Find("player"), GameObject.Find("Virtual Camera"), GameObject.Find("UI"), GameObject.Find("Inventory Manager")};
@@ -44,7 +43,16 @@ public class PortalScript : MonoBehaviour
 
     private void Start()
     {
+        currentScene = SceneManager.GetActiveScene().name;
         loadingScreen.SetActive(false);
+    }
+
+    private void Update()
+    {
+        if (SceneManager.GetSceneByName(nextScene).isLoaded)
+        {
+            SceneManager.UnloadSceneAsync(currentScene, UnloadSceneOptions.None);
+        }
     }
 
     IEnumerator CallEvents()
@@ -96,11 +104,11 @@ public class PortalScript : MonoBehaviour
                     DestroyPersistentObjects();
                 }
 
-                SceneManager.LoadScene(nextScene);
+                SceneManager.LoadScene(nextScene, LoadSceneMode.Additive);
             }
             else if (nextLevelRandomized)
             {
-                SceneManager.LoadScene(sceneList[Random.Range(0, sceneList.Count)]);
+                SceneManager.LoadSceneAsync(sceneList[Random.Range(0, sceneList.Count)], LoadSceneMode.Additive);
             }
             
             collider.GetComponent<PlayerControllerScript>().ReturnToStart();

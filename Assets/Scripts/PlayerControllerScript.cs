@@ -76,7 +76,7 @@ public class PlayerControllerScript : MonoBehaviour
 
     private void FixedUpdate()
     {
-        rb.velocity = new Vector2(speed * horizontal, rb.velocity.y);
+        rb.linearVelocity = new Vector2(speed * horizontal, rb.linearVelocity.y);
     }
     
     private void OnDrawGizmos() 
@@ -139,7 +139,7 @@ public class PlayerControllerScript : MonoBehaviour
 
         if ((Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.Space)) && ((IsGrounded() || IsGrounded2()) || coyoteTimeCounter > 0f))
         {
-            rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
+            rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpingPower);
 
             coyoteTimeCounter = 0f;
         }
@@ -148,7 +148,7 @@ public class PlayerControllerScript : MonoBehaviour
 
         else if ((Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.Space)) && canDoubleJump)
         {
-            rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
+            rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpingPower);
             doubleJumpped = true;
         }
     }
@@ -204,15 +204,15 @@ public class PlayerControllerScript : MonoBehaviour
 
         if (knockbackStrengthX == 0f)
         {
-            knockbackStrengthX = rb.velocity.x;
+            knockbackStrengthX = rb.linearVelocity.x;
         }
 
         if (knockbackStrengthY == 0f)
         {
-            knockbackStrengthY = rb.velocity.y;
+            knockbackStrengthY = rb.linearVelocity.y;
         }
 
-        rb.velocity = new Vector2(knockbackStrengthX, knockbackStrengthY);
+        rb.linearVelocity = new Vector2(knockbackStrengthX, knockbackStrengthY);
     }
 
     public void AddMod(ModData mod)

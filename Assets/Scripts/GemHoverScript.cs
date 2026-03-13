@@ -23,7 +23,7 @@ public class GemHoverScript : MonoBehaviour
         upperBound = startY + hoverDistance;
         lowerBound = startY - hoverDistance;
 
-        rb.velocity = new Vector2(0, Random.Range(0.1f, 0.30f));
+        rb.linearVelocity = new Vector2(0, Random.Range(0.1f, 0.30f));
     }
 
     // Update is called once per frame
@@ -31,12 +31,12 @@ public class GemHoverScript : MonoBehaviour
     {
         if (gameObject.transform.position.y > upperBound ) 
         {
-            rb.velocity = new Vector2(0, -hoverSpeed);
+            rb.linearVelocity = new Vector2(0, -hoverSpeed);
         }
 
         if (gameObject.transform.position.y < lowerBound)
         {
-            rb.velocity = new Vector2(0, hoverSpeed);
+            rb.linearVelocity = new Vector2(0, hoverSpeed);
         }
     }
 
