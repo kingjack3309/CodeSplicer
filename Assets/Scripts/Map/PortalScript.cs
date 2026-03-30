@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.PlayerLoop;
 using UnityEngine.SceneManagement;
 
 public class PortalScript : MonoBehaviour
@@ -17,6 +19,8 @@ public class PortalScript : MonoBehaviour
     [Header("special portals like boss fights will use a level counter")]
     [Header("and certian scenes wont count to that counter")]
     [SerializeField] bool sceneCounterAffected = true;
+
+    public string lastScene;
 
     int sceneCounter = 0;
 
@@ -39,19 +43,27 @@ public class PortalScript : MonoBehaviour
         loadingScreen = GameObject.Find("LoadingScreen");
 
         persistentObjects = new List<GameObject>() { GameObject.Find("player"), GameObject.Find("Virtual Camera"), GameObject.Find("UI"), GameObject.Find("Inventory Manager")};
+        lastScene = SceneManager.GetSceneAt(0).name;
+
+        if (SceneManager.sceneCount == 2)
+        {
+            currentScene = SceneManager.GetSceneAt(1).name;
+        }
     }
 
     private void Start()
     {
-        currentScene = SceneManager.GetActiveScene().name;
         loadingScreen.SetActive(false);
     }
 
     private void Update()
     {
-        if (SceneManager.GetSceneByName(nextScene).isLoaded)
+        if (SceneManager.sceneCount == 2)
         {
-            SceneManager.UnloadSceneAsync(currentScene, UnloadSceneOptions.None);
+            if (SceneManager.GetSceneAt(1).isLoaded)
+            {
+                SceneManager.UnloadSceneAsync(lastScene, UnloadSceneOptions.None);
+            }
         }
     }
 

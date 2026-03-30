@@ -16,7 +16,6 @@ public class StairExitScript : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             stairScript.stepCollider.enabled = true;
-            Debug.Log("Stair collider on");
         }
     }
 }

@@ -11,6 +11,8 @@ public class OneWayPlatformManager : MonoBehaviour
     private float platformTop;
     private float playerFeet;
 
+    private bool standingOnPlatform;
+
     void Start()
     {
         platformCollider = GetComponent<Collider2D>();
@@ -27,8 +29,13 @@ public class OneWayPlatformManager : MonoBehaviour
         // Reference height is the Marker's Y position
         float platformTop = platformCollider.bounds.max.y;
         float playerFeet = playerCollider.bounds.min.y;
-        
-        if (playerFeet < platformTop - 0.05f || isFallingThrough)
+
+        if (Input.GetKeyDown(KeyCode.S) && playerFeet > platformTop - 0.1f && standingOnPlatform)
+        {
+            isFallingThrough = true;
+        }
+
+        if (playerFeet < platformTop - 0.03f || isFallingThrough)
         {
             Physics2D.IgnoreCollision(playerCollider, platformCollider, true);
         }
@@ -37,18 +44,20 @@ public class OneWayPlatformManager : MonoBehaviour
             Physics2D.IgnoreCollision(playerCollider, platformCollider, false);
         }
 
-        if (isFallingThrough && playerCollider.bounds.max.y < platformTop - 0.5f)
+        if (isFallingThrough && playerCollider.bounds.max.y < platformTop - 0.3f)
         {
             isFallingThrough = false;
         }
     }
 
-    private void OnCollisionStay2D()
+    private void OnCollisionEnter2D()
     {
-        if (Input.GetKeyDown(KeyCode.S) && playerFeet > platformTop - 0.1f)
-        {
-            isFallingThrough = true;
-        }
+        standingOnPlatform = true;
+    }
+
+    private void OnCollisionExit2D()
+    {
+        standingOnPlatform = false;
     }
 
 }

@@ -10,6 +10,7 @@ public class StairScript : MonoBehaviour
     public TilemapCollider2D stepCollider;
 
     public bool isFacingRight = false;
+    private bool standingOnPlatform;
 
     // Start is called before the first frame update
     void Start()
@@ -17,16 +18,22 @@ public class StairScript : MonoBehaviour
         stepCollider = gameObject.GetComponent <TilemapCollider2D>();
     }
 
-    private void OnCollisionStay2D(Collision2D collision)
+    private void Update()
     {
-        if (collision.gameObject.CompareTag("Player"))
+        if (Input.GetKeyDown(KeyCode.S) && standingOnPlatform)
         {
-
-            if (Input.GetKeyDown(KeyCode.S))
-            {
-                stepCollider.enabled = false;
-                Debug.Log("Stair collider off");
-            }
+            stepCollider.enabled = false;
         }
     }
+
+    private void OnCollisionEnter2D()
+    {
+        standingOnPlatform = true;
+    }
+
+    private void OnCollisionExit2D()
+    {
+        standingOnPlatform = false;
+    }
+
 }
