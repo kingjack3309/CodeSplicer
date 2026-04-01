@@ -20,25 +20,14 @@ public class SettingsUIButtonManager : MonoBehaviour
 
     [SerializeField] SettingsDataManager settingsDataManager;
 
-    private void Start()
-    {
-        SubscribeParticleAction();
-    }
-
     public void ExitSettingsMenu()
     {
         pauseMenu.SetActive(true);
-        UpdateUIParticles();
         GameObject.Find("SettingsUI").SetActive(false);
     }
 
     public void ToggleAudioMenu()
     {
-        if (openMenu != null)
-        {
-            openMenu.SetActive(false); //Closes the open menu if there is any
-        }
-
         if (openMenu != audioMenu)
         {
             openMenu = audioMenu; // open new menu
@@ -49,14 +38,15 @@ public class SettingsUIButtonManager : MonoBehaviour
             openMenu = null;
         }
         
-    }
-
-    public void ToggleVideoMenu()
-    {
         if (openMenu != null)
         {
             openMenu.SetActive(false); //Closes the open menu if there is any
         }
+
+    }
+
+    public void ToggleVideoMenu()
+    {
 
         if (openMenu != videoMenu)
         {
@@ -67,58 +57,9 @@ public class SettingsUIButtonManager : MonoBehaviour
         {
             openMenu = null;
         }
-    }
-
-    public void ToggleUIParticles()
-    {
-        if (uiParticles != null)
+        if (openMenu != null)
         {
-            if (settingsDataManager.uiParticlesPlaying)
-            {
-                settingsDataManager.uiParticlesPlaying = false;
-                UpdateUIParticles();
-            }
-
-            else
-            {
-                settingsDataManager.uiParticlesPlaying = true;
-                UpdateUIParticles();
-            }
+            openMenu.SetActive(false); //Closes the open menu if there is any
         }
     }
-
-    public void ToggleDynamicParticles()
-    {
-        if (dynamicParticles != null)
-        {
-            if (settingsDataManager.dynamicParticlesPlaying)
-            {
-                settingsDataManager.dynamicParticlesPlaying = false;
-                UpdateDynamicParticles();
-            }
-
-            else
-            {
-                settingsDataManager.dynamicParticlesPlaying = true;
-                UpdateDynamicParticles();
-            }
-        }
-    }
-
-    public void ClearDynamicParticles()
-    {
-        dynamicParticles.Clear();
-    }
-
-    private void SubscribeParticleAction()
-    {
-        ClearDynamicParticleList += ClearDynamicParticles;
-    }
-
-    public static Action UpdateUIParticles;
-    public static Action UpdateDynamicParticles;
-
-    public static Action ClearDynamicParticleList;
-
-    public static Action RemoveSubscriberFunctions;
 }

@@ -70,7 +70,6 @@ public class InventoryToggle : MonoBehaviour
             gui.SetActive(false);
             isActive2 = true;
             Time.timeScale = 0;
-            SettingsUIButtonManager.UpdateUIParticles();
         }
         else if (Input.GetKeyDown(KeyCode.Escape) && isActive2)
         {

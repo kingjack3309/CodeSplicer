@@ -9,9 +9,6 @@ public class SettingsDataManager : ScriptableObject
     public float musicVolume = 0.5f;
     public float cutsceneVolume = 0.5f;
 
-    public bool uiParticlesPlaying = true;
-    public bool dynamicParticlesPlaying = true;
-
     public void SetSFXVolume(float volume)
     {
         sfxVolume = volume;
