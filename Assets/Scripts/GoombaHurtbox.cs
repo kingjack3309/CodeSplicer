@@ -4,11 +4,11 @@ public class GoombaHurtbox : MonoBehaviour
 {
     [SerializeField] GameObject parentObject;
     public float bounce = 1.5f;
-    private void OnCollisionEnter2D(Collision2D other)
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.CompareTag("Player"))
+        if (other.CompareTag("Player"))
         {
-            other.rigidbody.linearVelocityY = bounce;
+            other.GetComponent<Rigidbody2D>().linearVelocityY = bounce;
             //spawn 1&0 particle prefab that fall onto the floor
             Destroy(parentObject);
         }

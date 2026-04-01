@@ -13,28 +13,7 @@ public class SettingsManager : MonoBehaviour
         
         particleToggle = AllButtonManagers.FirstOrDefault();
 
-        FindDynamicParticleSystems();
-        FindUIParticleSystems();
-    }
-
-    public void FindUIParticleSystems()
-    {
-        var uiParticleSystems = FindObjectsByType<ParticleSystem>(FindObjectsInactive.Include, FindObjectsSortMode.None).Where(t => t.CompareTag("UI Particle"));
-        foreach (var system in uiParticleSystems)
-        {
-            particleToggle.uiParticles.Add(system);
-            system.GetComponentsInParent<ParticleSystemManager>(true)[0].DelegateSubscriber();
-        }
-    }
-
-    public void FindDynamicParticleSystems()
-    {
-        var dynamicParticleSystems = FindObjectsByType<ParticleSystem>(FindObjectsInactive.Include, FindObjectsSortMode.None).Where(t => t.CompareTag("Dynamic Particle"));
-        foreach (var system in dynamicParticleSystems)
-        {
-            particleToggle.dynamicParticles.Add(system);
-            system.GetComponentInParent<ParticleSystemManager>().DelegateSubscriber();
-        }
+        
     }
 
 }

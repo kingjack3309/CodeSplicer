@@ -16,4 +16,4 @@ MonoBehaviour:
   musicVolume: 0.5
   cutsceneVolume: 0.5
   uiParticlesPlaying: 1
-  dynamicParticlesPlaying: 1
+  dynamicParticlesPlaying: 0

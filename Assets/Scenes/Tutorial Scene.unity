@@ -5229,6 +5229,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   settingsDataManager: {fileID: 11400000, guid: 0cf52153c15919b4290e530dc59fe985, type: 2}
+  thisParticleSystem: {fileID: 0}
 --- !u!1 &39937595
 GameObject:
   m_ObjectHideFlags: 0
@@ -8372,7 +8373,6 @@ GameObject:
   - component: {fileID: 411277556}
   - component: {fileID: 411277555}
   - component: {fileID: 411277554}
-  - component: {fileID: 411277558}
   m_Layer: 0
   m_Name: Particle System (1)
   m_TagString: Dynamic Particle
@@ -8490,7 +8490,7 @@ ParticleSystem:
   emitterVelocityMode: 0
   looping: 1
   prewarm: 1
-  playOnAwake: 0
+  playOnAwake: 1
   useUnscaledTime: 0
   autoRandomSeed: 1
   startDelay:
@@ -13205,25 +13205,12 @@ Transform:
   m_GameObject: {fileID: 411277553}
   serializedVersion: 2
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 1.9, y: 19.6, z: -0.3}
+  m_LocalPosition: {x: 1.9, y: 16, z: -0.3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
---- !u!114 &411277558
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 411277553}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b775716c286c5fc42964389b59a26d8e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  settingsDataManager: {fileID: 11400000, guid: 0cf52153c15919b4290e530dc59fe985, type: 2}
 --- !u!1 &434638159
 GameObject:
   m_ObjectHideFlags: 0
@@ -13810,7 +13797,6 @@ GameObject:
   - component: {fileID: 503065055}
   - component: {fileID: 503065054}
   - component: {fileID: 503065053}
-  - component: {fileID: 503065057}
   m_Layer: 0
   m_Name: Particle System
   m_TagString: Dynamic Particle
@@ -13928,7 +13914,7 @@ ParticleSystem:
   emitterVelocityMode: 0
   looping: 1
   prewarm: 1
-  playOnAwake: 0
+  playOnAwake: 1
   useUnscaledTime: 0
   autoRandomSeed: 1
   startDelay:
@@ -18643,25 +18629,12 @@ Transform:
   m_GameObject: {fileID: 503065052}
   serializedVersion: 2
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 1.9, y: 19.6, z: -0.3}
+  m_LocalPosition: {x: 1.9, y: 16, z: -0.3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
---- !u!114 &503065057
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 503065052}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b775716c286c5fc42964389b59a26d8e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  settingsDataManager: {fileID: 11400000, guid: 0cf52153c15919b4290e530dc59fe985, type: 2}
 --- !u!1 &520083434
 GameObject:
   m_ObjectHideFlags: 0
@@ -20449,7 +20422,6 @@ GameObject:
   - component: {fileID: 740378333}
   - component: {fileID: 740378332}
   - component: {fileID: 740378334}
-  - component: {fileID: 740378335}
   m_Layer: 5
   m_Name: Particle System (1)
   m_TagString: UI Particle
@@ -25292,19 +25264,6 @@ SortingGroup:
   m_SortingOrder: 12
   m_SortAtRoot: 0
   m_Sort3DAs2D: 0
---- !u!114 &740378335
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 740378330}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b775716c286c5fc42964389b59a26d8e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  settingsDataManager: {fileID: 11400000, guid: 0cf52153c15919b4290e530dc59fe985, type: 2}
 --- !u!1 &779005049
 GameObject:
   m_ObjectHideFlags: 0
@@ -32369,6 +32328,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   settingsDataManager: {fileID: 11400000, guid: 0cf52153c15919b4290e530dc59fe985, type: 2}
+  thisParticleSystem: {fileID: 0}
 --- !u!1 &1166862928
 GameObject:
   m_ObjectHideFlags: 0
@@ -97949,7 +97909,6 @@ GameObject:
   - component: {fileID: 1780376336}
   - component: {fileID: 1780376335}
   - component: {fileID: 1780376337}
-  - component: {fileID: 1780376338}
   m_Layer: 5
   m_Name: Particle System
   m_TagString: UI Particle
@@ -102792,19 +102751,6 @@ SortingGroup:
   m_SortingOrder: 12
   m_SortAtRoot: 0
   m_Sort3DAs2D: 0
---- !u!114 &1780376338
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1780376333}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b775716c286c5fc42964389b59a26d8e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  settingsDataManager: {fileID: 11400000, guid: 0cf52153c15919b4290e530dc59fe985, type: 2}
 --- !u!1 &1785025365
 GameObject:
   m_ObjectHideFlags: 0
@@ -105003,10 +104949,6 @@ PrefabInstance:
     - target: {fileID: 3682268036815900864, guid: 0ff44ad5f2b49794693395b7567c241c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5169526782123754406, guid: 0ff44ad5f2b49794693395b7567c241c, type: 3}
-      propertyPath: stuckCheck
-      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
