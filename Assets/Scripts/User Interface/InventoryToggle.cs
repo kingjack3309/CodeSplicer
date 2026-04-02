@@ -13,6 +13,8 @@ public class InventoryToggle : MonoBehaviour
 
     GameObject ui;
 
+    public GameObject settingsMenu;
+
     bool isActive = false;
     bool isActive2 = false;
 
@@ -64,6 +66,11 @@ public class InventoryToggle : MonoBehaviour
 
     public void TogglePauseMenu()
     {
+        if(Input.GetKeyDown(KeyCode.Escape) && settingsMenu.activeSelf)
+        {
+            settingsMenu.SetActive(false);
+        }
+
         if (Input.GetKeyDown(KeyCode.Escape) && !isActive2)
         {
             pauseMenu.SetActive(true);

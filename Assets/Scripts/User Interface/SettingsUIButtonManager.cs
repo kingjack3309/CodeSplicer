@@ -28,6 +28,11 @@ public class SettingsUIButtonManager : MonoBehaviour
 
     public void ToggleAudioMenu()
     {
+        if (openMenu != null)
+        {
+            openMenu.SetActive(false); //Closes the open menu if there is any
+        }
+
         if (openMenu != audioMenu)
         {
             openMenu = audioMenu; // open new menu
@@ -37,16 +42,14 @@ public class SettingsUIButtonManager : MonoBehaviour
         {
             openMenu = null;
         }
-        
-        if (openMenu != null)
-        {
-            openMenu.SetActive(false); //Closes the open menu if there is any
-        }
-
     }
 
     public void ToggleVideoMenu()
     {
+        if (openMenu != null)
+        {
+            openMenu.SetActive(false); //Closes the open menu if there is any
+        }
 
         if (openMenu != videoMenu)
         {
@@ -56,10 +59,6 @@ public class SettingsUIButtonManager : MonoBehaviour
         else if (openMenu == videoMenu)
         {
             openMenu = null;
-        }
-        if (openMenu != null)
-        {
-            openMenu.SetActive(false); //Closes the open menu if there is any
         }
     }
 }
