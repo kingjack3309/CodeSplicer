@@ -92,6 +92,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   parentObject: {fileID: 6463352839818565128}
+  bloodParticles: {fileID: 2290355693073058139, guid: 6bf32443910cfd34f99263ac676a7f91, type: 3}
   bounce: 15
 --- !u!1 &6463352839818565128
 GameObject:
