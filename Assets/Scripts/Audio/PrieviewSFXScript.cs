@@ -10,6 +10,8 @@ public class PrieviewSFXScript : MonoBehaviour
 
     public List<AudioClip> sfxClipList;
 
+    public List<AudioClip> enemyClipList;
+
     public List<AudioClip> cutsceneClipList;
 
     private void Start()
@@ -27,6 +29,13 @@ public class PrieviewSFXScript : MonoBehaviour
     public void PreviewCutscene()
     {
         clip = cutsceneClipList[Random.Range(0, cutsceneClipList.Count)];
+        audioSource.clip = clip;
+        audioSource.Play();
+    }
+
+    public void PreviewEnemySFX()
+    {
+        clip = enemyClipList[Random.Range(0, enemyClipList.Count)];
         audioSource.clip = clip;
         audioSource.Play();
     }

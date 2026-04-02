@@ -20,7 +20,7 @@ public class StairScript : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.S) && standingOnPlatform)
+        if ((Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow)) && standingOnPlatform)
         {
             stepCollider.enabled = false;
         }

@@ -30,7 +30,7 @@ public class OneWayPlatformManager : MonoBehaviour
         float platformTop = platformCollider.bounds.max.y;
         float playerFeet = playerCollider.bounds.min.y;
 
-        if (Input.GetKeyDown(KeyCode.S) && playerFeet > platformTop - 0.1f && standingOnPlatform)
+        if ((Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow)) && playerFeet > platformTop - 0.1f && standingOnPlatform)
         {
             isFallingThrough = true;
         }

@@ -11,14 +11,9 @@ public class RandomizeAudioClips : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        int result = Random.Range(1, 10);
+        int result = Random.Range(0, 9);
         audioSource = GetComponent<AudioSource>();
         audioSource.clip = audioClips[result];
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        audioSource.Play();
     }
 }

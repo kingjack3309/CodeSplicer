@@ -12,6 +12,7 @@ public class SetVolume : MonoBehaviour
     public bool sfxSource = false;
     public bool musicSource = false;
     public bool cutsceneSource = false;
+    public bool enemySFX = false;
 
     private void Start()
     {
@@ -31,6 +32,10 @@ public class SetVolume : MonoBehaviour
         {
             audioSource.volume = settingsData.cutsceneVolume;
         }
+        else if (enemySFX)
+        {
+            audioSource.volume = settingsData.enemyVolume;
+        }
     }
 
     public void UpdateVolume()
@@ -48,6 +53,10 @@ public class SetVolume : MonoBehaviour
         else if (cutsceneSource)
         {
             audioSource.volume = settingsData.cutsceneVolume;
+        }
+        else if (enemySFX)
+        {
+            audioSource.volume = settingsData.enemyVolume;
         }
     }
 }

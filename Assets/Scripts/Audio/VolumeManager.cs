@@ -11,6 +11,7 @@ public class VolumeManager : MonoBehaviour
     public bool sfx = false;
     public bool music = false;
     public bool cutscene = false;
+    public bool enemy = false;
 
     private void Start()
     {
@@ -26,6 +27,10 @@ public class VolumeManager : MonoBehaviour
         else if (cutscene)
         {
             SetCutsceneVolume();
+        }
+        else if (enemy)
+        {
+            SetEnemyVolume();
         }
     }
 
@@ -49,6 +54,13 @@ public class VolumeManager : MonoBehaviour
         SetNewVolume();
     }
 
+    public void ChangeEnemyVolume()
+    {
+        settingsData.SetEnemyVolume(gameObject.GetComponent<Slider>().value);
+
+        SetNewVolume();
+    }
+
     public void ChangeMusicVolume()
     {
         settingsData.SetMusicVolume(gameObject.GetComponent<Slider>().value);
@@ -66,6 +78,11 @@ public class VolumeManager : MonoBehaviour
     void SetSFXVolume()
     {
         gameObject.GetComponent<Slider>().value = settingsData.sfxVolume;
+    }
+
+    void SetEnemyVolume()
+    {
+        gameObject.GetComponent<Slider>().value = settingsData.enemyVolume;
     }
 
     void SetMusicVolume()
