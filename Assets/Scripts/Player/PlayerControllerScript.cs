@@ -8,7 +8,7 @@ public class PlayerControllerScript : MonoBehaviour
 {
     private float horizontal;
     private float speed = 8f;
-    private float jumpingPower = 13f;
+    private float jumpingPower = 13.2f;
     public bool isFacingRight = false;
     private bool canDoubleJump = false;
     private bool doubleJumpped = false;
@@ -175,6 +175,7 @@ public class PlayerControllerScript : MonoBehaviour
         healthManager.LoseHealth(amount);
         audioSource.clip = gotStabbed;
         audioSource.Play();
+        StartCoroutine(HurtAnimation());
     }
 
     public void PlayGemSound()
@@ -213,6 +214,13 @@ public class PlayerControllerScript : MonoBehaviour
         }
 
         rb.linearVelocity = new Vector2(knockbackStrengthX, knockbackStrengthY);
+    }
+
+    IEnumerator HurtAnimation()
+    {
+        GetComponent<SpriteRenderer>().color = Color.red;
+        yield return new WaitForSeconds(0.3f);
+        GetComponent<SpriteRenderer>().color = Color.white;
     }
 
     public void AddMod(ModData mod)
