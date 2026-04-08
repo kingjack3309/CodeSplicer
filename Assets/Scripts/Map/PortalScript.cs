@@ -60,7 +60,7 @@ public class PortalScript : MonoBehaviour
     {
         if (SceneManager.sceneCount == 2)
         {
-            if (SceneManager.GetSceneAt(1).isLoaded)
+            if (SceneManager.GetSceneAt(1).isLoaded && lastScene != null)
             {
                 SceneManager.UnloadSceneAsync(lastScene, UnloadSceneOptions.None);
             }
