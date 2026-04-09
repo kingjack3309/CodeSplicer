@@ -109546,6 +109546,97 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 6082580248310853551, guid: ae89c58a72bff4b479acd38d1368841e, type: 3}
   m_PrefabInstance: {fileID: 1776689680}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1549062321
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1969191245327547214, guid: 14ba0a5fbd7e85741964ca313e664706, type: 3}
+      propertyPath: m_text
+      value: before you go jumping off the edge just know that the stairs work just
+        like one way platforms.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1969191245327547214, guid: 14ba0a5fbd7e85741964ca313e664706, type: 3}
+      propertyPath: 'm_ActiveFontFeatures.Array.data[0]'
+      value: 1801810542
+      objectReference: {fileID: 0}
+    - target: {fileID: 3387761824857879988, guid: 14ba0a5fbd7e85741964ca313e664706, type: 3}
+      propertyPath: germanTXT
+      value: no translation
+      objectReference: {fileID: 0}
+    - target: {fileID: 3387761824857879988, guid: 14ba0a5fbd7e85741964ca313e664706, type: 3}
+      propertyPath: pixelFont
+      value: 
+      objectReference: {fileID: 11400000, guid: aa6c04cdeb27e774db1361b9da2083d0, type: 2}
+    - target: {fileID: 3387761824857879988, guid: 14ba0a5fbd7e85741964ca313e664706, type: 3}
+      propertyPath: russianTXT
+      value: no translation
+      objectReference: {fileID: 0}
+    - target: {fileID: 3387761824857879988, guid: 14ba0a5fbd7e85741964ca313e664706, type: 3}
+      propertyPath: americanTXT
+      value: before you go jumping off the edge just know that the stairs work just
+        like one way platforms.
+      objectReference: {fileID: 0}
+    - target: {fileID: 3387761824857879988, guid: 14ba0a5fbd7e85741964ca313e664706, type: 3}
+      propertyPath: brittishTXT
+      value: no translation
+      objectReference: {fileID: 0}
+    - target: {fileID: 3387761824857879988, guid: 14ba0a5fbd7e85741964ca313e664706, type: 3}
+      propertyPath: russianFont
+      value: 
+      objectReference: {fileID: 11400000, guid: bbf14cc66b83a474cbf5d59d4fc532eb, type: 2}
+    - target: {fileID: 7496368611580464241, guid: 14ba0a5fbd7e85741964ca313e664706, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 8.54
+      objectReference: {fileID: 0}
+    - target: {fileID: 7496368611580464241, guid: 14ba0a5fbd7e85741964ca313e664706, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.47
+      objectReference: {fileID: 0}
+    - target: {fileID: 7496368611580464241, guid: 14ba0a5fbd7e85741964ca313e664706, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7496368611580464241, guid: 14ba0a5fbd7e85741964ca313e664706, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7496368611580464241, guid: 14ba0a5fbd7e85741964ca313e664706, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7496368611580464241, guid: 14ba0a5fbd7e85741964ca313e664706, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7496368611580464241, guid: 14ba0a5fbd7e85741964ca313e664706, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7496368611580464241, guid: 14ba0a5fbd7e85741964ca313e664706, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7496368611580464241, guid: 14ba0a5fbd7e85741964ca313e664706, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7496368611580464241, guid: 14ba0a5fbd7e85741964ca313e664706, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7800403779484627199, guid: 14ba0a5fbd7e85741964ca313e664706, type: 3}
+      propertyPath: m_Name
+      value: SignEntity (1)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 14ba0a5fbd7e85741964ca313e664706, type: 3}
 --- !u!1001 &1776689680
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -114052,6 +114143,95 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f17d03ebd64c3074da93322cde09e59b, type: 3}
+--- !u!1001 &2142037534
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1969191245327547214, guid: 14ba0a5fbd7e85741964ca313e664706, type: 3}
+      propertyPath: m_text
+      value: Kill all enemies in order to open the portal. [Hint] stomp on them.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1969191245327547214, guid: 14ba0a5fbd7e85741964ca313e664706, type: 3}
+      propertyPath: 'm_ActiveFontFeatures.Array.data[0]'
+      value: 1801810542
+      objectReference: {fileID: 0}
+    - target: {fileID: 3387761824857879988, guid: 14ba0a5fbd7e85741964ca313e664706, type: 3}
+      propertyPath: germanTXT
+      value: no translation
+      objectReference: {fileID: 0}
+    - target: {fileID: 3387761824857879988, guid: 14ba0a5fbd7e85741964ca313e664706, type: 3}
+      propertyPath: pixelFont
+      value: 
+      objectReference: {fileID: 11400000, guid: aa6c04cdeb27e774db1361b9da2083d0, type: 2}
+    - target: {fileID: 3387761824857879988, guid: 14ba0a5fbd7e85741964ca313e664706, type: 3}
+      propertyPath: russianTXT
+      value: no translation
+      objectReference: {fileID: 0}
+    - target: {fileID: 3387761824857879988, guid: 14ba0a5fbd7e85741964ca313e664706, type: 3}
+      propertyPath: americanTXT
+      value: Kill all enemies in order to open the portal. [Hint] stomp on them.
+      objectReference: {fileID: 0}
+    - target: {fileID: 3387761824857879988, guid: 14ba0a5fbd7e85741964ca313e664706, type: 3}
+      propertyPath: brittishTXT
+      value: no translation
+      objectReference: {fileID: 0}
+    - target: {fileID: 3387761824857879988, guid: 14ba0a5fbd7e85741964ca313e664706, type: 3}
+      propertyPath: russianFont
+      value: 
+      objectReference: {fileID: 11400000, guid: bbf14cc66b83a474cbf5d59d4fc532eb, type: 2}
+    - target: {fileID: 7496368611580464241, guid: 14ba0a5fbd7e85741964ca313e664706, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 15.909888
+      objectReference: {fileID: 0}
+    - target: {fileID: 7496368611580464241, guid: 14ba0a5fbd7e85741964ca313e664706, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -12.483099
+      objectReference: {fileID: 0}
+    - target: {fileID: 7496368611580464241, guid: 14ba0a5fbd7e85741964ca313e664706, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7496368611580464241, guid: 14ba0a5fbd7e85741964ca313e664706, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7496368611580464241, guid: 14ba0a5fbd7e85741964ca313e664706, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7496368611580464241, guid: 14ba0a5fbd7e85741964ca313e664706, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7496368611580464241, guid: 14ba0a5fbd7e85741964ca313e664706, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7496368611580464241, guid: 14ba0a5fbd7e85741964ca313e664706, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7496368611580464241, guid: 14ba0a5fbd7e85741964ca313e664706, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7496368611580464241, guid: 14ba0a5fbd7e85741964ca313e664706, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7800403779484627199, guid: 14ba0a5fbd7e85741964ca313e664706, type: 3}
+      propertyPath: m_Name
+      value: SignEntity
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 14ba0a5fbd7e85741964ca313e664706, type: 3}
 --- !u!1001 &7643417253592544461
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -114123,3 +114303,5 @@ SceneRoots:
   - {fileID: 1328491368}
   - {fileID: 1124965451}
   - {fileID: 1779585991}
+  - {fileID: 2142037534}
+  - {fileID: 1549062321}
