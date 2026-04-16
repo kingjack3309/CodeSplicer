@@ -42,21 +42,31 @@ public class SetVolume : MonoBehaviour
     {
         if (sfxSource)
         {
-            audioSource.volume = settingsData.sfxVolume;
+            if (audioSource != null && settingsData != null)
+            {
+                audioSource.volume = settingsData.sfxVolume;
+            }
         }
-
         else if (musicSource)
         {
-            audioSource.volume = settingsData.musicVolume;
+            if (audioSource != null && settingsData != null)
+            {
+                audioSource.volume = settingsData.musicVolume;
+            }
         }
-
         else if (cutsceneSource)
         {
-            audioSource.volume = settingsData.cutsceneVolume;
+            if (audioSource != null && settingsData != null)
+            {
+                audioSource.volume = settingsData.cutsceneVolume;
+            }
         }
         else if (enemySFX)
         {
-            audioSource.volume = settingsData.enemyVolume;
+            if (audioSource != null && settingsData != null)
+            {
+                audioSource.volume = settingsData.enemyVolume;
+            }
         }
     }
 }

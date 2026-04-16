@@ -17,22 +17,27 @@ public class MenuButtonControler : MonoBehaviour
 
     public void PlayButtonFunction()
     {
-        SceneManager.LoadScene("CutScene1");
+        SceneLoader.Instance.LoadScene("CutScene1", "Main Menu");
     }
 
     public void LanguagesButtonFunction()
     {
-        SceneManager.LoadScene("Languages Screen");
+        SceneLoader.Instance.LoadScene("LanguagesScene", "Main Menu");
     }
 
     public void SettingsButtonFunction()
     {
-        SceneManager.LoadScene("SettingsScreen");
+        SceneLoader.Instance.LoadScene("SettingsScreen", "Main Menu");
+    }
+
+    public void DifficultyButtonFunction()
+    {
+        SceneLoader.Instance.LoadScene("DifficultyScreen", "Main Menu");
     }
 
     public void SkipCutscene()
     {
-        SceneManager.LoadScene("Tutorial Scene");
+        SceneLoader.Instance.LoadScene("Tutorial Scene", "CutScene1");
     }
 
     public void QuitButtonFunction()

@@ -1,14 +1,9 @@
-using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.PlayerLoop;
 using UnityEngine.SceneManagement;
 
 public class PortalScript : MonoBehaviour
 {
-    GameObject loadingScreen;
-
     [SerializeField] string nextScene;
     [SerializeField] bool nextLevelRandomized;
 
@@ -20,15 +15,10 @@ public class PortalScript : MonoBehaviour
     [Header("and certian scenes wont count to that counter")]
     [SerializeField] bool sceneCounterAffected = true;
 
-    public string lastScene;
+    private static int sceneCounter = 0;
+    private static int marketcounter = 0;
 
-    int sceneCounter = 0;
-
-    int marketcounter = 0;
-
-    string currentScene;
-
-    List<GameObject> persistentObjects;
+    private List<GameObject> persistentObjects;
 
     public void DestroyPersistentObjects()
     {
@@ -40,82 +30,67 @@ public class PortalScript : MonoBehaviour
 
     private void Awake()
     {
-        loadingScreen = GameObject.Find("LoadingScreen");
-
-        persistentObjects = new List<GameObject>() { GameObject.Find("player"), GameObject.Find("Virtual Camera"), GameObject.Find("UI"), GameObject.Find("Inventory Manager")};
-        lastScene = SceneManager.GetSceneAt(0).name;
-
-        if (SceneManager.sceneCount == 2)
-        {
-            currentScene = SceneManager.GetSceneAt(1).name;
-        }
+        persistentObjects = new List<GameObject>() {
+            GameObject.Find("player"),
+            GameObject.Find("Virtual Camera"),
+            GameObject.Find("UI"),
+            GameObject.Find("Inventory Manager")
+        };
     }
-
-    private void Start()
-    {
-        loadingScreen.SetActive(false);
-    }
-
-    private void Update()
-    {
-        if (SceneManager.sceneCount == 2)
-        {
-            if (SceneManager.GetSceneAt(1).isLoaded && lastScene != null)
-            {
-                SceneManager.UnloadSceneAsync(lastScene, UnloadSceneOptions.None);
-            }
-        }
-    }
-
-
 
     private void OnTriggerEnter2D(Collider2D collider)
     {
         if (collider.CompareTag("Player"))
         {
-            loadingScreen.SetActive(true);
+            // Get the scene this portal is actually in (guaranteed correct)
+            string sceneToUnload = gameObject.scene.name;
 
-            if (sceneCounterAffected) 
-            { 
-                sceneCounter++; 
+            Debug.Log($"Portal triggered in: {sceneToUnload} | Active scene: {SceneManager.GetActiveScene().name}");
+
+            // Game logic for scene selection
+            if (sceneCounterAffected)
+            {
+                sceneCounter++;
             }
 
-            if (marketcounter < 2 && sceneCounter == 4) //if you have not had 2 markets yet it will create a market
+            if (marketcounter < 2 && sceneCounter == 4)
             {
                 if (marketcounter == 0 || marketcounter == 1)
                 {
                     nextScene = "MarketScene";
                     nextLevelRandomized = false;
                 }
-                marketcounter++; 
+                marketcounter++;
                 sceneCounter = 0;
             }
-
-            else if (marketcounter == 2 && sceneCounter == 4) //if you have had 2 markets then 4 levels later you get a bossfight
+            else if (marketcounter == 2 && sceneCounter == 4)
             {
                 marketcounter = 0;
                 sceneCounter = 0;
             }
 
-            if (!nextLevelRandomized) 
+            string sceneToLoadName = "";
+            if (!nextLevelRandomized)
             {
-                if (currentScene == "MarketScene")
+                if (sceneToUnload == "MarketScene")
                 {
                     nextLevelRandomized = true;
                 }
 
-                if(nextScene == "Main Menu" || nextScene == "Tutorial Scene")
+                if (nextScene == "Main Menu" || nextScene == "Tutorial Scene")
                 {
                     DestroyPersistentObjects();
                 }
-
-                SceneManager.LoadScene(nextScene, LoadSceneMode.Additive);
+                sceneToLoadName = nextScene;
             }
             else if (nextLevelRandomized)
             {
-                SceneManager.LoadSceneAsync(sceneList[Random.Range(0, sceneList.Count)], LoadSceneMode.Additive);
+                sceneToLoadName = sceneList[Random.Range(0, sceneList.Count)];
             }
-            
+
+            // Load new scene and unload THIS portal's scene
+            SceneLoader.Instance.LoadScene(sceneToLoadName, sceneToUnload);
+
             collider.GetComponent<PlayerControllerScript>().ReturnToStart();
         }
     }

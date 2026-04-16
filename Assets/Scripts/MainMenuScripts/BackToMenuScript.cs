@@ -8,6 +8,7 @@ public class BackToMenuScript : MonoBehaviour
     public void BackToMenu()
     {
         DontDestroyOnLoadManager.DestroyAll();
-        SceneManager.LoadScene("Main Menu");
+
+        SceneLoader.Instance.LoadScene("Main Menu", SceneManager.GetActiveScene().name);
     }
 }

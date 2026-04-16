@@ -38,7 +38,10 @@ public class VolumeManager : MonoBehaviour
     {
         foreach (GameObject game_object in GameObject.FindGameObjectsWithTag("Has Audio"))
         {
-            game_object.GetComponent<SetVolume>().UpdateVolume();                                                                                                                                                                                                           
+            if (GameObject.FindGameObjectsWithTag("Has Audio") != null)
+            {
+                game_object.GetComponent<SetVolume>().UpdateVolume();
+            }                                                                                                                                                                                                      
         }
 
         foreach (GameObject game_object in GameObject.FindGameObjectsWithTag("Player"))

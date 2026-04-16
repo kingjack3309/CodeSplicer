@@ -6,27 +6,31 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Main Menu.unity
+    path: Assets/Scenes/_ManagerScene.unity
+    guid: 29d6ed28914e4074595577715f50a81e
+  - enabled: 1
+    path: Assets/Scenes/Menus/Main Menu.unity
     guid: 2e9359e4e5b51aa48820ecabeb5f2880
   - enabled: 1
-    path: Assets/Scenes/SettingsScreen.unity
+    path: Assets/Scenes/Menus/SettingsScreen.unity
     guid: 1e2a8a44c3805ac408f077e5d9552046
   - enabled: 1
-    path: Assets/Scenes/Languages Screen.unity
+    path: Assets/Scenes/Menus/Languages Screen.unity
     guid: e18946361a8619b46a7c424e08f59431
   - enabled: 1
-    path: Assets/Scenes/CutScene1.unity
+    path: Assets/Scenes/Cutscenes/CutScene1.unity
     guid: 623575d8f4d52ab4089213aee9ef34a6
   - enabled: 1
-    path: Assets/Scenes/Tutorial Scene.unity
+    path: Assets/Scenes/Levels/Tutorial Scene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
-    path: Assets/Scenes/StageOneLevelA.unity
+    path: Assets/Scenes/Levels/StageOneLevelA.unity
     guid: 84ddad567a286bf439553d8a3427f2c3
   - enabled: 1
-    path: Assets/Scenes/StageOneLevelB.unity
+    path: Assets/Scenes/Levels/StageOneLevelB.unity
     guid: cfc391ebaafc8b5458bcc0540b694946
   - enabled: 1
-    path: Assets/Scenes/StageOneLevelC.unity
+    path: Assets/Scenes/Levels/StageOneLevelC.unity
     guid: 74498ce6eda898a478d44c84f2b048c1
   m_configObjects: {}
+  m_UseUCBPForAssetBundles: 0
